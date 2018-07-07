@@ -7,6 +7,7 @@
         background-repeat: no-repeat;
         height: 100vh;
         border-bottom: 2px solid $grey;
+        background-attachment: fixed;
 
         h1{
             font-family: $sans-serif;
@@ -287,7 +288,7 @@
                 padding: 2rem;
 
                 h2{
-                    font-size: 3.5rem;
+                    font-size: $desktop-sub-header;
                 }
             }
         }//end of header settings
@@ -295,18 +296,19 @@
         
         //service settings
         .service-section{
+            width: 85%;
+            margin:auto;
             display: flex;
             position: relative;
             top: -9rem;
             .panel{
-                margin:0 2%;
                 flex: 1;
                 border: 2px solid $black;
             }
             .panel-content{
                 h3{
                     padding-top: 3rem;
-                    font-size: 2.8rem;
+                    font-size: $desktop-lead;
                     height: 9rem;
                     background-color: $grey;
                     text-align: center;
@@ -319,16 +321,19 @@
                     margin: auto;
 
                     p{
-                        font-size: 2.5rem;
+                        font-size: $desktop-regular;
                         height: 10rem;
                     }
                     a{
                         margin-top: 2rem;
-                        font-size: 2.5rem;
+                        font-size: $desktop-regular;
                         padding: 2rem 0rem;
                     }
                 }
 
+            }
+            .panel-2{
+                margin: 0 2%;
             }
         }//end of service settings
 
@@ -337,11 +342,13 @@
         .about-wrapper{
             margin-top: -4rem;
             .about-content{
+                border-right: 0.6rem solid $primary-color;
                 h2{
                     text-align:left;
                     margin-bottom: 3.5rem;
-                    font-size: 4.5rem;
+                    font-size: $desktop-header;
                     width: 30rem;
+                    letter-spacing: 0.5rem;
                     text-align:center;
                 }
             }
@@ -354,17 +361,22 @@
             .parent{
                 display: flex;
             }
-            .child{
+            .child-1{
                 flex: 1;
             }
+            .child-2{
+                flex: 3;
+            }
+            
 
             .description{
+                margin: 0 20rem;
                 h3{
-                    font-size: $header;
+                    font-size: $desktop-sub-header;
                 }
                 p{
                     margin-top: 2.5rem;
-                    font-size: $lead;
+                    font-size: $desktop-regular;
                 }
             }
 
@@ -375,12 +387,12 @@
                 padding: 6rem 0;
 
                 h4{
-                    font-size: 3rem;
+                    font-size: $desktop-lead;
                     margin-bottom: 1rem;
                 }
                 p{
                     color: $grey;
-                    font-size: 2rem;
+                    font-size: $desktop-regular;
                     margin-bottom: 2rem;
                 }
 
@@ -388,6 +400,7 @@
                     width: 30%;
                 }
                 input{
+                    font-size: $desktop-small;
                     padding:1rem;
                 }
 

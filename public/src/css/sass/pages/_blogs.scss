@@ -1,3 +1,4 @@
+//global settings
 #blog-wrapper{
 
     header{
@@ -13,7 +14,6 @@
             h1{
                 font-family: $sans-serif;
                 font-weight: 400;
-                font-size: $header;
                 margin-bottom: 2rem;
             }
         }
@@ -23,7 +23,7 @@
     .blog-list{
         padding-top: 3rem;
         width: 85%;
-        margin:auto;
+        margin:1rem auto;
 
         form{
             margin-bottom: 3rem;
@@ -37,31 +37,27 @@
         input[type="submit"]{
             border-top-right-radius: 0.7rem;
             border-bottom-right-radius: 0.7rem;
-            background-color: $primary-color;
-            
+            background-color: $primary-color;    
         }
 
         .blog-panel{
             display:flex;
             border:1px solid $grey;
             margin-bottom: 2rem;
-            height: 13rem;
+            
 
             h3{
                 font-weight: 400;
                 font-family: $sans-serif;
-                margin-bottom: 0.5rem;
                 color: $primary-color;
             }
             p{
-                line-height: 2.2rem;
                 color: $black;
             }
 
         }
 
         .flex-1{
-            flex: 2;
             background-color: $black;
             border-right: 2px solid $grey;
              
@@ -72,10 +68,108 @@
 
         }
         .flex-2{
-            padding:0.5rem;
-            flex: 3;
             background-color: lightgray;
         }
     }
 
 }
+
+
+
+
+//MEDIA QUERIES
+//mobile
+@media screen and(max-width: $mobile){
+
+    #blog-wrapper{
+        header{
+            h1{
+                font-size: $header;
+            }
+            span{
+                font-size: $regular;
+            }
+        }
+    }
+
+    .blog-list{
+        .blog-panel{
+            height: 13rem;
+
+            h3{
+                font-size: $lead;
+                margin-bottom: 0.5rem;
+            }
+            p{
+                line-height: 2.2rem;
+            }
+
+        }
+        .flex-1{
+            flex: 2;
+        }
+        .flex-2{
+            padding:0.5rem;
+            flex: 3;
+        }
+    }
+
+}//end of mobile
+
+
+
+
+
+
+//desktop
+@media screen and(min-width: $desktop){
+
+    #blog-wrapper{
+        header{
+            h1{
+                font-size: $desktop-header;
+            }
+            span{
+                font-size: $desktop-lead;
+            }
+        }
+
+        .blog-list{
+            form{
+                text-align:left;
+
+                input{
+                    padding:0.7rem;
+                }
+
+                input[type="text"]{
+                    width: 30rem;
+                }
+
+            }
+
+            .blog-panel{
+                height: 30rem;
+
+                h3{
+                    font-size:$desktop-lead;
+                    margin-bottom: 1.5rem;
+                }
+                p{
+                    font-size: $desktop-regular;
+                    line-height: 3.2rem;
+                }
+
+            }
+            
+            .flex-1{
+                flex: 2;
+            }
+            .flex-2{
+                padding: 2rem;
+                flex: 5;
+            }
+        }
+    }
+
+}//end of desktop

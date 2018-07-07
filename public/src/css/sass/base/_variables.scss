@@ -13,6 +13,12 @@ $lead: 2.2rem;
 $regular: 1.6rem;
 $small: 1.4rem;
 
+$desktop-header: 5.5rem;
+$desktop-sub-header: 4.2rem;
+$desktop-lead: 3.2rem;
+$desktop-regular: 2.6rem;
+$desktop-small: 2.2rem;
+
 
 //font-family
 $serif: serif;
@@ -20,6 +26,6 @@ $sans-serif: sans-serif;
 
 
 //media queries - device sizes
-$mobile: 400px;
+$mobile: 440px;
 $tablet: 800px;
-$desktop: 1200px;
+$desktop: 1280px;

@@ -12,17 +12,14 @@
     }
 
     .projects-container{
-        width: 90%;
+        width: 85%;
         margin: 2rem auto;
         display: flex;
         flex-wrap: wrap;
     }
 
     .projects-panel{
-        width: 46%;
-        margin: 2%;
         border: 1px solid $grey;
-        padding: 3.2rem 1rem;
         background-image: url("../../img/projects/sample.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -30,18 +27,14 @@
         h3{
             font-family: $sans-serif;
             color: $white;
-            font-size: $small;
-            margin-bottom: 0.5rem;
         }
 
         a{
             display: block;
-            padding: 0.2rem;
             border-radius: 1.6rem;
             border: 1px solid $grey;
             background-color: $primary-color;
             color: $white;
-            font-size: $small;
 
             &:hover{
                 background-color: $hover;
@@ -52,3 +45,70 @@
     }
 
 }
+
+
+
+
+//MEDIA QUERIES
+
+//mobile
+@media screen and(max-width: $mobile){
+
+    header{
+        .header-content{
+            h1{
+                font-size: $header;
+            }
+        }
+    }
+
+    .projects-panel{
+        width: 46%;
+        margin: 2%;
+        padding: 3.2rem 1rem;
+        h3{
+            font-size: $small;
+            margin-bottom: 0.5rem;
+        }
+        a{
+            padding: 0.2rem;
+            font-size: $small;
+        }
+    }
+
+}//end of mobile
+
+
+
+
+
+//desktop
+@media screen and(min-width: $desktop){
+
+    header{
+        .header-content{
+            h1{
+                font-size: $desktop-header;
+            }
+            span{
+                font-size: $desktop-lead;
+            }
+        }
+    }
+
+    .projects-panel{
+        width: 22.5%;
+        margin: 1.25%;
+        padding: 12rem 4rem;
+        h3{
+            font-size: $desktop-small;
+            margin-bottom:1rem;
+        }
+        a{
+            font-size: $desktop-small;
+            padding: 0.75rem;
+        }
+    }
+
+
+}//end of desktop

@@ -67,14 +67,14 @@ input {
       background-color: white;
       margin: 0.6rem 0; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
   .nav-wrapper {
     background-color: red; }
     .nav-wrapper .desktop {
       display: none; }
     .nav-wrapper:hover .dropdown {
       display: block; } }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .nav-wrapper {
     background-color: white;
     padding: 2rem 0rem; }
@@ -105,7 +105,8 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  border-bottom: 2px solid grey; }
+  border-bottom: 2px solid grey;
+  background-attachment: fixed; }
   #index-wrapper header h1 {
     font-family: sans-serif;
     color: red;
@@ -190,7 +191,7 @@ input {
   #index-wrapper .social-media-wrapper a {
     color: white; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
   #index-wrapper header h1 {
     padding-top: 35vh;
     font-size: 6.5rem; }
@@ -242,25 +243,26 @@ input {
     padding: 1.6rem; }
     #index-wrapper .social-media-wrapper a {
       padding: 1rem; } }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   #index-wrapper header h1 {
     padding-top: 30vh;
     font-size: 14rem; }
   #index-wrapper header .tag-line {
     padding: 2rem; }
     #index-wrapper header .tag-line h2 {
-      font-size: 3.5rem; }
+      font-size: 4.2rem; }
   #index-wrapper .service-section {
+    width: 85%;
+    margin: auto;
     display: flex;
     position: relative;
     top: -9rem; }
     #index-wrapper .service-section .panel {
-      margin: 0 2%;
       flex: 1;
       border: 2px solid black; }
     #index-wrapper .service-section .panel-content h3 {
       padding-top: 3rem;
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       height: 9rem;
       background-color: grey;
       text-align: center;
@@ -271,47 +273,57 @@ input {
       width: 90%;
       margin: auto; }
       #index-wrapper .service-section .panel-content .panel-info p {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
         height: 10rem; }
       #index-wrapper .service-section .panel-content .panel-info a {
         margin-top: 2rem;
-        font-size: 2.5rem;
+        font-size: 2.6rem;
         padding: 2rem 0rem; }
+    #index-wrapper .service-section .panel-2 {
+      margin: 0 2%; }
   #index-wrapper .about-wrapper {
     margin-top: -4rem; }
-    #index-wrapper .about-wrapper .about-content h2 {
-      text-align: left;
-      margin-bottom: 3.5rem;
-      font-size: 4.5rem;
-      width: 30rem;
-      text-align: center; }
+    #index-wrapper .about-wrapper .about-content {
+      border-right: 0.6rem solid red; }
+      #index-wrapper .about-wrapper .about-content h2 {
+        text-align: left;
+        margin-bottom: 3.5rem;
+        font-size: 5.5rem;
+        width: 30rem;
+        letter-spacing: 0.5rem;
+        text-align: center; }
     #index-wrapper .about-wrapper .img {
       width: 30rem;
       height: 30rem; }
     #index-wrapper .about-wrapper .parent {
       display: flex; }
-    #index-wrapper .about-wrapper .child {
+    #index-wrapper .about-wrapper .child-1 {
       flex: 1; }
-    #index-wrapper .about-wrapper .description h3 {
-      font-size: 3.2rem; }
-    #index-wrapper .about-wrapper .description p {
-      margin-top: 2.5rem;
-      font-size: 2.2rem; }
+    #index-wrapper .about-wrapper .child-2 {
+      flex: 3; }
+    #index-wrapper .about-wrapper .description {
+      margin: 0 20rem; }
+      #index-wrapper .about-wrapper .description h3 {
+        font-size: 4.2rem; }
+      #index-wrapper .about-wrapper .description p {
+        margin-top: 2.5rem;
+        font-size: 2.6rem; }
     #index-wrapper .about-wrapper .subscribe {
       margin-top: 5rem;
       text-align: left;
       background-color: black;
       padding: 6rem 0; }
       #index-wrapper .about-wrapper .subscribe h4 {
-        font-size: 3rem;
+        font-size: 3.2rem;
         margin-bottom: 1rem; }
       #index-wrapper .about-wrapper .subscribe p {
         color: grey;
-        font-size: 2rem;
+        font-size: 2.6rem;
         margin-bottom: 2rem; }
       #index-wrapper .about-wrapper .subscribe input[type="text"] {
         width: 30%; }
       #index-wrapper .about-wrapper .subscribe input {
+        font-size: 2.2rem;
         padding: 1rem; }
     #index-wrapper .about-wrapper .subscribe-content {
       width: 90%;
@@ -334,12 +346,11 @@ input {
     #blog-wrapper header .header-content h1 {
       font-family: sans-serif;
       font-weight: 400;
-      font-size: 3.2rem;
       margin-bottom: 2rem; }
 #blog-wrapper .blog-list {
   padding-top: 3rem;
   width: 85%;
-  margin: auto; }
+  margin: 1rem auto; }
   #blog-wrapper .blog-list form {
     margin-bottom: 3rem; }
   #blog-wrapper .blog-list input[type="text"] {
@@ -352,28 +363,64 @@ input {
   #blog-wrapper .blog-list .blog-panel {
     display: flex;
     border: 1px solid grey;
-    margin-bottom: 2rem;
-    height: 13rem; }
+    margin-bottom: 2rem; }
     #blog-wrapper .blog-list .blog-panel h3 {
       font-weight: 400;
       font-family: sans-serif;
-      margin-bottom: 0.5rem;
       color: red; }
     #blog-wrapper .blog-list .blog-panel p {
-      line-height: 2.2rem;
       color: black; }
   #blog-wrapper .blog-list .flex-1 {
-    flex: 2;
     background-color: black;
     border-right: 2px solid grey; }
     #blog-wrapper .blog-list .flex-1 img {
       width: 100%;
       height: 100%; }
   #blog-wrapper .blog-list .flex-2 {
-    padding: 0.5rem;
-    flex: 3;
     background-color: lightgray; }
 
+@media screen and (max-width: 440px) {
+  #blog-wrapper header h1 {
+    font-size: 3.2rem; }
+  #blog-wrapper header span {
+    font-size: 1.6rem; }
+
+  .blog-list .blog-panel {
+    height: 13rem; }
+    .blog-list .blog-panel h3 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem; }
+    .blog-list .blog-panel p {
+      line-height: 2.2rem; }
+  .blog-list .flex-1 {
+    flex: 2; }
+  .blog-list .flex-2 {
+    padding: 0.5rem;
+    flex: 3; } }
+@media screen and (min-width: 1280px) {
+  #blog-wrapper header h1 {
+    font-size: 5.5rem; }
+  #blog-wrapper header span {
+    font-size: 3.2rem; }
+  #blog-wrapper .blog-list form {
+    text-align: left; }
+    #blog-wrapper .blog-list form input {
+      padding: 0.7rem; }
+    #blog-wrapper .blog-list form input[type="text"] {
+      width: 30rem; }
+  #blog-wrapper .blog-list .blog-panel {
+    height: 30rem; }
+    #blog-wrapper .blog-list .blog-panel h3 {
+      font-size: 3.2rem;
+      margin-bottom: 1.5rem; }
+    #blog-wrapper .blog-list .blog-panel p {
+      font-size: 2.6rem;
+      line-height: 3.2rem; }
+  #blog-wrapper .blog-list .flex-1 {
+    flex: 2; }
+  #blog-wrapper .blog-list .flex-2 {
+    padding: 2rem;
+    flex: 5; } }
 #tutorials-wrapper header {
   height: 50vh;
   background-image: url("../../img/tutorials/banner.jpg");
@@ -408,32 +455,56 @@ input {
     padding-top: 20vh;
     color: white; }
 #projects-wrapper .projects-container {
-  width: 90%;
+  width: 85%;
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap; }
 #projects-wrapper .projects-panel {
-  width: 46%;
-  margin: 2%;
   border: 1px solid grey;
-  padding: 3.2rem 1rem;
   background-image: url("../../img/projects/sample.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
   #projects-wrapper .projects-panel h3 {
     font-family: sans-serif;
-    color: white;
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem; }
+    color: white; }
   #projects-wrapper .projects-panel a {
     display: block;
-    padding: 0.2rem;
     border-radius: 1.6rem;
     border: 1px solid grey;
     background-color: red;
-    color: white;
-    font-size: 1.4rem; }
+    color: white; }
     #projects-wrapper .projects-panel a:hover {
       background-color: pink; }
+
+@media screen and (max-width: 440px) {
+  header .header-content h1 {
+    font-size: 3.2rem; }
+
+  .projects-panel {
+    width: 46%;
+    margin: 2%;
+    padding: 3.2rem 1rem; }
+    .projects-panel h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem; }
+    .projects-panel a {
+      padding: 0.2rem;
+      font-size: 1.4rem; } }
+@media screen and (min-width: 1280px) {
+  header .header-content h1 {
+    font-size: 5.5rem; }
+  header .header-content span {
+    font-size: 3.2rem; }
+
+  .projects-panel {
+    width: 22.5%;
+    margin: 1.25%;
+    padding: 12rem 4rem; }
+    .projects-panel h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem; }
+    .projects-panel a {
+      font-size: 2.2rem;
+      padding: 0.75rem; } }
 
 /*# sourceMappingURL=app.css.map */
