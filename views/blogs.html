@@ -1,0 +1,50 @@
+<div id="blog-wrapper">
+
+    <!--header-->
+    <header>
+        <div class="header-content text-center">
+            <h1>BLOGS</h1>
+            <span>my story | tips &amp; tricks | life</span>
+        </div>
+    </header> <!--end of header-->
+
+
+    <!--blog list-->
+    <div class="blog-list">
+
+        <form action="" method="POST" class="text-center">
+            <input type="text" name="search" id="search" placeholder="search..."
+            /><input type="submit" name="submit" id="submit" value="&#x1F50D;" />
+        </form>
+
+        <!--php data from blogs.php added in below-->
+        <?php
+        
+        while($blog = $stmt->fetch()){
+            $title = strtoupper($blog->get_title());
+            $preview = $blog->blog_preview();
+            $image_path = './img/blogs/' .$blog->get_image_path(); 
+            $created_at = $blog->get_created_at();
+
+            echo "
+            <a href='#'>
+                <div class='blog-panel'>
+                    <div class='flex-1'>
+                        <img src=$image_path />  
+                    </div>
+                    <div class='flex-2'>
+                        <h3>$title</h3>
+                        <p>$preview</p>
+                    </div>
+                </div>
+            </a>
+            
+            ";
+        }
+    
+        ?>
+
+    </div> <!--end of blog list-->
+
+
+</div>

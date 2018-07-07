@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: $regular;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+input[type="submit"]{
+    border: 1px solid $grey;
+}
+
+input{
+    border:1px solid $grey;
+    box-shadow: 0 0 0;
+    padding: 0.5rem;
+}

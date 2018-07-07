@@ -1,0 +1,18 @@
+//import base styling
+@import "sass/base/_variables";
+@import "sass/base/_reset";
+@import "sass/base/_classes";
+
+
+//import components
+@import "sass/components/_navigation";
+
+//import grid
+@import "sass/layouts/_grid";
+
+
+//import pages
+@import "sass/pages/_index";
+@import "sass/pages/_blogs";
+@import "sass/pages/_tutorials";
+@import "sass/pages/_projects";

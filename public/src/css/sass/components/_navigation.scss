@@ -1,0 +1,125 @@
+//global settings
+.nav-wrapper{
+    z-index: 10;
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom: 1px solid $grey;
+    position:fixed;
+
+    .dropdown{
+        position:relative;
+        top: 10px; /*to accommodate 10px bottom padding of nav-wrapper*/
+        width: 100%;
+        display: none;
+        text-align: center;
+
+        li,a{
+            display: block;
+            border-top: 1px solid $black;
+            color: $white;
+            font-size: $lead;
+            font-family: $sans-serif;
+
+            &:hover{
+                background-color: $hover;
+            }
+        }
+        a{
+            padding: 5px;
+        }
+
+    }
+
+    .menu-icon{
+        margin-left: 1rem;
+        width: 3.5rem;
+
+        a{
+            display:block;
+        }
+
+        div{
+            width: inherit;
+            height: 0.3rem;
+            background-color: $white;
+            margin: 0.6rem 0;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+//MEDIA QUERIES
+
+//mobile
+@media screen and(max-width: $mobile){
+    .nav-wrapper{
+        //hide desktop nav bar items
+        .desktop{
+            display: none;
+        }
+
+        background-color: $primary-color;
+
+        &:hover{
+            .dropdown{
+                display: block;
+            }
+        }
+    }
+}
+
+
+//tablet
+
+
+
+//desktop
+@media screen and(min-width: $desktop){
+    .nav-wrapper{
+        //hide mobile nav bar items
+        .mobile{
+            display: none;
+        }
+
+        background-color: $white;
+        padding:2rem 0rem;
+
+        li{
+            display: inline-block;
+        }
+
+        .nav{
+            width: 95%;
+            margin: auto;
+            display: flex;
+        }
+
+        .nav-brand a{
+            color: $primary-color;
+            font-size: $sub-header;
+            font-family: $sans-serif;
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+
+        .nav-links{
+            flex: 3;
+                a{
+                padding: 1rem;
+                margin:0 2rem;
+                font-size: $lead;
+
+                &:hover{
+                    color: $grey;
+                }
+            }
+        }
+    }
+}//end of desktop

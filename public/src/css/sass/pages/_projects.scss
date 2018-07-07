@@ -1,0 +1,54 @@
+#projects-wrapper{
+    header{
+        height: 50vh;
+        background-image: url('../../img/projects/banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .header-content{
+            padding-top: 20vh;
+            color: $white;
+        }
+    }
+
+    .projects-container{
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .projects-panel{
+        width: 46%;
+        margin: 2%;
+        border: 1px solid $grey;
+        padding: 3.2rem 1rem;
+        background-image: url("../../img/projects/sample.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h3{
+            font-family: $sans-serif;
+            color: $white;
+            font-size: $small;
+            margin-bottom: 0.5rem;
+        }
+
+        a{
+            display: block;
+            padding: 0.2rem;
+            border-radius: 1.6rem;
+            border: 1px solid $grey;
+            background-color: $primary-color;
+            color: $white;
+            font-size: $small;
+
+            &:hover{
+                background-color: $hover;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+input[type="submit"] {
+  border: 1px solid grey; }
+
+input {
+  border: 1px solid grey;
+  box-shadow: 0 0 0;
+  padding: 0.5rem; }
+
+.hide {
+  display: none; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.nav-wrapper {
+  z-index: 10;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom: 1px solid grey;
+  position: fixed; }
+  .nav-wrapper .dropdown {
+    position: relative;
+    top: 10px;
+    /*to accommodate 10px bottom padding of nav-wrapper*/
+    width: 100%;
+    display: none;
+    text-align: center; }
+    .nav-wrapper .dropdown li, .nav-wrapper .dropdown a {
+      display: block;
+      border-top: 1px solid black;
+      color: white;
+      font-size: 2.2rem;
+      font-family: sans-serif; }
+      .nav-wrapper .dropdown li:hover, .nav-wrapper .dropdown a:hover {
+        background-color: pink; }
+    .nav-wrapper .dropdown a {
+      padding: 5px; }
+  .nav-wrapper .menu-icon {
+    margin-left: 1rem;
+    width: 3.5rem; }
+    .nav-wrapper .menu-icon a {
+      display: block; }
+    .nav-wrapper .menu-icon div {
+      width: inherit;
+      height: 0.3rem;
+      background-color: white;
+      margin: 0.6rem 0; }
+
+@media screen and (max-width: 400px) {
+  .nav-wrapper {
+    background-color: red; }
+    .nav-wrapper .desktop {
+      display: none; }
+    .nav-wrapper:hover .dropdown {
+      display: block; } }
+@media screen and (min-width: 1200px) {
+  .nav-wrapper {
+    background-color: white;
+    padding: 2rem 0rem; }
+    .nav-wrapper .mobile {
+      display: none; }
+    .nav-wrapper li {
+      display: inline-block; }
+    .nav-wrapper .nav {
+      width: 95%;
+      margin: auto;
+      display: flex; }
+    .nav-wrapper .nav-brand a {
+      color: red;
+      font-size: 2.6rem;
+      font-family: sans-serif; }
+      .nav-wrapper .nav-brand a:hover {
+        opacity: 0.75; }
+    .nav-wrapper .nav-links {
+      flex: 3; }
+      .nav-wrapper .nav-links a {
+        padding: 1rem;
+        margin: 0 2rem;
+        font-size: 2.2rem; }
+        .nav-wrapper .nav-links a:hover {
+          color: grey; } }
+#index-wrapper header {
+  background-image: url("../../img/homepage/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  border-bottom: 2px solid grey; }
+  #index-wrapper header h1 {
+    font-family: sans-serif;
+    color: red;
+    font-weight: normal; }
+  #index-wrapper header .tag-line {
+    display: block;
+    border: 2px solid grey;
+    border-radius: 50px;
+    background-color: white;
+    width: 95%;
+    margin: 2rem auto; }
+    #index-wrapper header .tag-line h2 {
+      font-family: sans-serif;
+      font-weight: normal; }
+#index-wrapper .service-section .panel {
+  color: white; }
+  #index-wrapper .service-section .panel .panel-link {
+    border-radius: 20px;
+    background-color: red; }
+    #index-wrapper .service-section .panel .panel-link:hover {
+      background-color: pink; }
+  #index-wrapper .service-section .panel a {
+    display: block;
+    color: black;
+    font-family: sans-serif; }
+  #index-wrapper .service-section .panel h3 {
+    font-family: sans-serif; }
+#index-wrapper .service-section .panel-1 {
+  background-image: url("../../img/homepage/projects.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#index-wrapper .service-section .panel-2 {
+  background-image: url("../../img/homepage/blog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#index-wrapper .service-section .panel-3 {
+  background-image: url("../../img/homepage/tutorials.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+#index-wrapper .about-wrapper {
+  background-color: white; }
+  #index-wrapper .about-wrapper .about-content {
+    width: 85%;
+    margin: auto; }
+    #index-wrapper .about-wrapper .about-content h2 {
+      font-family: sans-serif;
+      color: grey;
+      font-weight: 400; }
+  #index-wrapper .about-wrapper .img {
+    border-radius: 360px;
+    border: 1px solid grey;
+    overflow: hidden; }
+    #index-wrapper .about-wrapper .img img {
+      width: inherit;
+      height: inherit;
+      display: block;
+      height: auto; }
+  #index-wrapper .about-wrapper .description h3 {
+    font-family: sans-serif;
+    font-weight: normal; }
+  #index-wrapper .about-wrapper .description p {
+    color: grey; }
+  #index-wrapper .about-wrapper .subscribe {
+    font-family: sans-serif; }
+    #index-wrapper .about-wrapper .subscribe h4 {
+      color: red;
+      font-weight: normal; }
+    #index-wrapper .about-wrapper .subscribe p {
+      color: red;
+      line-height: 2.2rem; }
+    #index-wrapper .about-wrapper .subscribe input:not([type="submit"]) {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; }
+    #index-wrapper .about-wrapper .subscribe input[type="submit"] {
+      background-color: red;
+      color: white;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
+#index-wrapper .social-media-wrapper {
+  border-top: 2px solid grey;
+  background-color: black; }
+  #index-wrapper .social-media-wrapper a {
+    color: white; }
+
+@media screen and (max-width: 400px) {
+  #index-wrapper header h1 {
+    padding-top: 35vh;
+    font-size: 6.5rem; }
+  #index-wrapper header .tag-line {
+    padding: 13px 5px; }
+    #index-wrapper header .tag-line h2 {
+      font-size: 2.2rem; }
+  #index-wrapper .service-section {
+    height: 100vh; }
+    #index-wrapper .service-section .panel {
+      height: 33.33vh;
+      padding-top: 2rem; }
+      #index-wrapper .service-section .panel .panel-content {
+        margin: auto;
+        width: 80%; }
+      #index-wrapper .service-section .panel .panel-link {
+        margin: 4rem auto; }
+      #index-wrapper .service-section .panel a {
+        padding: 13px 0px;
+        font-size: 2.2rem; }
+      #index-wrapper .service-section .panel p {
+        line-height: 2.2rem; }
+      #index-wrapper .service-section .panel h3 {
+        font-size: 2.2rem; }
+  #index-wrapper .about-wrapper {
+    height: 100vh;
+    padding-top: 3rem; }
+    #index-wrapper .about-wrapper .about-content h2 {
+      font-size: 3.2rem; }
+    #index-wrapper .about-wrapper .img {
+      width: 20rem;
+      height: 20rem;
+      margin: 2rem auto; }
+    #index-wrapper .about-wrapper .description p {
+      margin-top: 1rem;
+      font-size: 1.6rem;
+      line-height: 2.2rem; }
+    #index-wrapper .about-wrapper .subscribe {
+      margin-top: 3rem; }
+      #index-wrapper .about-wrapper .subscribe form {
+        padding-top: 1rem; }
+      #index-wrapper .about-wrapper .subscribe input:not([type="submit"]) {
+        padding: 5px; }
+      #index-wrapper .about-wrapper .subscribe input[type="submit"] {
+        padding: 5px;
+        position: relative;
+        left: -7px; }
+  #index-wrapper .social-media-wrapper {
+    padding: 1.6rem; }
+    #index-wrapper .social-media-wrapper a {
+      padding: 1rem; } }
+@media screen and (min-width: 1200px) {
+  #index-wrapper header h1 {
+    padding-top: 30vh;
+    font-size: 14rem; }
+  #index-wrapper header .tag-line {
+    padding: 2rem; }
+    #index-wrapper header .tag-line h2 {
+      font-size: 3.5rem; }
+  #index-wrapper .service-section {
+    display: flex;
+    position: relative;
+    top: -9rem; }
+    #index-wrapper .service-section .panel {
+      margin: 0 2%;
+      flex: 1;
+      border: 2px solid black; }
+    #index-wrapper .service-section .panel-content h3 {
+      padding-top: 3rem;
+      font-size: 2.8rem;
+      height: 9rem;
+      background-color: grey;
+      text-align: center;
+      border-bottom: 2px solid black;
+      box-shadow: 1px 0px 6px black; }
+    #index-wrapper .service-section .panel-content .panel-info {
+      padding: 8rem 1rem;
+      width: 90%;
+      margin: auto; }
+      #index-wrapper .service-section .panel-content .panel-info p {
+        font-size: 2.5rem;
+        height: 10rem; }
+      #index-wrapper .service-section .panel-content .panel-info a {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        padding: 2rem 0rem; }
+  #index-wrapper .about-wrapper {
+    margin-top: -4rem; }
+    #index-wrapper .about-wrapper .about-content h2 {
+      text-align: left;
+      margin-bottom: 3.5rem;
+      font-size: 3.5rem; }
+    #index-wrapper .about-wrapper .img {
+      width: 30rem;
+      height: 30rem; }
+    #index-wrapper .about-wrapper .parent {
+      display: flex; }
+    #index-wrapper .about-wrapper .child {
+      flex: 1; }
+    #index-wrapper .about-wrapper .description h3 {
+      font-size: 3.2rem; }
+    #index-wrapper .about-wrapper .description p {
+      margin-top: 2.5rem;
+      font-size: 2.2rem; }
+    #index-wrapper .about-wrapper .subscribe {
+      margin-top: 5rem;
+      text-align: left;
+      background-color: black;
+      padding: 6rem 0; }
+      #index-wrapper .about-wrapper .subscribe h4 {
+        font-size: 3rem;
+        margin-bottom: 1rem; }
+      #index-wrapper .about-wrapper .subscribe p {
+        color: grey;
+        font-size: 2rem;
+        margin-bottom: 2rem; }
+      #index-wrapper .about-wrapper .subscribe input[type="text"] {
+        width: 30%; }
+      #index-wrapper .about-wrapper .subscribe input {
+        padding: 1rem; }
+    #index-wrapper .about-wrapper .subscribe-content {
+      width: 90%;
+      margin: auto; }
+  #index-wrapper .social-media-wrapper {
+    padding: 3rem 0rem;
+    background-color: white; }
+    #index-wrapper .social-media-wrapper a {
+      color: black;
+      padding: 1rem;
+      margin: 0 3rem; } }
+#blog-wrapper header {
+  height: 50vh;
+  background-image: url("../../img/blogs/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #blog-wrapper header .header-content {
+    color: white;
+    padding-top: 20vh; }
+    #blog-wrapper header .header-content h1 {
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 3.2rem;
+      margin-bottom: 2rem; }
+#blog-wrapper .blog-list {
+  padding-top: 3rem;
+  width: 85%;
+  margin: auto; }
+  #blog-wrapper .blog-list form {
+    margin-bottom: 3rem; }
+  #blog-wrapper .blog-list input[type="text"] {
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem; }
+  #blog-wrapper .blog-list input[type="submit"] {
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    background-color: red; }
+  #blog-wrapper .blog-list .blog-panel {
+    display: flex;
+    border: 1px solid grey;
+    margin-bottom: 2rem;
+    height: 13rem; }
+    #blog-wrapper .blog-list .blog-panel h3 {
+      font-weight: 400;
+      font-family: sans-serif;
+      margin-bottom: 0.5rem;
+      color: red; }
+    #blog-wrapper .blog-list .blog-panel p {
+      line-height: 2.2rem;
+      color: black; }
+  #blog-wrapper .blog-list .flex-1 {
+    flex: 2;
+    background-color: black;
+    border-right: 2px solid grey; }
+    #blog-wrapper .blog-list .flex-1 img {
+      width: 100%;
+      height: 100%; }
+  #blog-wrapper .blog-list .flex-2 {
+    padding: 0.5rem;
+    flex: 3;
+    background-color: lightgray; }
+
+#tutorials-wrapper header {
+  height: 50vh;
+  background-image: url("../../img/tutorials/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid grey; }
+  #tutorials-wrapper header .header-content {
+    padding-top: 20vh;
+    color: white; }
+#tutorials-wrapper .categories {
+  height: 50vh; }
+  #tutorials-wrapper .categories .categories-panel {
+    height: 25vh;
+    background-color: black;
+    border-bottom: 2px solid grey; }
+    #tutorials-wrapper .categories .categories-panel a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    #tutorials-wrapper .categories .categories-panel h2 {
+      padding-top: 8vh;
+      color: red; }
+    #tutorials-wrapper .categories .categories-panel span {
+      color: white; }
+
+#projects-wrapper header {
+  height: 50vh;
+  background-image: url("../../img/projects/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #projects-wrapper header .header-content {
+    padding-top: 20vh;
+    color: white; }
+#projects-wrapper .projects-container {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap; }
+#projects-wrapper .projects-panel {
+  width: 46%;
+  margin: 2%;
+  border: 1px solid grey;
+  padding: 3.2rem 1rem;
+  background-image: url("../../img/projects/sample.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #projects-wrapper .projects-panel h3 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem; }
+  #projects-wrapper .projects-panel a {
+    display: block;
+    padding: 0.2rem;
+    border-radius: 1.6rem;
+    border: 1px solid grey;
+    background-color: red;
+    color: white;
+    font-size: 1.4rem; }
+    #projects-wrapper .projects-panel a:hover {
+      background-color: pink; }
+
+/*# sourceMappingURL=app.css.map */
