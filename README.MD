@@ -6,5 +6,3 @@
 * JavaScript/ES6
 * HTML/CSS
 * SASS
-
-test
