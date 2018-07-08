@@ -7,7 +7,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  font-family: "Roboto Slab", serif; }
 
 a {
   color: black;
@@ -17,12 +18,16 @@ li {
   list-style: none; }
 
 input[type="submit"] {
-  border: 1px solid grey; }
+  border: 1px solid grey;
+  cursor: pointer; }
 
 input {
   border: 1px solid grey;
   box-shadow: 0 0 0;
   padding: 0.5rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
 
 .hide {
   display: none; }
@@ -51,7 +56,7 @@ input {
       border-top: 1px solid black;
       color: white;
       font-size: 2.2rem;
-      font-family: sans-serif; }
+      font-family: "Open Sans", sans-serif; }
       .nav-wrapper .dropdown li:hover, .nav-wrapper .dropdown a:hover {
         background-color: pink; }
     .nav-wrapper .dropdown a {
@@ -89,7 +94,7 @@ input {
     .nav-wrapper .nav-brand a {
       color: red;
       font-size: 2.6rem;
-      font-family: sans-serif; }
+      font-family: "Open Sans", sans-serif; }
       .nav-wrapper .nav-brand a:hover {
         opacity: 0.75; }
     .nav-wrapper .nav-links {
@@ -108,7 +113,7 @@ input {
   border-bottom: 2px solid grey;
   background-attachment: fixed; }
   #index-wrapper header h1 {
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: red;
     font-weight: normal; }
   #index-wrapper header .tag-line {
@@ -119,7 +124,7 @@ input {
     width: 95%;
     margin: 2rem auto; }
     #index-wrapper header .tag-line h2 {
-      font-family: sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-weight: normal; }
 #index-wrapper .service-section .panel {
   color: white; }
@@ -131,9 +136,9 @@ input {
   #index-wrapper .service-section .panel a {
     display: block;
     color: black;
-    font-family: sans-serif; }
+    font-family: "Open Sans", sans-serif; }
   #index-wrapper .service-section .panel h3 {
-    font-family: sans-serif; }
+    font-weight: 900; }
 #index-wrapper .service-section .panel-1 {
   background-image: url("../../img/homepage/projects.jpg");
   background-size: cover;
@@ -152,7 +157,7 @@ input {
     width: 85%;
     margin: auto; }
     #index-wrapper .about-wrapper .about-content h2 {
-      font-family: sans-serif;
+      font-family: "Open Sans", sans-serif;
       color: grey;
       font-weight: 400; }
   #index-wrapper .about-wrapper .img {
@@ -165,18 +170,19 @@ input {
       display: block;
       height: auto; }
   #index-wrapper .about-wrapper .description h3 {
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: normal; }
   #index-wrapper .about-wrapper .description p {
     color: grey; }
   #index-wrapper .about-wrapper .subscribe {
-    font-family: sans-serif; }
+    font-family: "Open Sans", sans-serif; }
     #index-wrapper .about-wrapper .subscribe h4 {
       color: red;
       font-weight: normal; }
     #index-wrapper .about-wrapper .subscribe p {
       color: red;
-      line-height: 2.2rem; }
+      line-height: 2.2rem;
+      font-family: "Roboto Slab", serif; }
     #index-wrapper .about-wrapper .subscribe input:not([type="submit"]) {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px; }
@@ -261,7 +267,7 @@ input {
       flex: 1;
       border: 2px solid black; }
     #index-wrapper .service-section .panel-content h3 {
-      padding-top: 3rem;
+      padding-top: 2.2rem;
       font-size: 3.2rem;
       height: 9rem;
       background-color: grey;
@@ -344,9 +350,8 @@ input {
     color: white;
     padding-top: 20vh; }
     #blog-wrapper header .header-content h1 {
-      font-family: sans-serif;
-      font-weight: 400;
-      margin-bottom: 2rem; }
+      font-family: "Open Sans", sans-serif;
+      font-weight: 900; }
 #blog-wrapper .blog-list {
   padding-top: 3rem;
   width: 85%;
@@ -365,8 +370,7 @@ input {
     border: 1px solid grey;
     margin-bottom: 2rem; }
     #blog-wrapper .blog-list .blog-panel h3 {
-      font-weight: 400;
-      font-family: sans-serif;
+      font-family: "Roboto Slab", serif;
       color: red; }
     #blog-wrapper .blog-list .blog-panel p {
       color: black; }
@@ -399,7 +403,8 @@ input {
     flex: 3; } }
 @media screen and (min-width: 1280px) {
   #blog-wrapper header h1 {
-    font-size: 5.5rem; }
+    font-size: 5.5rem;
+    margin-bottom: 2rem; }
   #blog-wrapper header span {
     font-size: 3.2rem; }
   #blog-wrapper .blog-list form {
@@ -409,13 +414,18 @@ input {
     #blog-wrapper .blog-list form input[type="text"] {
       width: 30rem; }
   #blog-wrapper .blog-list .blog-panel {
-    height: 30rem; }
+    height: 30rem;
+    transition: transform 0.2s; }
     #blog-wrapper .blog-list .blog-panel h3 {
       font-size: 3.2rem;
       margin-bottom: 1.5rem; }
     #blog-wrapper .blog-list .blog-panel p {
       font-size: 2.6rem;
       line-height: 3.2rem; }
+    #blog-wrapper .blog-list .blog-panel:hover {
+      transform: scale(1.015);
+      box-shadow: 2px 3px 7px grey;
+      transition: transform 0.2s; }
   #blog-wrapper .blog-list .flex-1 {
     flex: 2; }
   #blog-wrapper .blog-list .flex-2 {
@@ -430,10 +440,12 @@ input {
   #tutorials-wrapper header .header-content {
     padding-top: 20vh;
     color: white; }
+    #tutorials-wrapper header .header-content h1 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 900; }
 #tutorials-wrapper .categories {
   height: 50vh; }
   #tutorials-wrapper .categories .categories-panel {
-    height: 25vh;
     background-color: black;
     border-bottom: 2px solid grey; }
     #tutorials-wrapper .categories .categories-panel a {
@@ -441,11 +453,39 @@ input {
       width: 100%;
       height: 100%; }
     #tutorials-wrapper .categories .categories-panel h2 {
-      padding-top: 8vh;
       color: red; }
     #tutorials-wrapper .categories .categories-panel span {
       color: white; }
+    #tutorials-wrapper .categories .categories-panel:hover {
+      opacity: 0.9; }
 
+@media screen and (max-width: 440px) {
+  #tutorials-wrapper header h1 {
+    font-size: 3.2rem; }
+  #tutorials-wrapper .categories-panel {
+    height: 25vh; }
+    #tutorials-wrapper .categories-panel h2 {
+      padding-top: 8vh; } }
+@media screen and (min-width: 1280px) {
+  #tutorials-wrapper header h1 {
+    font-size: 5.5rem;
+    margin-bottom: 2rem; }
+  #tutorials-wrapper .categories {
+    display: flex; }
+  #tutorials-wrapper .categories-panel {
+    flex: 1; }
+    #tutorials-wrapper .categories-panel h2 {
+      font-size: 4.2rem;
+      padding-top: 18vh;
+      margin-bottom: 2rem;
+      transition: font-size 0.4s; }
+    #tutorials-wrapper .categories-panel span {
+      font-size: 2.6rem; }
+    #tutorials-wrapper .categories-panel:hover h2 {
+      font-size: 5.5rem;
+      transition: font-size 0.4s; }
+  #tutorials-wrapper .panel-2 {
+    border-left: 2px solid grey; } }
 #projects-wrapper header {
   height: 50vh;
   background-image: url("../../img/projects/banner.jpg");
@@ -454,6 +494,9 @@ input {
   #projects-wrapper header .header-content {
     padding-top: 20vh;
     color: white; }
+    #projects-wrapper header .header-content h1 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 900; }
 #projects-wrapper .projects-container {
   width: 85%;
   margin: 2rem auto;
@@ -465,7 +508,8 @@ input {
   background-size: cover;
   background-repeat: no-repeat; }
   #projects-wrapper .projects-panel h3 {
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900;
     color: white; }
   #projects-wrapper .projects-panel a {
     display: block;
@@ -492,17 +536,18 @@ input {
       font-size: 1.4rem; } }
 @media screen and (min-width: 1280px) {
   header .header-content h1 {
-    font-size: 5.5rem; }
+    font-size: 5.5rem;
+    margin-bottom: 2rem; }
   header .header-content span {
     font-size: 3.2rem; }
 
   .projects-panel {
     width: 22.5%;
     margin: 1.25%;
-    padding: 12rem 4rem; }
+    padding: 10rem 4rem 12rem; }
     .projects-panel h3 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem; }
+      font-size: 2.6rem;
+      margin-bottom: 2rem; }
     .projects-panel a {
       font-size: 2.2rem;
       padding: 0.75rem; } }

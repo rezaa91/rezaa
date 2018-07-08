@@ -1,3 +1,4 @@
+//global settings
 #tutorials-wrapper{
     header{
         height: 50vh;
@@ -9,14 +10,17 @@
         .header-content{
             padding-top: 20vh;
             color: $white;
+            h1{
+                font-family: $sans-serif;
+                font-weight: 900;
+            }
         }
     }
 
     .categories{
         height: 50vh;
-
+        
         .categories-panel{
-            height: 25vh;
             background-color: $black;
             border-bottom: 2px solid $grey;
 
@@ -27,13 +31,76 @@
             }
 
             h2{
-                padding-top: 8vh;
                 color: $primary-color;
             }
             span{
                 color: $white;
             }
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+}//end of global settings
+
+
+
+//MEDIA QUERIES
+//mobile
+@media screen and(max-width: $mobile){
+    #tutorials-wrapper{
+        header{
+            h1{
+                font-size: $header;
+            }
+        }
+        .categories-panel{
+            height: 25vh;
+            h2{
+                padding-top: 8vh;
+            }
         }
     }
 
-}
+}//end of mobile
+
+
+
+//desktop
+@media screen and(min-width: $desktop){
+    #tutorials-wrapper{
+        header{
+            h1{
+                font-size: $desktop-header;
+                margin-bottom: 2rem;
+            }
+        }
+        .categories{
+            display:flex;
+        }
+        .categories-panel{
+            flex:1;
+            h2{
+                font-size: $desktop-sub-header;
+                padding-top: 18vh;
+                margin-bottom: 2rem;
+                transition:
+                    font-size 0.4s;
+            }
+            span{
+                font-size: $desktop-regular;
+            }
+            &:hover{
+                h2{
+                    font-size: $desktop-header;
+                    transition:
+                        font-size 0.4s;
+                }
+            }
+        }
+        .panel-2{
+            border-left: 2px solid $grey;
+        }
+    }
+
+}//end of desktop

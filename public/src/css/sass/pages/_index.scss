@@ -52,7 +52,7 @@
                 font-family: $sans-serif;
             }
             h3{
-                font-family: $sans-serif;
+                font-weight: 900;
             }
         }
         .panel-1{
@@ -125,6 +125,7 @@
             p{
                 color: $primary-color;
                 line-height: 2.2rem;
+                font-family: $serif;
             }
             input:not([type="submit"]){
                 border-top-left-radius: 10px;
@@ -307,13 +308,13 @@
             }
             .panel-content{
                 h3{
-                    padding-top: 3rem;
+                    padding-top: 2.2rem;
                     font-size: $desktop-lead;
                     height: 9rem;
                     background-color: $grey;
                     text-align: center;
                     border-bottom: 2px solid $black;
-                    box-shadow: 1px 0px 6px $black
+                    box-shadow: 1px 0px 6px $black;
                 }
                 .panel-info{
                     padding: 8rem 1rem;

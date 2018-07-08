@@ -8,6 +8,11 @@
         .header-content{
             padding-top: 20vh;
             color: $white;
+
+            h1{
+                font-family: $sans-serif;
+                font-weight: 900;
+            }
         }
     }
 
@@ -26,6 +31,7 @@
 
         h3{
             font-family: $sans-serif;
+            font-weight: 900;
             color: $white;
         }
 
@@ -89,6 +95,7 @@
         .header-content{
             h1{
                 font-size: $desktop-header;
+                margin-bottom: 2rem;
             }
             span{
                 font-size: $desktop-lead;
@@ -99,10 +106,10 @@
     .projects-panel{
         width: 22.5%;
         margin: 1.25%;
-        padding: 12rem 4rem;
+        padding: 10rem 4rem 12rem;
         h3{
-            font-size: $desktop-small;
-            margin-bottom:1rem;
+            font-size: $desktop-regular;
+            margin-bottom:2rem;
         }
         a{
             font-size: $desktop-small;

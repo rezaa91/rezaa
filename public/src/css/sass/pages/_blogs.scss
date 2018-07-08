@@ -13,8 +13,7 @@
 
             h1{
                 font-family: $sans-serif;
-                font-weight: 400;
-                margin-bottom: 2rem;
+                font-weight: 900;
             }
         }
     }
@@ -47,8 +46,7 @@
             
 
             h3{
-                font-weight: 400;
-                font-family: $sans-serif;
+                font-family: $serif;
                 color: $primary-color;
             }
             p{
@@ -128,6 +126,7 @@
         header{
             h1{
                 font-size: $desktop-header;
+                margin-bottom: 2rem;
             }
             span{
                 font-size: $desktop-lead;
@@ -150,7 +149,7 @@
 
             .blog-panel{
                 height: 30rem;
-
+                transition: transform 0.2s;
                 h3{
                     font-size:$desktop-lead;
                     margin-bottom: 1.5rem;
@@ -158,6 +157,12 @@
                 p{
                     font-size: $desktop-regular;
                     line-height: 3.2rem;
+                }
+                &:hover{
+                    transform: scale(1.015);
+                    box-shadow: 2px 3px 7px $grey;
+                    transition:
+                        transform 0.2s;
                 }
 
             }
