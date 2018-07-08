@@ -13,6 +13,10 @@
 
         <link rel="stylesheet" href="./src/css/app.css" />
 
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+
+
     </head>
     <body>
         
