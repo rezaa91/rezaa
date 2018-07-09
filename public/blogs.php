@@ -5,6 +5,7 @@
 
 require("../core/init.php");
 
+
 $page_title = "Blogs";
 include('../includes/header.inc.php');
 
@@ -19,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
     
     //find all blogs in database with a title similar to the inputted information
     try{
-        $query = "SELECT * FROM blog WHERE title LIKE :inputted_data";
+        $query = "SELECT * FROM blog WHERE title LIKE :inputted_data ORDER BY blog_id DESC"; //get all relevant logs newest to oldest
         $stmt = $pdo->prepare($query);
         $result = $stmt->execute([':inputted_data' => '%'.$search_request.'%']);
 
@@ -44,8 +45,26 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
 
     //establish connection to database to fetch blog posts
     try{
+        #pagination
+        //get total number of blogs
+        $query = "SELECT COUNT(blog_id) FROM blog";
+        $result = $pdo->query($query);
+        $total_blogs = $result->fetchColumn();
+
+        //total to display per page
+        $total_per_page = 8;
+
+        //total pages
+        $total_pages = ceil($total_blogs / $total_per_page);
+
+        //get page number and start point
+        $page_number = $_GET['page'];
+        $start = $_GET['s'];
+
+
+
         //show blogs
-        $q = "SELECT * FROM blog"; //get all blog entries
+        $q = "SELECT * FROM blog ORDER BY blog_id DESC LIMIT $start,$total_per_page"; //get all blog entries, newest to oldest
         $stmt = $pdo->prepare($q);
         $r = $stmt->execute();
 
@@ -53,6 +72,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
         if($r){
             if($stmt->rowCount() >= 1){
                 $stmt->setFetchMode(PDO::FETCH_CLASS,'Blog'); //insert data in to new Blog instance to be used in view
+
+                $pagination = true; //flag variable - show pagination if set to true
+
                 //include view
                 include('../views/blogs.html'); //the fetch while loop is situated inside the view if there are blog entries
             }else{
