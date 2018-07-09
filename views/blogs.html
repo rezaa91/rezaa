@@ -12,7 +12,7 @@
     <!--blog list-->
     <div class="blog-list">
 
-        <form action="" method="POST" class="text-center">
+        <form action="blogs.php" method="POST" class="text-center">
             <input type="text" name="search" id="search" placeholder="search blogs..."
             /><input type="submit" name="submit" id="submit" value="&#x1F50D;" />
         </form>
@@ -45,10 +45,48 @@
         if(isset($error)){
             echo "<p class='error'>$error</p>";
         }
+
+        //pagination
+        //only show pagination if page accessed via get request
+
+        if(isset($pagination)){ //flag var set in post conditional in blogs.php
+            $next_page = $page_number + 1;
+            $prev_page = $page_number - 1;
+            $next_start = $start + $total_per_page;
+            $prev_start = $start - $total_per_page;
+            
+            //only show previous page if page number is 2 or greater
+            echo "<div class='pagination text-center'>";
+            if($page_number > 1){
+                echo "<a href='./blogs.php?page=" . $prev_page ."&s=" . $prev_start ."'>&lt;</a>";
+            }
+
+            //display page numbers if total_pages is greater than 1
+            if($total_pages > 1){
+                for($i = 1; $i<=$total_pages; $i++){
+                    $start = $i * $total_per_page - $total_per_page; //set the s(tart) variable in the url to the first blog to display on that page
+    
+                    echo "<a href='./blogs.php?page=" . $i ."&s=" . $start ."'>$i</a>";
+                }
+            }
+            
+
+            //only show next page if there is one
+            if($page_number < $total_pages){
+                echo "<a href='./blogs.php?page=" . $next_page ."&s=" . $next_start ."'>&gt;</a>";
+            }
+            echo "</div>";
+        }
+
+        
     
         ?>
+
+
 
     </div> <!--end of blog list-->
 
 
 </div>
+
+<script>blogs()</script>
