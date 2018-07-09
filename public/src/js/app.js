@@ -22,3 +22,23 @@ function index(){
     form.addEventListener('submit', checkData); //run checkData function when form submitted
     
 } //end of index page
+
+
+
+
+//blog page specific javascript
+function blogs(){
+
+    const form = document.forms[0]; //get search bar form
+
+    //prevent form firing if no data inserted into search box
+    function checkData(e){
+        const input = document.querySelector('#search');
+        if(!input.value){
+            e.preventDefault();
+        }
+    }
+
+    form.addEventListener('submit', checkData);
+
+}//end of blog page
