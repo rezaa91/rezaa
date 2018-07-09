@@ -191,6 +191,10 @@ h1, h2, h3, h4, h5, h6 {
       color: white;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px; }
+    #index-wrapper .about-wrapper .subscribe .validation-wrapper {
+      margin-top: 1rem;
+      height: 2rem;
+      color: crimson; }
 #index-wrapper .social-media-wrapper {
   border-top: 2px solid grey;
   background-color: black; }
@@ -331,6 +335,8 @@ h1, h2, h3, h4, h5, h6 {
       #index-wrapper .about-wrapper .subscribe input {
         font-size: 2.2rem;
         padding: 1rem; }
+    #index-wrapper .about-wrapper .validation-wrapper {
+      font-size: 2.2rem; }
     #index-wrapper .about-wrapper .subscribe-content {
       width: 90%;
       margin: auto; }
@@ -368,7 +374,8 @@ h1, h2, h3, h4, h5, h6 {
   #blog-wrapper .blog-list .blog-panel {
     display: flex;
     border: 1px solid grey;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    overflow: hidden; }
     #blog-wrapper .blog-list .blog-panel h3 {
       font-family: "Roboto Slab", serif;
       color: red; }
@@ -392,7 +399,6 @@ h1, h2, h3, h4, h5, h6 {
   .blog-list .blog-panel {
     height: 13rem; }
     .blog-list .blog-panel h3 {
-      font-size: 2.2rem;
       margin-bottom: 0.5rem; }
     .blog-list .blog-panel p {
       line-height: 2.2rem; }
@@ -551,5 +557,49 @@ h1, h2, h3, h4, h5, h6 {
     .projects-panel a {
       font-size: 2.2rem;
       padding: 0.75rem; } }
+#blogpost-wrapper {
+  width: 85%;
+  margin: auto; }
+  #blogpost-wrapper .blog-wrapper .header h1 {
+    font-family: "Open Sans", sans-serif;
+    color: black; }
+  #blogpost-wrapper .blog-wrapper .image {
+    border: 2px solid grey;
+    width: 100%; }
+    #blogpost-wrapper .blog-wrapper .image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+  #blogpost-wrapper .blog-wrapper .content {
+    color: grey; }
+
+@media screen and (max-width: 440px) {
+  #blogpost-wrapper {
+    padding-top: 9rem; }
+    #blogpost-wrapper .blog-wrapper .header {
+      margin-bottom: 2rem; }
+      #blogpost-wrapper .blog-wrapper .header h1 {
+        font-size: 3.2rem; }
+    #blogpost-wrapper .blog-wrapper .image {
+      margin-bottom: 2rem;
+      height: 25rem; }
+    #blogpost-wrapper .blog-wrapper .content .intro {
+      margin-bottom: 1rem;
+      font-size: 2.2rem; } }
+@media screen and (min-width: 1280px) {
+  #blogpost-wrapper {
+    padding-top: 17rem; }
+    #blogpost-wrapper .blog-wrapper .header {
+      margin-bottom: 3rem; }
+      #blogpost-wrapper .blog-wrapper .header h1 {
+        font-size: 5.5rem; }
+    #blogpost-wrapper .blog-wrapper .image {
+      margin-bottom: 3rem;
+      height: 40rem; }
+    #blogpost-wrapper .blog-wrapper .content {
+      font-size: 2.6rem; }
+      #blogpost-wrapper .blog-wrapper .content .intro {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem; } }
 
 /*# sourceMappingURL=app.css.map */

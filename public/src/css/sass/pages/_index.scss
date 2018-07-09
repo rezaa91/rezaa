@@ -137,6 +137,11 @@
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
             }
+            .validation-wrapper{
+                margin-top: 1rem;
+                height:2rem;
+                color: $failure;
+            }
         }   
     }//end of about settings
 
@@ -406,6 +411,10 @@
                 }
 
             }
+            .validation-wrapper{
+                font-size: $desktop-small;
+            }
+
             .subscribe-content{
                 width: 90%;
                 margin:auto;
