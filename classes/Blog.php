@@ -44,9 +44,8 @@ class Blog{
     //other methods
     //return preview of blog
     function blog_preview(){
-        $body = $this->body;
-        $body = htmlentities($body);
-        $body = substr($body, 0, 70);
+        $body = $this->body; //get the blog content
+        $body = substr($body, 0, 70); //only allow set amount of characters before returning
         return $body . '...';
     }
 
