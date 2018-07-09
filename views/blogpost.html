@@ -1,0 +1,21 @@
+<div id="blogpost-wrapper">
+
+
+    <div class="blog-wrapper">
+
+        <div class="header">
+            <h1><?php echo strtoupper($blog->title); ?></h1>
+        </div><!--end of header-->
+
+        <div class="image">
+            <img src='./img/blogs/<?php echo $blog->image_path ?>' />
+        </div>
+
+        <div class="content text-center">
+            <?php echo $blog->body; ?>
+        </div>
+
+    </div><!--end of blog-wrapper-->
+
+
+</div><!--end of blogpost-wrapper-->
