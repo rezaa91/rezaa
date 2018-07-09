@@ -70,6 +70,11 @@
             background-color: lightgray;
         }
     }
+    .pagination{
+        a{
+            color: $primary-color;
+        }
+    }
 
 }
 
@@ -109,6 +114,11 @@
         .flex-2{
             padding:0.5rem;
             flex: 3;
+        }
+    }
+    .pagination{
+        a{
+            padding:0.5rem;
         }
     }
 
@@ -173,6 +183,12 @@
             .flex-2{
                 padding: 2rem;
                 flex: 5;
+            }
+        }
+        .pagination{
+            font-size: $desktop-regular;
+            a{
+                padding: 1rem;
             }
         }
     }
