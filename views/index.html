@@ -92,10 +92,11 @@
                 <p>for regular newsletters &amp; updates</p>
                 
                 <!--newsletter subscription form-->
-                <form action="" method="POST">
+                <form action="index.php" method="POST">
                     <input type="text" name="email" id="email" placeholder="email..."
                     /><input type="submit" name="submit" id="submit" value="&#10003;"/>
                 </form><!--end of newsletter subscription form-->
+                <div class="validation-wrapper"></div>
             </div><!--end of subscribe content-->
         </div><!--end of newsletter subscription article-->
         
@@ -117,4 +118,5 @@
 
 </div>
 
-
+<!--run page specific javascript-->
+<script>index();</script>
