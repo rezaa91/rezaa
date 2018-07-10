@@ -19,6 +19,9 @@ function class_loader($class){
 
 spl_autoload_register(class_loader); //autoload classes
 
+//get functions
+require('../functions/display_error_page.php'); //function used to display error page with relevant messages to user
+
 session_start(); //start the session
 
 
