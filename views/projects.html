@@ -12,28 +12,32 @@
     <!--projects container-->
     <div class="projects-container text-center">
 
-        <div class="projects-panel">
-            <h3>FIRSTEP</h3>
-            <a href="./projects/firstep.php">VIEW</a>
-        </div><!--end of projects panel-->
+        <?php
+        
+        if(isset($projects) && $projects){
 
+            while($project = $result->fetch()){
 
-        <div class="projects-panel">
-            <h3>AX PHOTOGRAPHY</h3>
-            <a href="./projects/photography.php">VIEW</a>
-        </div><!--end of projects panel-->
+                $style = "background-image:url('./img/projects/$project->image_path');";
 
+                //display all projects in database
+                $title = strtoupper($project->title);
+                echo "
+                <div class='projects-panel' style=$style>
+                    <h3>$title</h3>
+                    <a href='./project.php?id=" . $project->project_id . "'>VIEW</a>
+                </div>";
+            }
 
-        <div class="projects-panel">
-            <h3>CALCULATOR</h3>
-            <a href="./projects/calculator.php">VIEW</a>
-        </div><!--end of projects panel-->
+        }else{
+            if(isset($error)){
+                echo '<div class="error">' . $error . '</div>';
+            }
+        }
+        
+        ?>
 
-
-        <div class="projects-panel">
-            <h3>BREW APP</h3>
-            <a href="./projects/brew.php">VIEW</a>
-        </div><!--end of projects panel-->        
+               
 
 
     </div><!--end of projects container-->
