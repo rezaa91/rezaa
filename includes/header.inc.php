@@ -12,9 +12,9 @@
         <title><?php echo $page_title; ?></title>
 
         <!--stylesheet-->
-        <link rel="stylesheet" href="./src/css/app.css" />
+        <link rel="stylesheet" href="/rezaa/public/src/css/app.css" />
         <!--javascript file-->
-        <script src="./src/js/app.js"></script>
+        <script src="/rezaa/public/src/js/app.js"></script>
 
         <!--fonts-->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
