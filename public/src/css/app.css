@@ -105,6 +105,28 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2.2rem; }
         .nav-wrapper .nav-links a:hover {
           color: grey; } }
+#error_page_wrapper {
+  width: 85%;
+  margin: auto; }
+  #error_page_wrapper header h1 {
+    color: crimson; }
+  #error_page_wrapper .error-content {
+    color: grey; }
+
+@media screen and (max-width: 440px) {
+  #error_page_wrapper {
+    padding-top: 8rem; }
+    #error_page_wrapper header h1 {
+      font-size: 3.2rem; }
+    #error_page_wrapper .error-content {
+      font-size: 2.2rem; } }
+@media screen and (min-width: 1280px) {
+  #error_page_wrapper {
+    padding-top: 11rem; }
+    #error_page_wrapper header h1 {
+      font-size: 5.5rem; }
+    #error_page_wrapper .error-content {
+      font-size: 3.2rem; } }
 #index-wrapper header {
   background-image: url("../../img/homepage/home.jpg");
   background-size: cover;
@@ -519,7 +541,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap; }
 #projects-wrapper .projects-panel {
   border: 1px solid grey;
-  background-image: url("../../img/projects/sample.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
   #projects-wrapper .projects-panel h3 {

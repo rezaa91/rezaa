@@ -1,0 +1,53 @@
+#error_page_wrapper{
+    width: 85%;
+    margin: auto;
+    header{
+        h1{
+            color: $failure;
+        }
+    }
+    
+    .error-content{
+        color: $grey;
+    }
+}
+
+
+
+//MEDIA QUERIES
+//mobile
+@media screen and(max-width: $mobile){
+
+    #error_page_wrapper{
+        padding-top: 8rem;
+        header{
+            h1{
+                font-size: $header;
+            }
+        }
+        .error-content{
+            font-size: $lead;
+        }
+    }
+
+}//end of mobile
+
+
+
+//desktop
+@media screen and(min-width: $desktop){
+
+    #error_page_wrapper{
+        padding-top: 11rem;
+        header{
+            h1{
+                font-size: $desktop-header;
+            }
+        }
+        .error-content{
+            font-size: $desktop-lead;
+        }
+
+    }
+
+}//end of desktop
