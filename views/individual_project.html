@@ -1,0 +1,26 @@
+<div id="project-wrapper">
+
+    <div class="project-header">
+        <h1><?php echo strtoupper($project->title) ?></h1>
+    </div>
+
+    <div class="image">
+        <img src="/rezaa/public/img/projects/<?php echo $project->image_path ?>" />
+    </div>
+
+    <div class="project-content">
+        <h3>Aims</h3>
+        <p><?php echo $project->aims; ?></p>
+
+        <h3>Process</h3>
+        <p><?php echo $project->process; ?></p>
+
+        <h3>Outcome</h3>
+        <p><?php echo $project->outcome; ?></p>
+    </div>
+
+    <div class="project-btn text-center">
+        <a href="<?php echo $project->link; ?>" target="_blank">VIEW</a>
+    </div>
+
+</div>
