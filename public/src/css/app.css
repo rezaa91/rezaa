@@ -610,5 +610,70 @@ h1, h2, h3, h4, h5, h6 {
       #blogpost-wrapper .blog-wrapper .content .intro {
         font-size: 3.2rem;
         margin-bottom: 1.5rem; } }
+#project-wrapper {
+  width: 85%;
+  margin: auto; }
+  #project-wrapper .project-header h1 {
+    font-family: "Open Sans", sans-serif;
+    color: black; }
+  #project-wrapper .image {
+    width: 100%;
+    border: 2px solid grey; }
+    #project-wrapper .image img {
+      width: 100%;
+      height: 100%; }
+  #project-wrapper .project-content h3 {
+    font-family: "Open Sans", sans-serif;
+    color: red; }
+  #project-wrapper .project-content p {
+    color: grey; }
+  #project-wrapper .project-btn {
+    margin-top: 4rem;
+    background-color: white;
+    border: 1px solid red;
+    margin-bottom: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 1px 3px 12px grey; }
+    #project-wrapper .project-btn a {
+      font-family: "Open Sans", sans-serif;
+      color: red;
+      font-weight: 900;
+      display: block; }
+    #project-wrapper .project-btn:hover {
+      box-shadow: 0px 0px 4px grey; }
+
+@media screen and (max-width: 440px) {
+  #project-wrapper {
+    padding-top: 9rem; }
+    #project-wrapper h1 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem; }
+    #project-wrapper .image {
+      height: 25rem;
+      margin-bottom: 3rem; }
+    #project-wrapper .project-content h3 {
+      font-size: 2.2rem; }
+    #project-wrapper .project-content p {
+      margin-bottom: 2rem; }
+    #project-wrapper .project-btn a {
+      padding: 1rem;
+      font-size: 2.2rem; } }
+@media screen and (min-width: 1280px) {
+  #project-wrapper {
+    padding-top: 12rem; }
+    #project-wrapper h1 {
+      font-size: 5.5rem;
+      margin-bottom: 2rem; }
+    #project-wrapper .image {
+      height: 50rem;
+      margin-bottom: 3rem; }
+    #project-wrapper .project-content h3 {
+      font-size: 3.2rem; }
+    #project-wrapper .project-content p {
+      font-size: 2.6rem;
+      margin-bottom: 4rem; }
+    #project-wrapper .project-btn a {
+      padding: 3rem;
+      font-size: 3.2rem; } }
 
 /*# sourceMappingURL=app.css.map */
