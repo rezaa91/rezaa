@@ -1,11 +1,11 @@
 <?php
-#This script displays the firstep project view
+#This script displays the brew-app project view
 
 require("../../core/init.php");
 
-$page_title = "Firstep";
+$page_title = "Brew Rota";
 include('../../includes/header.inc.php');
-include('../../views/projects/firstep.html');
+include('../../views/projects/brew.html');
 include('../../includes/footer.inc.php');
 
 ?>

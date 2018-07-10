@@ -1,11 +1,11 @@
 <?php
-#This script displays the firstep project view
+#This script displays the ax photography project view
 
 require("../../core/init.php");
 
-$page_title = "Firstep";
+$page_title = "AX Photography";
 include('../../includes/header.inc.php');
-include('../../views/projects/firstep.html');
+include('../../views/projects/ax.html');
 include('../../includes/footer.inc.php');
 
 ?>

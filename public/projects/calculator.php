@@ -1,11 +1,11 @@
 <?php
-#This script displays the firstep project view
+#This script displays the calculator project view
 
 require("../../core/init.php");
 
-$page_title = "Firstep";
+$page_title = "Calculator";
 include('../../includes/header.inc.php');
-include('../../views/projects/firstep.html');
+include('../../views/projects/calc.html');
 include('../../includes/footer.inc.php');
 
 ?>
