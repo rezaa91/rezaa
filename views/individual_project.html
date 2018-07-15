@@ -1,5 +1,13 @@
 <div id="project-wrapper">
 
+
+    <?php
+    if($logged_in){
+        echo "<a href='edit.php?id=$project->project_id&type=project'>Edit Project</a>";
+        echo "<a href='delete.php?id=$project->project_id&type=project'>Delete Project</a>";
+    }
+    ?>
+
     <div class="project-header">
         <h1><?php echo strtoupper($project->title) ?></h1>
     </div>
