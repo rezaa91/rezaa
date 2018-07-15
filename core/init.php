@@ -11,18 +11,38 @@
 
 
 
-
 //class loading function
 function class_loader($class){
-    require('../classes/'.$class.'.php');
+    //require class if one directory deep
+    if(file_exists('../classes/'.$class.'.php')){
+        require('../classes/'.$class.'.php');
+    }
 }
 
 spl_autoload_register(class_loader); //autoload classes
 
 //get functions
-require('../functions/display_error_page.php'); //function used to display error page with relevant messages to user
+$function_list = ['display_error_page'];
+
+for($i = 0; $i<=function_list; $i++){
+    //require functions if one directory deep
+    if(file_exists('../functions/'.$function_list[$i].'.php')){
+        require('../functions/'.$function_list[$i].'.php');
+    }
+}
+
 
 session_start(); //start the session
+
+$logged_in = null;
+
+//check for user in the session
+if(isset($_SESSION['user']) && (md5($_SERVER['HTTP_USER_AGENT']) == $_SESSION['agent']) ){
+    $logged_in = true;
+}else{
+    $logged_in = false;
+}
+
 
 
 //uncomment the below code out when pushed to server
