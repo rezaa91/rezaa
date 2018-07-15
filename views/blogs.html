@@ -16,17 +16,28 @@
             <input type="text" name="search" id="search" placeholder="search blogs..."
             /><input type="submit" name="submit" id="submit" value="&#x1F50D;" />
         </form>
+        <?php
+        
+        if($logged_in){
+            echo "<a href='create.php?type=blog'>Create Blog</a>";
+        }
+
+        ?>
 
         <!--php data from blogs.php added in below-->
         <?php
+
+        echo "<form action='delete.php?type=blog' method='POST'>";
         
         while($blog = $stmt->fetch()){
             $title = strtoupper($blog->get_title());
             $preview = $blog->blog_preview();
             $image_path = './img/blogs/' .$blog->get_image_path(); 
             $created_at = $blog->get_created_at();
+            $input = $logged_in?"<input type='checkbox' name='check' value='".$blog->get_blog_id()."'/>" : "";
 
             echo "
+            $input
             <a href='blogpost.php?id=".$blog->get_blog_id()."'>
                 <div class='blog-panel'>
                     <div class='flex-1'>
@@ -41,6 +52,9 @@
             
             ";
         }
+
+        echo "<input type='submit' name='delete' value='Delete' />
+        </form>";
 
         if(isset($error)){
             echo "<p class='error'>$error</p>";
