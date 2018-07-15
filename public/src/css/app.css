@@ -696,5 +696,35 @@ h1, h2, h3, h4, h5, h6 {
     #project-wrapper .project-btn a {
       padding: 3rem;
       font-size: 3.2rem; } }
+#login-wrapper {
+  padding-top: 35vh;
+  width: 85%;
+  margin: auto; }
+  #login-wrapper .login-form {
+    border: 2px solid grey; }
+  #login-wrapper .form-group {
+    display: flex; }
+    #login-wrapper .form-group input {
+      flex: 1;
+      border-radius: 5px; }
+  #login-wrapper input[type="submit"] {
+    background-color: red;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900; }
+
+@media screen and (max-width: 440px) {
+  #login-wrapper input {
+    padding: 0.5rem; }
+  #login-wrapper input[type="submit"] {
+    font-size: 2.2rem; } }
+@media screen and (min-width: 1280px) {
+  #login-wrapper input {
+    padding: 1rem;
+    font-size: 2.6rem; }
+  #login-wrapper input[type="submit"] {
+    font-size: 3.2rem; }
+  #login-wrapper .form-group {
+    margin: 2rem 1rem; } }
 
 /*# sourceMappingURL=app.css.map */
