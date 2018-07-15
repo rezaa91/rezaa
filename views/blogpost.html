@@ -3,6 +3,13 @@
 
     <div class="blog-wrapper">
 
+        <?php
+        if($logged_in){
+            echo "<a href='edit.php?id=$blog->blog_id&type=blog'>Edit Blog</a>";
+            echo "<a href='delete.php?id=$blog->blog_id&type=blog'>Delete Blog</a>";
+        }
+        ?>
+
         <div class="header">
             <h1><?php echo strtoupper($blog->title); ?></h1>
         </div><!--end of header-->
