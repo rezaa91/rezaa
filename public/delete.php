@@ -1,0 +1,6 @@
+<?php
+
+#CRUD - DELETE BLOG/PROJECT
+
+
+?>
