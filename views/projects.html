@@ -9,37 +9,52 @@
     </header><!--end of header-->
 
 
-    <!--projects container-->
-    <div class="projects-container text-center">
+
+
+    <div id="projects">
+        <?php
+        if($logged_in){
+            echo '<a href="create.php?type=project">Create Project</a>';
+            echo "<form action='delete.php?type=project' method='POST'>";    
+
+        }
+        ?>
+        
+        <!--projects container-->
+        <div class="projects-container text-center">
+
+            <?php
+            
+            if(isset($projects) && $projects){
+                while($project = $result->fetch()){
+
+                    $style = "background-image:url('./img/projects/$project->image_path');";
+                    $input = $logged_in?"<input type='checkbox' name='check' value='$project->project_id'/>" : "";
+
+                    //display all projects in database
+                    $title = strtoupper($project->title);
+                    echo "
+                    $input
+                    <div class='projects-panel' style=$style>
+                        <h3>$title</h3>
+                        <a href='./project.php?id=" . $project->project_id . "'>VIEW</a>
+                    </div>";
+                }
+            }else{
+                if(isset($error)){
+                    echo '<div class="error">' . $error . '</div>';
+                }
+            }
+            
+            ?>
+        </div><!--end of projects container-->
 
         <?php
-        
-        if(isset($projects) && $projects){
-
-            while($project = $result->fetch()){
-
-                $style = "background-image:url('./img/projects/$project->image_path');";
-
-                //display all projects in database
-                $title = strtoupper($project->title);
-                echo "
-                <div class='projects-panel' style=$style>
-                    <h3>$title</h3>
-                    <a href='./project.php?id=" . $project->project_id . "'>VIEW</a>
-                </div>";
-            }
-
-        }else{
-            if(isset($error)){
-                echo '<div class="error">' . $error . '</div>';
-            }
+        if($logged_in){
+            echo "<input type='submit' name='delete' value='Delete' /></form>";
         }
-        
         ?>
+    </div><!--end of projects-->
 
-               
-
-
-    </div><!--end of projects container-->
 
 </div>
