@@ -10,6 +10,14 @@
                 <li><a href="/rezaa/public/projects.php">PROJECTS</a></li>
                 <li><a href="/rezaa/public/blogs.php?page=1&s=0">BLOGS</a></li>
                 <li><a href="/rezaa/public/tutorials.php">TUTORIALS</a></li>
+                <?php
+                    if(isset($logged_in) && $logged_in ){
+                        echo '<li><a href="#">' . $_SESSION['user']->get_username() . '</a></li>';
+                        echo '<ul>
+                            <li><a href="/rezaa/public/logout.php">Logout</a></li>
+                            </ul>';
+                    }
+                ?>
             </div>
         </div>
         
@@ -30,7 +38,11 @@
                 <li><a href="/rezaa/public/projects.php">PROJECTS</a></li>
                 <li><a href="/rezaa/public/blogs.php?page=1&s=0">BLOGS</a></li>
                 <li><a href="/rezaa/public/tutorials.php">TUTORIALS</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <?php
+                    if($logged_in){
+                        //copy and paste drop down menu from desktop nav bar
+                    }
+                ?>
             </ul>
         </li>
     </ul>
