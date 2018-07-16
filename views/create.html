@@ -1,0 +1,82 @@
+<div class="crud-wrapper">
+
+    <header>
+        <h1><?php echo 'Create ' . ucfirst($type); ?></h1>
+    </header>
+
+
+    <div class='form-wrapper'>
+
+        <form action="create.php?<?php echo 'type='.$type; ?>" method="POST">
+            <?php
+            
+            if($type == 'blog'){
+
+                $html = "
+                    <div class='form-group'>
+                        <label for='title'>Title</label>
+                        <input type='text' name='title' />
+                    </div>
+
+                    <div class='form-group'>
+                        <label for='body'>Body</label>
+                        <textarea name='body'></textarea>
+                    </div>
+
+                    <div class='form-group'>
+                        <label for='file'>Image</label>
+                        <input type='file' name='file' />
+                    </div>
+                ";
+
+                echo $html;
+
+            }elseif($type == 'project'){
+
+                $html = "
+                <div class='form-group'>
+                    <label for='title'>Title</label>
+                    <input type='text' name='title' />
+                </div>
+
+                <div class='form-group'>
+                    <label for='aims'>Aims</label>
+                    <textarea name='aims'></textarea>
+                </div>
+
+                <div class='form-group'>
+                    <label for='process'>Process</label>
+                    <textarea name='process'></textarea>
+                </div>
+
+                <div class='form-group'>
+                    <label for='outcome'>Outcome</label>
+                    <textarea name='outcome'></textarea>
+                </div>
+
+                <div class='form-group'>
+                    <label for='body'>Link</label>
+                    <input type='text' name='link' />
+                </div>
+
+                <div class='form-group'>
+                    <label for='file'>Image</label>
+                    <input type='file' name='file' />
+                </div>
+
+                ";
+
+                echo $html;
+
+            }
+
+            ?>
+            <div class='form-group'>
+                <input type='submit' name='submit' value='Create Post' />
+            </div>
+        </form>
+
+    </div>
+
+
+</div>
