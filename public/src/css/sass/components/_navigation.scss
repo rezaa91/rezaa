@@ -45,6 +45,14 @@
             margin: 0.6rem 0;
         }
     }
+    .admin-dropdown{
+        .admin-dropdown-menu{
+            position:absolute;
+            a{
+                display: block;
+            }
+        }
+    }
 
 }
 
@@ -69,6 +77,17 @@
         &:hover{
             .dropdown{
                 display: block;
+            }
+        }
+        .admin-dropdown{
+            .admin-dropdown-menu{
+                background-color: $grey;
+                width: 100%;
+                a{
+                    &:hover{
+                        background-color: $black;
+                    }
+                }
             }
         }
     }
@@ -118,6 +137,22 @@
 
                 &:hover{
                     color: $grey;
+                }
+            }
+        }
+
+        .admin-dropdown{
+            &:hover{
+                .admin-dropdown-menu{
+                    display: block;
+                }
+            }
+            .admin-dropdown-menu{
+                background-color: $white;
+                border: 1px solid $grey;
+                display: none;
+                a{
+                    padding: 5px;
                 }
             }
         }

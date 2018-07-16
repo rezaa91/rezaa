@@ -1,0 +1,58 @@
+//global settings
+.form-group{
+    display: flex;
+    margin: 1rem;
+    
+    input[type="submit"]{
+        width: 100%;
+        background-color: $primary-color;
+        color: $white;
+        font-weight: 900;
+    }
+}
+
+
+//MEDIA QUERIES
+//mobile
+@media screen and(max-width: $mobile){
+
+    .form-group{
+        label,input, textarea{
+            font-size: $small;
+            flex: 3;
+        }
+
+        label{
+            flex: 1;
+        }
+
+        input[type="submit"]{
+            font-size: $regular;
+            padding: 1rem;
+        }
+    }
+
+}//end of mobile
+
+
+//desktop
+@media screen and(min-width: $desktop){
+
+    .form-group{
+        label,input, textarea{
+            font-size: $desktop-small;
+            flex: 5;
+        }
+        label{
+            flex: 2;
+        }
+        input[type="submit"]{
+            font-size: $desktop-regular;
+            padding: 2rem;
+        }
+        input[type="file"]{
+            flex: 1;
+        }
+    }
+
+}//end of desktop

@@ -16,8 +16,12 @@
         }
     }
 
-    .projects-container{
+    .projects{
         width: 85%;
+        margin: 2rem auto;
+    }
+
+    .projects-container{
         margin: 2rem auto;
         display: flex;
         flex-wrap: wrap;
@@ -27,6 +31,7 @@
         border: 1px solid $grey;
         background-size: cover;
         background-repeat: no-repeat;
+        position:relative;
 
         h3{
             font-family: $sans-serif;
@@ -35,16 +40,26 @@
         }
 
         a{
-            display: block;
+            position: absolute;
+            left: 10%;
+            width: 80%;
             border-radius: 1.6rem;
             border: 1px solid $grey;
             background-color: $primary-color;
             color: $white;
+            
 
             &:hover{
                 background-color: $hover;
             }
 
+        }
+
+        input[type="checkbox"]{
+            position: absolute;
+            top: 1rem;
+            left:1rem; 
+            transform: scale(1.2); 
         }
 
     }
@@ -78,6 +93,7 @@
         a{
             padding: 0.2rem;
             font-size: $small;
+            bottom: 1rem;
         }
     }
 
@@ -113,6 +129,7 @@
         a{
             font-size: $desktop-small;
             padding: 0.75rem;
+            bottom: 2rem;
         }
     }
 

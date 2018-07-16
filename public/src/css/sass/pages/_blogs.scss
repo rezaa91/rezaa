@@ -33,7 +33,7 @@
             border-bottom-left-radius: 0.7rem;
         }
 
-        input[type="submit"]{
+        #submit{
             border-top-right-radius: 0.7rem;
             border-bottom-right-radius: 0.7rem;
             background-color: $primary-color;    
@@ -74,6 +74,10 @@
         a{
             color: $primary-color;
         }
+    }
+
+    input[type="checkbox"]{
+        margin-top: 2rem;
     }
 
 }

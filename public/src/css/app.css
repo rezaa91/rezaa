@@ -11,6 +11,7 @@ body {
   font-family: "Roboto Slab", serif; }
 
 a {
+  cursor: pointer;
   color: black;
   text-decoration: none; }
 
@@ -18,8 +19,8 @@ li {
   list-style: none; }
 
 input[type="submit"] {
-  border: 1px solid grey;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 1.6rem; }
 
 input {
   border: 1px solid grey;
@@ -28,6 +29,10 @@ input {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
+
+textarea {
+  resize: none;
+  height: 20rem; }
 
 .hide {
   display: none; }
@@ -71,6 +76,10 @@ h1, h2, h3, h4, h5, h6 {
       height: 0.3rem;
       background-color: white;
       margin: 0.6rem 0; }
+  .nav-wrapper .admin-dropdown .admin-dropdown-menu {
+    position: absolute; }
+    .nav-wrapper .admin-dropdown .admin-dropdown-menu a {
+      display: block; }
 
 @media screen and (max-width: 440px) {
   .nav-wrapper {
@@ -78,7 +87,12 @@ h1, h2, h3, h4, h5, h6 {
     .nav-wrapper .desktop {
       display: none; }
     .nav-wrapper:hover .dropdown {
-      display: block; } }
+      display: block; }
+    .nav-wrapper .admin-dropdown .admin-dropdown-menu {
+      background-color: grey;
+      width: 100%; }
+      .nav-wrapper .admin-dropdown .admin-dropdown-menu a:hover {
+        background-color: black; } }
 @media screen and (min-width: 1280px) {
   .nav-wrapper {
     background-color: white;
@@ -104,7 +118,90 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 2rem;
         font-size: 2.2rem; }
         .nav-wrapper .nav-links a:hover {
-          color: grey; } }
+          color: grey; }
+    .nav-wrapper .admin-dropdown:hover .admin-dropdown-menu {
+      display: block; }
+    .nav-wrapper .admin-dropdown .admin-dropdown-menu {
+      background-color: white;
+      border: 1px solid grey;
+      display: none; }
+      .nav-wrapper .admin-dropdown .admin-dropdown-menu a {
+        padding: 5px; } }
+.btn {
+  text-align: center;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white; }
+
+.btn-delete {
+  background-color: crimson; }
+
+.btn-create {
+  background-color: green; }
+
+.btn-edit {
+  background-color: grey; }
+
+@media screen and (min-width: 1280px) {
+  .btn {
+    width: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; } }
+.form-group {
+  display: flex;
+  margin: 1rem; }
+  .form-group input[type="submit"] {
+    width: 100%;
+    background-color: red;
+    color: white;
+    font-weight: 900; }
+
+@media screen and (max-width: 440px) {
+  .form-group label, .form-group input, .form-group textarea {
+    font-size: 1.4rem;
+    flex: 3; }
+  .form-group label {
+    flex: 1; }
+  .form-group input[type="submit"] {
+    font-size: 1.6rem;
+    padding: 1rem; } }
+@media screen and (min-width: 1280px) {
+  .form-group label, .form-group input, .form-group textarea {
+    font-size: 2.2rem;
+    flex: 5; }
+  .form-group label {
+    flex: 2; }
+  .form-group input[type="submit"] {
+    font-size: 2.6rem;
+    padding: 2rem; }
+  .form-group input[type="file"] {
+    flex: 1; } }
+.crud-wrapper {
+  width: 85%;
+  margin: auto;
+  margin-bottom: 3rem; }
+  .crud-wrapper header {
+    margin-bottom: 2rem; }
+  .crud-wrapper input[type="submit"] {
+    margin-top: 2rem; }
+  .crud-wrapper .form-wrapper h2 {
+    margin-bottom: 1rem; }
+
+@media screen and (max-width: 440px) {
+  .crud-wrapper {
+    padding-top: 9rem; }
+    .crud-wrapper header h1 {
+      font-size: 2.6rem; }
+    .crud-wrapper .form-wrapper h2 {
+      font-size: 2.2rem; } }
+@media screen and (min-width: 1280px) {
+  .crud-wrapper {
+    padding-top: 12rem; }
+    .crud-wrapper header h1 {
+      font-size: 4.2rem; }
+    .crud-wrapper .form-wrapper h2 {
+      font-size: 3.2rem; } }
 #error_page_wrapper {
   width: 85%;
   margin: auto; }
@@ -389,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
   #blog-wrapper .blog-list input[type="text"] {
     border-top-left-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem; }
-  #blog-wrapper .blog-list input[type="submit"] {
+  #blog-wrapper .blog-list #submit {
     border-top-right-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
     background-color: red; }
@@ -413,6 +510,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: lightgray; }
 #blog-wrapper .pagination a {
   color: red; }
+#blog-wrapper input[type="checkbox"] {
+  margin-top: 2rem; }
 
 @media screen and (max-width: 440px) {
   #blog-wrapper header h1 {
@@ -534,27 +633,37 @@ h1, h2, h3, h4, h5, h6 {
     #projects-wrapper header .header-content h1 {
       font-family: "Open Sans", sans-serif;
       font-weight: 900; }
-#projects-wrapper .projects-container {
+#projects-wrapper .projects {
   width: 85%;
+  margin: 2rem auto; }
+#projects-wrapper .projects-container {
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap; }
 #projects-wrapper .projects-panel {
   border: 1px solid grey;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative; }
   #projects-wrapper .projects-panel h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: 900;
     color: white; }
   #projects-wrapper .projects-panel a {
-    display: block;
+    position: absolute;
+    left: 10%;
+    width: 80%;
     border-radius: 1.6rem;
     border: 1px solid grey;
     background-color: red;
     color: white; }
     #projects-wrapper .projects-panel a:hover {
       background-color: pink; }
+  #projects-wrapper .projects-panel input[type="checkbox"] {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: scale(1.2); }
 
 @media screen and (max-width: 440px) {
   header .header-content h1 {
@@ -569,7 +678,8 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 0.5rem; }
     .projects-panel a {
       padding: 0.2rem;
-      font-size: 1.4rem; } }
+      font-size: 1.4rem;
+      bottom: 1rem; } }
 @media screen and (min-width: 1280px) {
   header .header-content h1 {
     font-size: 5.5rem;
@@ -586,7 +696,8 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 2rem; }
     .projects-panel a {
       font-size: 2.2rem;
-      padding: 0.75rem; } }
+      padding: 0.75rem;
+      bottom: 2rem; } }
 #blogpost-wrapper {
   width: 85%;
   margin: auto; }

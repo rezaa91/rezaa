@@ -1,0 +1,63 @@
+//global settings
+.crud-wrapper{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    header{
+        margin-bottom: 2rem;
+    }
+
+    input[type="submit"]{
+        margin-top: 2rem;
+    }
+
+    .form-wrapper{
+        h2{
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+//MEDIA QUERIES
+//mobile
+@media screen and(max-width: $mobile){
+
+    .crud-wrapper{
+        padding-top: 9rem;
+
+        header{
+            h1{
+                font-size: $sub-header;
+            }
+        }
+        .form-wrapper{
+            h2{
+                font-size: $lead;
+            }
+        }
+    }
+
+}//end of mobile
+
+
+//desktop
+@media screen and(min-width: $desktop){
+    .crud-wrapper{
+        padding-top: 12rem;
+
+        header{
+            h1{
+                font-size: $desktop-sub-header;
+            }
+        }
+        .form-wrapper{
+            h2{
+                font-size: $desktop-lead;
+            }
+        }
+    }
+
+}//end of desktop
