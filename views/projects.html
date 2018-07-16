@@ -11,12 +11,11 @@
 
 
 
-    <div id="projects">
+    <div class="projects">
         <?php
         if($logged_in){
-            echo '<a href="create.php?type=project">Create Project</a>';
-            echo "<form action='delete.php?type=project' method='POST'>";    
-
+            echo '<a href="create.php?type=project" class="btn btn-create">Create Project</a>';
+            echo "<form action='delete.php?type=project' method='POST'>";
         }
         ?>
         
@@ -34,8 +33,8 @@
                     //display all projects in database
                     $title = strtoupper($project->title);
                     echo "
-                    $input
                     <div class='projects-panel' style=$style>
+                        $input
                         <h3>$title</h3>
                         <a href='./project.php?id=" . $project->project_id . "'>VIEW</a>
                     </div>";
@@ -51,7 +50,7 @@
 
         <?php
         if($logged_in){
-            echo "<input type='submit' name='delete' value='Delete' /></form>";
+            echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' /></form>";
         }
         ?>
     </div><!--end of projects-->
