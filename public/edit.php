@@ -65,7 +65,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         }
 
     }else{
-        header('location: logout.php');
+        header('location: index.php');
     }
 
     include('../includes/footer.inc.php');
