@@ -3,8 +3,8 @@
 
     <?php
     if($logged_in){
-        echo "<a href='edit.php?id=$project->project_id&type=project'>Edit Project</a>";
-        echo "<a href='delete.php?id=$project->project_id&type=project'>Delete Project</a>";
+        echo "<a href='edit.php?id=$project->project_id&type=project' class='btn btn-edit'>Edit Project</a>";
+        echo "<a href='delete.php?id=$project->project_id&type=project' class='btn btn-delete'>Delete Project</a>";
     }
     ?>
 
