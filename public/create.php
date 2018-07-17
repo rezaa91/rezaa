@@ -75,7 +75,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
             $link = $validate->isStr($_POST['link']);
 
             if($title && $aims && $process && $outcome && $link){
-                $query = "INSERT INTO projects(image_path, title, aims, process, outcome, link, upload_date) VALUES('sample.jpg', :title, :aims, :process, :outcome, :link, NOW())";
+                $query = "INSERT INTO project(image_path, title, aims, process, outcome, link, upload_date) VALUES('sample.jpg', :title, :aims, :process, :outcome, :link, NOW())";
                 $stmt = $pdo->prepare($query);
                 $result = $stmt->execute([ ':title' => $_POST['title'], ':aims' => $_POST['aims'], ':process' => $_POST['process'], ':outcome' => $_POST['outcome'], ':link' => $_POST['link'] ]);
 
