@@ -43,6 +43,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
 
 }else if($_SERVER['REQUEST_METHOD'] == "GET"){ //if page accessed via GET response
 
+    //if page accessed with url variables to be used in pagination, redirect user to page with url variables inserted
+    if(!$_GET['page']){
+        header('location: blogs.php?page=1&s=0');
+        exit();
+    }
+
     //establish connection to database to fetch blog posts
     try{
         #pagination
@@ -68,18 +74,22 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
         $stmt = $pdo->prepare($q);
         $r = $stmt->execute();
 
-        //if query successful, display view to user with blog post list
+        //if query successful, fetch data to display in view
         if($r){
-            if($stmt->rowCount() >= 1){
-                $stmt->setFetchMode(PDO::FETCH_CLASS,'Blog'); //insert data in to new Blog instance to be used in view
+            if($stmt->rowCount() > 0){ //if 1 or more records returned - fetch data to display in view
 
+                $stmt->setFetchMode(PDO::FETCH_CLASS,'Blog'); //insert data in to new Blog instance to be used in view
+                $blogs = true; //flag variable to be used in view
                 $pagination = true; //flag variable - show pagination if set to true
 
-                //include view
-                include('../views/blogs.html'); //the fetch while loop is situated inside the view if there are blog entries
-            }else{
-                throw new Exception('There are currently no blogs to display!');
+
+            }else{ //inform user if no blogs yet to display
+
+                $blogs = false; //flag variable to be used in view
+                throw new Exception('There are currently no blogs to display');
+
             }
+            
 
         }else{
             throw new Exception('Sorry, something went wrong. Please try again!');
@@ -92,7 +102,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
     }
 }
 
-
+//include view
+include('../views/blogs.html'); //the fetch while loop is situated inside the view if there are blog entries
 include('../includes/footer.inc.php');
 
 
