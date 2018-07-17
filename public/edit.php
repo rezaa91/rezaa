@@ -49,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }else if($type == 'project'){
         try{
 
-            $query = "SELECT * FROM projects WHERE project_id = :id LIMIT 1";
+            $query = "SELECT * FROM project WHERE project_id = :id LIMIT 1";
             $stmt = $pdo->prepare($query);
             $result = $stmt->execute([':id' => $id]);
 
