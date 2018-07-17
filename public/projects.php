@@ -8,7 +8,7 @@ include("../includes/header.inc.php");
 try{
 
     //get all projects from database
-    $query = "SELECT * FROM projects";
+    $query = "SELECT * FROM project";
     $result = $pdo->query($query);
 
     if($result && $result->rowCount() > 0){
