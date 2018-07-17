@@ -6,7 +6,7 @@
         <?php
         if($logged_in){
             echo "<a href='edit.php?id=$blog->blog_id&type=blog' class='btn btn-edit'>Edit Blog</a>";
-            echo "<a href='delete.php?id=$blog->blog_id&type=blog' class='btn btn-delete'>Delete Blog</a>";
+            echo "<form action='delete.php?id=$blog->blog_id&type=blog' method='POST'><input type='submit' name='submit' value='Delete Blog' class='btn btn-delete' /></form>";
         }
         ?>
 

@@ -4,7 +4,7 @@
     <?php
     if($logged_in){
         echo "<a href='edit.php?id=$project->project_id&type=project' class='btn btn-edit'>Edit Project</a>";
-        echo "<a href='delete.php?id=$project->project_id&type=project' class='btn btn-delete'>Delete Project</a>";
+        echo "<form action='delete.php?id=$project->project_id&type=project' method='POST'><input type='submit' name='submit' value='Delete Project' class='btn btn-delete' /></a>";
     }
     ?>
 

@@ -28,7 +28,7 @@
                 while($project = $result->fetch()){
 
                     $style = "background-image:url('./img/projects/$project->image_path');";
-                    $input = $logged_in?"<input type='checkbox' name='check' value='$project->project_id'/>" : "";
+                    $input = $logged_in?"<input type='checkbox' name='check[]' value='$project->project_id'/>" : "";
 
                     //display all projects in database
                     $title = strtoupper($project->title);
@@ -39,6 +39,11 @@
                         <a href='./project.php?id=" . $project->project_id . "'>VIEW</a>
                     </div>";
                 }
+                if($logged_in){
+                    //close project container and display delete button
+                    echo "</div>\n
+                    <div><input type='submit' name='delete' value='Delete' class='btn btn-delete' /></form></div>";
+                }
             }else{
                 if(isset($error)){
                     echo '<div class="error">' . $error . '</div>';
@@ -46,13 +51,7 @@
             }
             
             ?>
-        </div><!--end of projects container-->
 
-        <?php
-        if($logged_in){
-            echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' /></form>";
-        }
-        ?>
     </div><!--end of projects-->
 
 

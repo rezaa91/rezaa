@@ -29,32 +29,35 @@
 
         echo "<form action='delete.php?type=blog' method='POST'>";
         
-        while($blog = $stmt->fetch()){
-            $title = strtoupper($blog->get_title());
-            $preview = $blog->blog_preview();
-            $image_path = './img/blogs/' .$blog->get_image_path(); 
-            $created_at = $blog->get_created_at();
-            $input = $logged_in?"<input type='checkbox' name='check' value='".$blog->get_blog_id()."'/>" : "";
-
-            echo "
-            $input
-            <a href='blogpost.php?id=".$blog->get_blog_id()."'>
-                <div class='blog-panel'>
-                    <div class='flex-1'>
-                        <img src=$image_path />  
+        if(isset($blogs) && $blogs){
+            while($blog = $stmt->fetch()){
+                $title = strtoupper($blog->get_title());
+                $preview = $blog->blog_preview();
+                $image_path = './img/blogs/' .$blog->get_image_path(); 
+                $created_at = $blog->get_created_at();
+                $input = $logged_in?"<input type='checkbox' name='check[]' value='".$blog->get_blog_id()."'/>" : "";
+    
+                echo "
+                $input
+                <a href='blogpost.php?id=".$blog->get_blog_id()."'>
+                    <div class='blog-panel'>
+                        <div class='flex-1'>
+                            <img src=$image_path />  
+                        </div>
+                        <div class='flex-2'>
+                            <h3>$title</h3>
+                            <p>$preview</p>
+                        </div>
                     </div>
-                    <div class='flex-2'>
-                        <h3>$title</h3>
-                        <p>$preview</p>
-                    </div>
-                </div>
-            </a>
-            
-            ";
+                </a>
+                
+                ";
+            }
+    
+            echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' />
+            </form>";
         }
-
-        echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' />
-        </form>";
+        
 
         if(isset($error)){
             echo "<p class='error'>$error</p>";
