@@ -512,6 +512,8 @@ textarea {
   color: red; }
 #blog-wrapper input[type="checkbox"] {
   margin-top: 2rem; }
+#blog-wrapper .error {
+  margin-top: 2rem; }
 
 @media screen and (max-width: 440px) {
   #blog-wrapper header h1 {
