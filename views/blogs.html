@@ -63,13 +63,16 @@
                 ";
             }
 
-            echo "<p>
-                    <label for='selectall'>Select All</label>
-                    <input type='checkbox' name='selectall' />
-                </p>";
-    
-            echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' />
-            </form>";
+            if($logged_in){
+                echo "<p>
+                        <label for='selectall'>Select All</label>
+                        <input type='checkbox' name='selectall' />
+                    </p>";
+        
+                echo "<input type='submit' name='delete' value='Delete' class='btn btn-delete' />
+                </form>";
+            }
+            
         }
         
 
