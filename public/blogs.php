@@ -26,8 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
 
         if($result && $stmt->rowCount() > 0){ //if successful result returned - display blogs to user
             $stmt->setFetchMode(PDO::FETCH_CLASS, 'Blog'); //insert data in to new Blog instance 
-            //include view
-            include('../views/blogs.html');
+            $blogs = true; //flag var - set to true so will be displayed in view
 
         }else{
             throw new Exception('Sorry, we could not find what you were looking for. <a href="./blogs.php">Go back</a>');
@@ -36,7 +35,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
     }catch(Exception $e){
         //display errors to user
         $error = $e->getMessage();
-        include('../views/blogs.html');
     }
 
 
