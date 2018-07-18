@@ -15,7 +15,7 @@
         <?php
         if($logged_in){
             echo '<a href="create.php?type=project" class="btn btn-create">Create Project</a>';
-            echo "<form action='delete.php?type=project' method='POST'>";
+            echo "<form action='delete.php?type=project' name='delete_form' method='POST'>";
         }
         ?>
         
@@ -40,9 +40,14 @@
                     </div>";
                 }
                 if($logged_in){
-                    //close project container and display delete button
+                    
+                    //close project container and display select all checkbox and delete button
                     echo "</div>\n
-                    <div><input type='submit' name='delete' value='Delete' class='btn btn-delete' /></form></div>";
+                        <p>
+                            <label for='selectall'>Select All</label>
+                            <input type='checkbox' name='selectall' />
+                        </p>
+                        <div><input type='submit' name='delete' value='Delete' class='btn btn-delete' /></form></div>";
                 }
             }else{
                 if(isset($error)){
@@ -56,3 +61,5 @@
 
 
 </div>
+
+<script>posts();</script>
