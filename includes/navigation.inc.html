@@ -14,7 +14,7 @@
                     if(isset($logged_in) && $logged_in ){
                         echo '<li class="admin-dropdown"><a href="#">' . $_SESSION['user']->get_username() . '</a>';
                         echo '<ul class="admin-dropdown-menu text-center">
-                            <li><a href="/rezaa/public/logout.php">Logout</a></li>
+                            <li><a href="/rezaa/public/logout.php" class="logout">Logout</a></li>
                             </ul></li>';
                     }
                 ?>
@@ -42,7 +42,7 @@
                     if($logged_in){
                         echo '<li class="admin-dropdown"><a href="#">' . $_SESSION['user']->get_username() . '</a>';
                         echo '<ul class="admin-dropdown-menu text-center">
-                            <li><a href="/rezaa/public/logout.php">Logout</a></li>
+                            <li><a href="/rezaa/public/logout.php" class="logout">Logout</a></li>
                             </ul></li>';
                     }
                 ?>
@@ -51,3 +51,5 @@
     </ul>
     
 </div>
+
+<script>navigation();</script>
