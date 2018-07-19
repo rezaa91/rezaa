@@ -32,7 +32,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 $result = $stmt->execute( [':id' => $value] );
             }
 
-            header('location: ' . $type .'s.php');
+            $_SESSION['success'] = $type . 's successfully deleted.';
+            $url_extension = $type == 'blog' ? '?page=1&s=0' : ''; //blog url variables
+            header('location: ' . $type .'s.php' . $url_extension);
             exit();            
 
         }catch(Exception $e){
@@ -43,13 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
 
-
-
-
-
     //DELETE INDIVIDUALS POSTS - FROM PROJECT.PHP AND BLOGPOST.PHP
-    
-
     try{
 
         //delete post from database
@@ -59,8 +55,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         //redirect user to post page if successfully deleted
         if($result){
-            
-            header('location: ' . $type . 's.php');
+            $_SESSION['success'] = $type . ' successfully deleted.';
+            $url_extension = $type == 'blog' ? '?page=1&s=0' : ''; //blog url variables
+            header('location: ' . $type . 's.php' . $url_extension);
             exit();
 
         }else{ //if error deleting row from database...
