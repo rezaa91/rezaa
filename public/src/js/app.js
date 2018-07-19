@@ -1,3 +1,23 @@
+//global settings
+window.addEventListener('load', function() {
+
+    //close feedback modal if showing
+    if(document.querySelector('.close_btn')){
+        const close_btn = document.querySelector('.close_btn');
+
+        function close_modal(){
+            const modal = document.querySelector('.feedback-modal');
+            modal.style.display = "none";
+        }
+
+        close_btn.addEventListener('click', close_modal);
+    }
+
+})//end of global settings
+
+
+
+
 //index page specific javascript
 function index(){
 
