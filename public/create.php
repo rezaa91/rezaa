@@ -52,6 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 
                 if($result){
                     //redirect user to newly created blog if successfully created
+                    $_SESSION['success'] = "Blog successfully created.";
                     $last_id = $pdo->lastInsertId();
                     header("location: blogpost.php?id=$last_id");
 
@@ -80,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
                 $result = $stmt->execute([ ':title' => $_POST['title'], ':aims' => $_POST['aims'], ':process' => $_POST['process'], ':outcome' => $_POST['outcome'], ':link' => $_POST['link'] ]);
 
                 if($result){
-
+                    $_SESSION['success'] = "Project successfully created.";
                     $last_id = $pdo->lastInsertId();
                     header("location: project.php?id=$last_id");
 
