@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
                 //redirect user to updated blog page if successfully updated
                 if($result){
-                    
+                    $_SESSION['success'] = "Blog successfully updated.";
                     header("location: blogpost.php?id=$id");
 
                 }else{//alert user if error updating data
@@ -69,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
                 //redirect user to project page if successfully updated
                 if($result){
-
+                    $_SESSION['success'] = "Project successfully updated.";
                     header("location: project.php?id=$id");
 
                 }else{//error updating database
