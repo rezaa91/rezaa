@@ -44,6 +44,8 @@
                 $preview = $blog->blog_preview();
                 $image_path = './img/blogs/' .$blog->get_image_path(); 
                 $created_at = $blog->get_created_at();
+                $dt = new DateTime($created_at);
+                $date = $dt->format('M d Y');
                 $input = $logged_in?"<input type='checkbox' class='check' name='check[]' value='".$blog->get_blog_id()."'/>" : "";
     
                 echo "
@@ -56,6 +58,7 @@
                         <div class='flex-2'>
                             <h3>$title</h3>
                             <p>$preview</p>
+                            <p>$date</p>
                         </div>
                     </div>
                 </a>

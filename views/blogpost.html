@@ -22,6 +22,21 @@
             <?php echo $blog->body; ?>
         </div>
 
+        <div class="footer">
+            <?php 
+            $dt = new DateTime($blog->created_at);
+            $date = $dt->format('M d Y');
+            echo '<p>Created at: ' . $date . '</p>';
+
+            if($blog->updated_at != NULL){
+                $dt = new DateTime($blog->updated_at);
+                $date = $dt->format('M d Y');
+                echo '<p>Updated at: ' .$date . '</p>';
+            }
+
+            ?>
+        </div>
+
     </div><!--end of blog-wrapper-->
 
 
