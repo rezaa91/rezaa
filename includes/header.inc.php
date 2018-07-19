@@ -27,6 +27,16 @@
 
         <?php
             include('navigation.inc.html'); //include navigation
+
+            include('../core/feedback.php'); //require success/failure sessions
+            if(isset($feedback_msg)){
+                echo '<div class="feedback-modal">
+                        <div class="feedback-close"><div class="close text-right"><a class="close_btn">x</a></div></div>
+                        <div class="feedback-content">'
+                            . $feedback_msg .
+                        '</div>
+                    </div>';
+            }
         ?>
 
 
