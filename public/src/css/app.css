@@ -837,6 +837,56 @@ textarea {
     #project-wrapper .project-btn a {
       padding: 3rem;
       font-size: 3.2rem; } }
+.tutorial_template_wrapper {
+  width: 85%;
+  margin: auto;
+  text-align: center; }
+  .tutorial_template_wrapper .featured_video_title {
+    color: red;
+    font-family: "Open Sans", sans-serif; }
+  .tutorial_template_wrapper .video_list_wrapper {
+    box-shadow: 1px 2px 5px black;
+    background-color: #e3e7ed;
+    text-align: left;
+    overflow: scroll; }
+  .tutorial_template_wrapper .video_title {
+    border-bottom: 1px solid black;
+    padding: 2rem 0rem 1rem;
+    transition: padding 0.15s; }
+    .tutorial_template_wrapper .video_title:hover {
+      padding-left: 2rem;
+      opacity: 0.7; }
+  .tutorial_template_wrapper iframe {
+    height: 720px;
+    width: 1280px;
+    max-width: 100%;
+    max-height: 100%; }
+  .tutorial_template_wrapper .active {
+    font-weight: 900; }
+
+@media screen and (max-width: 440px) {
+  .tutorial_template_wrapper {
+    padding-top: 10vh; }
+    .tutorial_template_wrapper .video_list_wrapper {
+      margin-top: 8vh;
+      height: 40vh;
+      font-size: 11px;
+      padding: 1.5rem; }
+    .tutorial_template_wrapper .featured_video_wrapper {
+      height: 40vh; }
+    .tutorial_template_wrapper .featured_video_title {
+      font-size: 13px; } }
+@media screen and (min-width: 1280px) {
+  .tutorial_template_wrapper {
+    padding-top: 12rem; }
+    .tutorial_template_wrapper .video_list_wrapper {
+      margin-top: 6rem;
+      height: 60rem;
+      padding: 5rem;
+      margin-bottom: 5rem; }
+    .tutorial_template_wrapper .featured_video_title {
+      font-size: 2.6rem;
+      letter-spacing: 0.5rem; } }
 #login-wrapper {
   padding-top: 35vh;
   width: 85%;
