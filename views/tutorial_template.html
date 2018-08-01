@@ -1,0 +1,64 @@
+<div class="tutorial_template_wrapper">
+
+
+    <?php
+
+    $video_type = $videos[$type]; //html or js
+
+    //if there are no videos to display to the user - inform them
+
+    if(empty($video_type)){
+        echo "<div class='empty'>
+                <h3>There are no videos to display in this tutorial.</h3>
+                <p>Check back again soon...</p>
+                <a href='tutorials.php'>Go Back.</a>
+            </div>";
+
+    
+    }else{ //show video titles to user - if no id in the url, display the first video 
+
+
+        $video_type_index = array_values($video_type); //convert associative array to indexed array
+        $video_type_key = array_keys($video_type); //access the associative key, numerically
+
+        //if there is an id in the url, then play the video with that id (position in array)
+        echo '<div class="featured_video_wrapper">';
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+
+            echo "<iframe src='" . $video_type_index[$id-1] . "?autoplay=1'></iframe>"; //autoplay the video
+
+        }else{ //if id is not in the url, display the first video in the array
+
+            echo "<iframe height='720' width='1280' src='" . $video_type_index[0] . "'></iframe>";
+
+        }
+        echo '<div class="featured_video_title"><h1>' . $video_type_key[isset($id) ? $id-1 : 0] . '</h1></div>'; //display the title underneath video
+        echo '</div>'; //close featured_video_wrapper tag
+
+
+
+
+
+
+        //display the video title of each video in the series
+
+        $n = 0; //video id
+        echo '<div class="video_list_wrapper">';
+
+        foreach($video_type as $title => $link){
+            $n++;
+            $active = ( (isset($id) && $id==$n) || (!isset($id) && $n == 1) ) ? 'active' : ''; //apply css class active if video is currently in featured video section
+            echo "<div class='video_title'>
+                <h1><a class='$active' href='tutorial.php?type=html&id=$n'>$n. $title</a></h1>
+            </div>"; //go to same page but with video id in url - this is used to play the featured video
+        
+        }
+        echo '</div>'; //end of video_list_wrapper
+    }
+
+
+    ?>
+
+
+</div><!--end of tutorial template wrapper-->
