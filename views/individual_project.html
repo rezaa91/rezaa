@@ -3,8 +3,8 @@
 
     <?php
     if($logged_in){
-        echo "<a href='edit.php?id=$project->project_id&type=project' class='btn btn-edit'>Edit Project</a>";
-        echo "<form action='delete.php?id=$project->project_id&type=project' method='POST'><input type='submit' name='submit' value='Delete Project' class='btn btn-delete' /></a>";
+        echo "<div class='crud_wrapper'><a href='edit.php?id=$project->project_id&type=project' class='btn btn-edit'>Edit Project</a></div>";
+        echo "<form action='delete.php?id=$project->project_id&type=project' method='POST' class='delete'><input type='submit' name='submit' value='Delete Project' class='btn btn-delete' /></form>";
     }
     ?>
 
