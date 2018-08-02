@@ -4,9 +4,16 @@
 require("../core/init.php");
 
 if($_SERVER['REQUEST_METHOD'] == "GET"){
-    $id = $_GET['id']; //get id - to use with projects in sql table
 
     try{
+
+        if(!isset($_GET['id'])){
+            throw new Exception('The page you are looking for does not exist.');
+        }
+
+        $id = $_GET['id']; //get id - to use with projects in sql table
+
+
         //get individual project from sql table
         $query = "SELECT * FROM project WHERE project_id = :id LIMIT 1";
         $stmt = $pdo->prepare($query);

@@ -5,9 +5,16 @@ require('../core/init.php');
 
 if($_SERVER['REQUEST_METHOD'] == "GET"){
 
-    $id = $_GET["id"]; //get id from url
 
     try{
+
+        if(!isset($_GET['id']) ){
+            throw new Exception('This page does not exist.');
+        }
+
+        $id = $_GET["id"]; //get id from url
+
+
         //get blog information from database using id from url
         $q = "SELECT * FROM blog WHERE blog_id = :id";
         $stmt = $pdo->prepare($q);
