@@ -14,3 +14,15 @@
 .text-right{
     text-align: right;
 }
+
+//position CRUD btns
+.crud_wrapper{
+    display: inline-block;
+    width: 50%;
+}
+
+.delete{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
