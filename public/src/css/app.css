@@ -838,14 +838,13 @@ textarea {
       padding: 3rem;
       font-size: 3.2rem; } }
 .tutorial_template_wrapper {
-  width: 85%;
   margin: auto;
   text-align: center; }
   .tutorial_template_wrapper .featured_video_title {
     color: red;
     font-family: "Open Sans", sans-serif; }
   .tutorial_template_wrapper .video_list_wrapper {
-    box-shadow: 1px 2px 5px black;
+    box-shadow: 1px 1px 3px grey;
     background-color: #e3e7ed;
     text-align: left;
     overflow: scroll; }
@@ -869,21 +868,26 @@ textarea {
     padding-top: 10vh; }
     .tutorial_template_wrapper .video_list_wrapper {
       margin-top: 8vh;
-      height: 40vh;
+      height: 32vh;
       font-size: 11px;
       padding: 1.5rem; }
     .tutorial_template_wrapper .featured_video_wrapper {
-      height: 40vh; }
+      height: 50vh; }
     .tutorial_template_wrapper .featured_video_title {
       font-size: 13px; } }
 @media screen and (min-width: 1280px) {
   .tutorial_template_wrapper {
-    padding-top: 12rem; }
+    padding-top: 12rem;
+    width: 85%; }
+    .tutorial_template_wrapper .content-wrapper {
+      display: flex; }
+    .tutorial_template_wrapper .featured_video_wrapper {
+      flex: 6; }
     .tutorial_template_wrapper .video_list_wrapper {
-      margin-top: 6rem;
-      height: 60rem;
+      flex: 2;
       padding: 5rem;
-      margin-bottom: 5rem; }
+      margin-left: 1rem;
+      height: 720px; }
     .tutorial_template_wrapper .featured_video_title {
       font-size: 2.6rem;
       letter-spacing: 0.5rem; } }
