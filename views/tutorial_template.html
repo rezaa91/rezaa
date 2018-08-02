@@ -9,14 +9,15 @@
 
     if(empty($video_type)){
         echo "<div class='empty'>
-                <h3>There are no videos to display in this tutorial.</h3>
+                <h2>Sorry, this tutorial is not yet available.</h2>
                 <p>Check back again soon...</p>
-                <a href='tutorials.php'>Go Back.</a>
+                <a href='tutorials.php' class='btn btn-edit'>Go Back.</a>
             </div>";
 
     
     }else{ //show video titles to user - if no id in the url, display the first video 
 
+        echo '<div class="content-wrapper">';
 
         $video_type_index = array_values($video_type); //convert associative array to indexed array
         $video_type_key = array_keys($video_type); //access the associative key, numerically
@@ -55,6 +56,7 @@
         
         }
         echo '</div>'; //end of video_list_wrapper
+        echo '</div>'; //end of content-wrapper
     }
 
 
