@@ -52,7 +52,7 @@
         .video_list_wrapper{
             margin-top: 8vh;
             height: 32vh;
-            font-size: 11px;
+            font-size: 9px;
             padding: 1.5rem;
         }
 
@@ -64,6 +64,27 @@
         }
     }
 
+}
+
+@media screen and (max-width: $mobile-landscape) and (orientation: landscape){
+    .nav-wrapper{
+        display: none;
+    }
+
+    .tutorial_template_wrapper{
+        .video_list_wrapper{
+            display: none;
+        }
+
+        .featured_video_title{
+            display: none;
+        }
+
+        iframe{
+            height: 100vh;
+            max-width: 100%;
+        }
+    }
 }
 
 

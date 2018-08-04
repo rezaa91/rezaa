@@ -878,12 +878,23 @@ textarea {
     .tutorial_template_wrapper .video_list_wrapper {
       margin-top: 8vh;
       height: 32vh;
-      font-size: 11px;
+      font-size: 9px;
       padding: 1.5rem; }
     .tutorial_template_wrapper .featured_video_wrapper {
       height: 50vh; }
     .tutorial_template_wrapper .featured_video_title {
       font-size: 13px; } }
+@media screen and (max-width: 750px) and (orientation: landscape) {
+  .nav-wrapper {
+    display: none; }
+
+  .tutorial_template_wrapper .video_list_wrapper {
+    display: none; }
+  .tutorial_template_wrapper .featured_video_title {
+    display: none; }
+  .tutorial_template_wrapper iframe {
+    height: 100vh;
+    max-width: 100%; } }
 @media screen and (min-width: 1280px) {
   .tutorial_template_wrapper {
     padding-top: 12rem;
