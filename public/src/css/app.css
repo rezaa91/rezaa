@@ -23,7 +23,7 @@ input[type="submit"] {
   font-size: 1.6rem; }
 
 input {
-  border: 1px solid grey;
+  border: 1px solid #989898;
   box-shadow: 0 0 0;
   padding: 0.5rem; }
 
@@ -56,7 +56,7 @@ textarea {
   z-index: 10;
   width: 100%;
   padding: 10px 0px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #989898;
   position: fixed; }
   .nav-wrapper .dropdown {
     position: relative;
@@ -67,12 +67,12 @@ textarea {
     text-align: center; }
     .nav-wrapper .dropdown li, .nav-wrapper .dropdown a {
       display: block;
-      border-top: 1px solid black;
-      color: white;
+      border-top: 1px solid #272424;
+      color: #f9f9f9;
       font-size: 2.2rem;
       font-family: "Open Sans", sans-serif; }
       .nav-wrapper .dropdown li:hover, .nav-wrapper .dropdown a:hover {
-        background-color: pink; }
+        background-color: #a80808; }
     .nav-wrapper .dropdown a {
       padding: 5px; }
   .nav-wrapper .menu-icon {
@@ -83,7 +83,7 @@ textarea {
     .nav-wrapper .menu-icon div {
       width: inherit;
       height: 0.3rem;
-      background-color: white;
+      background-color: #f9f9f9;
       margin: 0.6rem 0; }
   .nav-wrapper .admin-dropdown .admin-dropdown-menu {
     position: absolute; }
@@ -92,19 +92,19 @@ textarea {
 
 @media screen and (max-width: 440px) {
   .nav-wrapper {
-    background-color: red; }
+    background-color: #B30B0B; }
     .nav-wrapper .desktop {
       display: none; }
     .nav-wrapper:hover .dropdown {
       display: block; }
     .nav-wrapper .admin-dropdown .admin-dropdown-menu {
-      background-color: grey;
+      background-color: #989898;
       width: 100%; }
       .nav-wrapper .admin-dropdown .admin-dropdown-menu a:hover {
-        background-color: black; } }
+        background-color: #272424; } }
 @media screen and (min-width: 1280px) {
   .nav-wrapper {
-    background-color: white;
+    background-color: #f9f9f9;
     padding: 2rem 0rem; }
     .nav-wrapper .mobile {
       display: none; }
@@ -115,7 +115,7 @@ textarea {
       margin: auto;
       display: flex; }
     .nav-wrapper .nav-brand a {
-      color: red;
+      color: #B30B0B;
       font-size: 2.6rem;
       font-family: "Open Sans", sans-serif; }
       .nav-wrapper .nav-brand a:hover {
@@ -127,21 +127,21 @@ textarea {
         margin: 0 2rem;
         font-size: 2.2rem; }
         .nav-wrapper .nav-links a:hover {
-          color: grey; }
+          color: #989898; }
     .nav-wrapper .admin-dropdown:hover .admin-dropdown-menu {
       display: block; }
     .nav-wrapper .admin-dropdown .admin-dropdown-menu {
-      background-color: white;
-      border: 1px solid grey;
+      background-color: #f9f9f9;
+      border: 1px solid #989898;
       display: none; }
       .nav-wrapper .admin-dropdown .admin-dropdown-menu a {
         padding: 5px; } }
 .btn {
   text-align: center;
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid #272424;
   border-radius: 5px;
-  color: white; }
+  color: #f9f9f9; }
 
 .btn-delete {
   background-color: crimson; }
@@ -150,7 +150,7 @@ textarea {
   background-color: green; }
 
 .btn-edit {
-  background-color: grey; }
+  background-color: #989898; }
 
 @media screen and (min-width: 1280px) {
   .btn {
@@ -162,8 +162,8 @@ textarea {
   margin: 1rem; }
   .form-group input[type="submit"] {
     width: 100%;
-    background-color: red;
-    color: white;
+    background-color: #B30B0B;
+    color: #f9f9f9;
     font-weight: 900; }
 
 @media screen and (max-width: 440px) {
@@ -191,18 +191,18 @@ textarea {
   position: absolute;
   top: 5rem;
   right: 5rem;
-  border: 1px solid black;
-  background-color: white;
-  color: black;
-  box-shadow: 2px 2px 5px grey;
+  border: 1px solid #272424;
+  background-color: #f9f9f9;
+  color: #272424;
+  box-shadow: 2px 2px 5px #989898;
   opacity: 0.75;
   transition: opacity 0.2s; }
   .feedback-modal .close {
-    background-color: red;
+    background-color: #B30B0B;
     padding: 0.3rem 1rem;
-    border-bottom: 2px solid grey; }
+    border-bottom: 2px solid #989898; }
     .feedback-modal .close a {
-      color: white; }
+      color: #f9f9f9; }
   .feedback-modal .feedback-content {
     padding: 2rem 4rem;
     font-family: "Open Sans", sans-serif;
@@ -245,7 +245,7 @@ textarea {
   #error_page_wrapper header h1 {
     color: crimson; }
   #error_page_wrapper .error-content {
-    color: grey; }
+    color: #989898; }
 
 @media screen and (max-width: 440px) {
   #error_page_wrapper {
@@ -266,32 +266,32 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid #989898;
   background-attachment: fixed; }
   #index-wrapper header h1 {
     font-family: "Open Sans", sans-serif;
-    color: red;
+    color: #B30B0B;
     font-weight: normal; }
   #index-wrapper header .tag-line {
     display: block;
-    border: 2px solid grey;
+    border: 2px solid #989898;
     border-radius: 50px;
-    background-color: white;
+    background-color: #f9f9f9;
     width: 95%;
     margin: 2rem auto; }
     #index-wrapper header .tag-line h2 {
       font-family: "Open Sans", sans-serif;
       font-weight: normal; }
 #index-wrapper .service-section .panel {
-  color: white; }
+  color: #f9f9f9; }
   #index-wrapper .service-section .panel .panel-link {
     border-radius: 20px;
-    background-color: red; }
+    background-color: #B30B0B; }
     #index-wrapper .service-section .panel .panel-link:hover {
-      background-color: pink; }
+      background-color: #a80808; }
   #index-wrapper .service-section .panel a {
     display: block;
-    color: black;
+    color: #272424;
     font-family: "Open Sans", sans-serif; }
   #index-wrapper .service-section .panel h3 {
     font-weight: 900; }
@@ -308,17 +308,17 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat; }
 #index-wrapper .about-wrapper {
-  background-color: white; }
+  background-color: #f9f9f9; }
   #index-wrapper .about-wrapper .about-content {
     width: 85%;
     margin: auto; }
     #index-wrapper .about-wrapper .about-content h2 {
       font-family: "Open Sans", sans-serif;
-      color: grey;
+      color: #989898;
       font-weight: 400; }
   #index-wrapper .about-wrapper .img {
     border-radius: 360px;
-    border: 1px solid grey;
+    border: 1px solid #989898;
     overflow: hidden; }
     #index-wrapper .about-wrapper .img img {
       width: inherit;
@@ -329,22 +329,22 @@ textarea {
     font-family: "Open Sans", sans-serif;
     font-weight: normal; }
   #index-wrapper .about-wrapper .description p {
-    color: grey; }
+    color: #989898; }
   #index-wrapper .about-wrapper .subscribe {
     font-family: "Open Sans", sans-serif; }
     #index-wrapper .about-wrapper .subscribe h4 {
-      color: red;
+      color: #B30B0B;
       font-weight: normal; }
     #index-wrapper .about-wrapper .subscribe p {
-      color: red;
+      color: #B30B0B;
       line-height: 2.2rem;
       font-family: "Roboto Slab", serif; }
     #index-wrapper .about-wrapper .subscribe input:not([type="submit"]) {
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px; }
     #index-wrapper .about-wrapper .subscribe input[type="submit"] {
-      background-color: red;
-      color: white;
+      background-color: #B30B0B;
+      color: #f9f9f9;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px; }
     #index-wrapper .about-wrapper .subscribe .validation-wrapper {
@@ -352,10 +352,10 @@ textarea {
       height: 2rem;
       color: crimson; }
 #index-wrapper .social-media-wrapper {
-  border-top: 2px solid grey;
-  background-color: black; }
+  border-top: 2px solid #989898;
+  background-color: #272424; }
   #index-wrapper .social-media-wrapper a {
-    color: white; }
+    color: #f9f9f9; }
 
 @media screen and (max-width: 440px) {
   #index-wrapper header h1 {
@@ -425,15 +425,15 @@ textarea {
     top: -9rem; }
     #index-wrapper .service-section .panel {
       flex: 1;
-      border: 2px solid black; }
+      border: 2px solid #272424; }
     #index-wrapper .service-section .panel-content h3 {
       padding-top: 2.2rem;
       font-size: 3.2rem;
       height: 9rem;
-      background-color: grey;
+      background-color: #989898;
       text-align: center;
-      border-bottom: 2px solid black;
-      box-shadow: 1px 0px 6px black; }
+      border-bottom: 2px solid #272424;
+      box-shadow: 1px 0px 6px #272424; }
     #index-wrapper .service-section .panel-content .panel-info {
       padding: 8rem 1rem;
       width: 90%;
@@ -450,7 +450,7 @@ textarea {
   #index-wrapper .about-wrapper {
     margin-top: -4rem; }
     #index-wrapper .about-wrapper .about-content {
-      border-right: 0.6rem solid red; }
+      border-right: 0.6rem solid #B30B0B; }
       #index-wrapper .about-wrapper .about-content h2 {
         text-align: left;
         margin-bottom: 3.5rem;
@@ -477,13 +477,13 @@ textarea {
     #index-wrapper .about-wrapper .subscribe {
       margin-top: 5rem;
       text-align: left;
-      background-color: black;
+      background-color: #272424;
       padding: 6rem 0; }
       #index-wrapper .about-wrapper .subscribe h4 {
         font-size: 3.2rem;
         margin-bottom: 1rem; }
       #index-wrapper .about-wrapper .subscribe p {
-        color: grey;
+        color: #989898;
         font-size: 2.6rem;
         margin-bottom: 2rem; }
       #index-wrapper .about-wrapper .subscribe input[type="text"] {
@@ -498,9 +498,9 @@ textarea {
       margin: auto; }
   #index-wrapper .social-media-wrapper {
     padding: 3rem 0rem;
-    background-color: white; }
+    background-color: #f9f9f9; }
     #index-wrapper .social-media-wrapper a {
-      color: black;
+      color: #272424;
       padding: 1rem;
       margin: 0 3rem; } }
 #blog-wrapper header {
@@ -509,7 +509,7 @@ textarea {
   background-size: cover;
   background-repeat: no-repeat; }
   #blog-wrapper header .header-content {
-    color: white;
+    color: #f9f9f9;
     padding-top: 20vh; }
     #blog-wrapper header .header-content h1 {
       font-family: "Open Sans", sans-serif;
@@ -526,27 +526,27 @@ textarea {
   #blog-wrapper .blog-list #submit {
     border-top-right-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
-    background-color: red; }
+    background-color: #B30B0B; }
   #blog-wrapper .blog-list .blog-panel {
     display: flex;
-    border: 1px solid grey;
+    border: 1px solid #989898;
     margin-bottom: 2rem;
     overflow: hidden; }
     #blog-wrapper .blog-list .blog-panel h3 {
       font-family: "Roboto Slab", serif;
-      color: red; }
+      color: #B30B0B; }
     #blog-wrapper .blog-list .blog-panel p {
-      color: black; }
+      color: #272424; }
   #blog-wrapper .blog-list .flex-1 {
-    background-color: black;
-    border-right: 2px solid grey; }
+    background-color: #272424;
+    border-right: 2px solid #989898; }
     #blog-wrapper .blog-list .flex-1 img {
       width: 100%;
       height: 100%; }
   #blog-wrapper .blog-list .flex-2 {
     background-color: lightgray; }
 #blog-wrapper .pagination a {
-  color: red; }
+  color: #B30B0B; }
 #blog-wrapper input[type="checkbox"] {
   margin-top: 2rem; }
 #blog-wrapper .error {
@@ -595,7 +595,7 @@ textarea {
       line-height: 3.2rem; }
     #blog-wrapper .blog-list .blog-panel:hover {
       transform: scale(1.015);
-      box-shadow: 2px 3px 7px grey;
+      box-shadow: 2px 3px 7px #989898;
       transition: transform 0.2s; }
   #blog-wrapper .blog-list .flex-1 {
     flex: 2; }
@@ -611,26 +611,26 @@ textarea {
   background-image: url("../../img/tutorials/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom: 2px solid grey; }
+  border-bottom: 2px solid #989898; }
   #tutorials-wrapper header .header-content {
     padding-top: 20vh;
-    color: white; }
+    color: #f9f9f9; }
     #tutorials-wrapper header .header-content h1 {
       font-family: "Open Sans", sans-serif;
       font-weight: 900; }
 #tutorials-wrapper .categories {
   height: 50vh; }
   #tutorials-wrapper .categories .categories-panel {
-    background-color: black;
-    border-bottom: 2px solid grey; }
+    background-color: #272424;
+    border-bottom: 2px solid #989898; }
     #tutorials-wrapper .categories .categories-panel a {
       display: block;
       width: 100%;
       height: 100%; }
     #tutorials-wrapper .categories .categories-panel h2 {
-      color: red; }
+      color: #B30B0B; }
     #tutorials-wrapper .categories .categories-panel span {
-      color: white; }
+      color: #f9f9f9; }
     #tutorials-wrapper .categories .categories-panel:hover {
       opacity: 0.9; }
 
@@ -660,7 +660,7 @@ textarea {
       font-size: 5.5rem;
       transition: font-size 0.4s; }
   #tutorials-wrapper .panel-2 {
-    border-left: 2px solid grey; } }
+    border-left: 2px solid #989898; } }
 #projects-wrapper header {
   height: 50vh;
   background-image: url("../../img/projects/banner.jpg");
@@ -668,7 +668,7 @@ textarea {
   background-repeat: no-repeat; }
   #projects-wrapper header .header-content {
     padding-top: 20vh;
-    color: white; }
+    color: #f9f9f9; }
     #projects-wrapper header .header-content h1 {
       font-family: "Open Sans", sans-serif;
       font-weight: 900; }
@@ -680,24 +680,24 @@ textarea {
   display: flex;
   flex-wrap: wrap; }
 #projects-wrapper .projects-panel {
-  border: 1px solid grey;
+  border: 1px solid #989898;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
   #projects-wrapper .projects-panel h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: 900;
-    color: white; }
+    color: #f9f9f9; }
   #projects-wrapper .projects-panel a {
     position: absolute;
     left: 10%;
     width: 80%;
     border-radius: 1.6rem;
-    border: 1px solid grey;
-    background-color: red;
-    color: white; }
+    border: 1px solid #989898;
+    background-color: #B30B0B;
+    color: #f9f9f9; }
     #projects-wrapper .projects-panel a:hover {
-      background-color: pink; }
+      background-color: #a80808; }
   #projects-wrapper .projects-panel input[type="checkbox"] {
     position: absolute;
     top: 1rem;
@@ -742,16 +742,16 @@ textarea {
   margin: auto; }
   #blogpost-wrapper .blog-wrapper .header h1 {
     font-family: "Open Sans", sans-serif;
-    color: black; }
+    color: #272424; }
   #blogpost-wrapper .blog-wrapper .image {
-    border: 2px solid grey;
+    border: 2px solid #989898;
     width: 100%; }
     #blogpost-wrapper .blog-wrapper .image img {
       object-fit: cover;
       width: 100%;
       height: 100%; }
   #blogpost-wrapper .blog-wrapper .content {
-    color: grey; }
+    color: #989898; }
 
 @media screen and (max-width: 440px) {
   #blogpost-wrapper {
@@ -786,32 +786,32 @@ textarea {
   margin: auto; }
   #project-wrapper .project-header h1 {
     font-family: "Open Sans", sans-serif;
-    color: black; }
+    color: #272424; }
   #project-wrapper .image {
     width: 100%;
-    border: 2px solid grey; }
+    border: 2px solid #989898; }
     #project-wrapper .image img {
       width: 100%;
       height: 100%; }
   #project-wrapper .project-content h3 {
     font-family: "Open Sans", sans-serif;
-    color: red; }
+    color: #B30B0B; }
   #project-wrapper .project-content p {
-    color: grey; }
+    color: #989898; }
   #project-wrapper .project-btn {
     margin-top: 4rem;
-    background-color: white;
-    border: 1px solid red;
+    background-color: #f9f9f9;
+    border: 1px solid #B30B0B;
     margin-bottom: 3rem;
     border-radius: 1.5rem;
-    box-shadow: 1px 3px 12px grey; }
+    box-shadow: 1px 3px 12px #989898; }
     #project-wrapper .project-btn a {
       font-family: "Open Sans", sans-serif;
-      color: red;
+      color: #B30B0B;
       font-weight: 900;
       display: block; }
     #project-wrapper .project-btn:hover {
-      box-shadow: 0px 0px 4px grey; }
+      box-shadow: 0px 0px 4px #989898; }
 
 @media screen and (max-width: 440px) {
   #project-wrapper {
@@ -850,15 +850,15 @@ textarea {
   margin: auto;
   text-align: center; }
   .tutorial_template_wrapper .featured_video_title {
-    color: red;
+    color: #B30B0B;
     font-family: "Open Sans", sans-serif; }
   .tutorial_template_wrapper .video_list_wrapper {
-    box-shadow: 1px 1px 3px grey;
+    box-shadow: 1px 1px 3px #989898;
     background-color: #e3e7ed;
     text-align: left;
     overflow: scroll; }
   .tutorial_template_wrapper .video_title {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #272424;
     padding: 2rem 0rem 1rem;
     transition: padding 0.15s; }
     .tutorial_template_wrapper .video_title:hover {
@@ -916,15 +916,15 @@ textarea {
   width: 85%;
   margin: auto; }
   #login-wrapper .login-form {
-    border: 2px solid grey; }
+    border: 2px solid #989898; }
   #login-wrapper .form-group {
     display: flex; }
     #login-wrapper .form-group input {
       flex: 1;
       border-radius: 5px; }
   #login-wrapper input[type="submit"] {
-    background-color: red;
-    color: white;
+    background-color: #B30B0B;
+    color: #f9f9f9;
     font-family: "Open Sans", sans-serif;
     font-weight: 900; }
 
