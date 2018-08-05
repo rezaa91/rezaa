@@ -5,9 +5,9 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="author" content="rezaa"/>
-        <meta name="keywords" content="full stack developer portfolio front end javascript php react blog digital marketting web design develop laravel tutorial html css sass"/>
-        <meta name="description" content=""/>
+        <meta name="author" content="Rezaa"/>
+        <meta name="keywords" content="web developer hull, full stack developer, php, javascript, computer programming, tutorials, rezaa tutorials, front end development, yorkshire, user interface, learn to code, blogger, vlogger, developer portfolio"/>
+        <meta name="description" content="Want to learn how to code? Follow my HTML &amp; CSS tutorials and JavaScript tutorials to learn how. Want to keep up with the industry? Follow my blogs for helpful tips &amp; tricks, my view on all things web amongst other web-related topics. Also, you can view my portfolio to have a look at some of the recent projects I have created/contributed to."/>
 
         <title><?php echo $page_title; ?></title>
 
