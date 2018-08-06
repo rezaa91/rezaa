@@ -46,9 +46,19 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
 
             //insert data in to database if inputted information is valid
             if($title && $body){
-                $query = "INSERT INTO blog(admin_id, title, body, image_path, created_at) VALUES(:admin_id, :title, :body, 'sample.jpg', NOW())";
+
+                //check to see whether file uploaded - if so validate and handle
+                if(isset($_FILES['file'])){
+
+                    $file = new File($_FILES['file']);
+                    $file_name = $file->get_file_name(); //get file name
+                    $file->upload_file(); //upload file to directory
+
+                }
+
+                $query = "INSERT INTO blog(admin_id, title, body, image_path, created_at) VALUES(:admin_id, :title, :body, :file_path, NOW())";
                 $stmt = $pdo->prepare($query);
-                $result = $stmt->execute( [':admin_id' => $_SESSION['user']->get_id(), ':title' => $_POST['title'], ':body' => $_POST['body'] ] );
+                $result = $stmt->execute( [':admin_id' => $_SESSION['user']->get_id(), ':title' => $_POST['title'], ':body' => $_POST['body'], ':file_path' => $file_name ] );
 
                 if($result){
                     //redirect user to newly created blog if successfully created
@@ -76,9 +86,19 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
             $link = $validate->isStr($_POST['link']);
 
             if($title && $aims && $process && $outcome && $link){
-                $query = "INSERT INTO project(image_path, title, aims, process, outcome, link, upload_date) VALUES('sample.jpg', :title, :aims, :process, :outcome, :link, NOW())";
+
+                //check to see whether file uploaded - if so validate and handle
+                if(isset($_FILES['file'])){
+
+                    $file = new File($_FILES['file']);
+                    $file_name = $file->get_file_name(); //get file name
+                    $file->upload_file(); //upload file to directory
+
+                }
+
+                $query = "INSERT INTO project(image_path, title, aims, process, outcome, link, upload_date) VALUES(:file_path, :title, :aims, :process, :outcome, :link, NOW())";
                 $stmt = $pdo->prepare($query);
-                $result = $stmt->execute([ ':title' => $_POST['title'], ':aims' => $_POST['aims'], ':process' => $_POST['process'], ':outcome' => $_POST['outcome'], ':link' => $_POST['link'] ]);
+                $result = $stmt->execute([ ':file_path' => $file_name, ':title' => $_POST['title'], ':aims' => $_POST['aims'], ':process' => $_POST['process'], ':outcome' => $_POST['outcome'], ':link' => $_POST['link'] ]);
 
                 if($result){
                     $_SESSION['success'] = "Project successfully created.";
