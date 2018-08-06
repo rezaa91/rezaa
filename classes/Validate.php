@@ -14,7 +14,6 @@ class Validate{
             return htmlentities($str);
         }
     }
-
 }
 
 ?>
