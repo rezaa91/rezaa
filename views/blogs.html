@@ -42,7 +42,7 @@
             while($blog = $stmt->fetch()){
                 $title = strtoupper($blog->get_title());
                 $preview = $blog->blog_preview();
-                $image_path = './img/blogs/' .$blog->get_image_path(); 
+                $image_path = './img/uploads/' .$blog->get_image_path(); 
                 $created_at = $blog->get_created_at();
                 $dt = new DateTime($created_at);
                 $date = $dt->format('M d Y');

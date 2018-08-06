@@ -27,7 +27,7 @@
             if(isset($projects) && $projects){
                 while($project = $result->fetch()){
 
-                    $style = "background-image:url('./img/projects/$project->image_path');";
+                    $style = "background-image:url('./img/uploads/$project->image_path');";
                     $input = $logged_in?"<input type='checkbox' name='check[]' value='$project->project_id'/>" : "";
 
                     //display all projects in database
