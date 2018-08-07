@@ -30,6 +30,35 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             //update data to database if form validation passed
             if($title && $body){
 
+                //if user selected an image for upload, change this and delete the previous image
+                if(!empty($_FILES['file']['name'])){
+
+                    $query = "SELECT image_path FROM blog WHERE blog_id = :blog_id";
+                    $stmt = $pdo->prepare($query);
+                    $result = $stmt->execute([':blog_id' => $id]);
+
+                    //delete the old file from directory
+                    if($result){
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        $row = $stmt->fetch();
+                        $image_path = $row['image_path'];
+
+                        $image = new File($image_path);
+                        $image->delete_file();
+                    }
+
+                    //upload the new file
+                    $image = new File($_FILES['file']);
+                    $image->upload_file();
+                    $file_path = $image->get_file_name();
+
+                    //update the database
+                    $query = "UPDATE blog SET image_path = :image_path WHERE blog_id = :blog_id";
+                    $stmt = $pdo->prepare($query);
+                    $result = $stmt->execute([':image_path' => $file_path, ':blog_id' => $id]);
+
+                }
+
                 $query = "UPDATE blog SET title = :title, body = :body, updated_at = NOW() WHERE blog_id = :blog_id";
                 $stmt = $pdo->prepare($query);
                 $result = $stmt->execute([ ':title' => $_POST['title'], ':body' => $_POST['body'], ':blog_id' => $id ]);
@@ -62,6 +91,36 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
             //update data to database if passed form validation
             if($title && $aims && $process && $outcome && $link){
+
+                //if user selected an image for upload, change this and delete the previous image
+                if(!empty($_FILES['file']['name'])){
+
+                    $query = "SELECT image_path FROM project WHERE project_id = :project_id";
+                    $stmt = $pdo->prepare($query);
+                    $result = $stmt->execute([':project_id' => $id]);
+
+                    //delete the old file from directory
+                    if($result){
+                        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                        $row = $stmt->fetch();
+                        $image_path = $row['image_path'];
+
+                        $image = new File($image_path);
+                        $image->delete_file();
+                    }
+
+                    //upload the new file
+                    $image = new File($_FILES['file']);
+                    $image->upload_file();
+                    $file_path = $image->get_file_name();
+
+                    //update the database
+                    $query = "UPDATE project SET image_path = :image_path WHERE project_id = :project_id";
+                    $stmt = $pdo->prepare($query);
+                    $result = $stmt->execute([':image_path' => $file_path, ':project_id' => $id]);
+
+                }
+
 
                 $query = "UPDATE project SET title = :title, aims = :aims, process = :process, outcome = :outcome, link = :link WHERE project_id = :project_id";
                 $stmt = $pdo->prepare($query);

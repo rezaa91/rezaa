@@ -26,10 +26,27 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             //get values from checked checkboxes and delete all those selected
             $checkbox_array = $_POST['check'];
 
+            //delete checked rows from database and any images from directory
             foreach($checkbox_array as $value){
-                $query = "DELETE FROM $type WHERE $table_id = :id";
+                $query = "SELECT image_path FROM $type WHERE $table_id = :id"; //select the image path data from selected row
                 $stmt = $pdo->prepare($query);
-                $result = $stmt->execute( [':id' => $value] );
+                $result = $stmt->execute([':id' => $value]);
+
+                if($result){
+                    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                    $row = $stmt->fetch();
+                    $image_path = $row['image_path']; //get the image path for individual row
+
+                    $image = new File($image_path); //create new instance with image path as str arg
+                    $image->delete_file(); //delete the image
+
+
+                    //delete full row from database
+                    $query = "DELETE FROM $type WHERE $table_id = :id";
+                    $stmt = $pdo->prepare($query);
+                    $result = $stmt->execute( [':id' => $value] );
+
+                }
             }
 
             $_SESSION['success'] = $type . 's successfully deleted.';
@@ -45,24 +62,47 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 
 
+
+
+    
+
     //DELETE INDIVIDUALS POSTS - FROM PROJECT.PHP AND BLOGPOST.PHP
     try{
 
-        //delete post from database
-        $query = "DELETE FROM $type WHERE $table_id = :id ";
+        //get the file path in order to delete file from dir
+        $query = "SELECT image_path FROM $type WHERE $table_id = :id";
         $stmt = $pdo->prepare($query);
-        $result = $stmt->execute([':id' => $id]);
+        $result = $stmt->execute( [':id' => $id] );
 
-        //redirect user to post page if successfully deleted
         if($result){
-            $_SESSION['success'] = $type . ' successfully deleted.';
-            $url_extension = $type == 'blog' ? '?page=1&s=0' : ''; //blog url variables
-            header('location: ' . $type . 's.php' . $url_extension);
-            exit();
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $stmt->fetch();
+            $image_path = $row['image_path']; //get the data from the image_path column, returns string
 
-        }else{ //if error deleting row from database...
-            throw new Exception('We could not delete the post. Please try again.');
+            $image = new File($image_path); //create new instance, pass the image_path str as arg
+            $image->delete_file(); //delete file from database
+        
+
+            //delete post from database
+            $query = "DELETE FROM $type WHERE $table_id = :id ";
+            $stmt = $pdo->prepare($query);
+            $result = $stmt->execute([':id' => $id]);
+
+            //redirect user to post page if successfully deleted
+            if($result){
+                $_SESSION['success'] = $type . ' successfully deleted.';
+                $url_extension = $type == 'blog' ? '?page=1&s=0' : ''; //blog url variables
+                header('location: ' . $type . 's.php' . $url_extension);
+                exit();
+
+            }else{ //if error deleting row from database...
+                throw new Exception('We could not delete the post. Please try again.');
+            }
+
+        }else{ //error deleting file from directory
+            throw new Exception('Sorry, we could not delete the post. Please try again.');
         }
+
 
     }catch(Exception $e){
         display_error_page($e);
