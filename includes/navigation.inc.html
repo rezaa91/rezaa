@@ -40,7 +40,7 @@
                 <li><a href="/rezaa/public/blogs.php?page=1&s=0">BLOGS</a></li>
                 <li><a href="/rezaa/public/tutorials.php">TUTORIALS</a></li>
                 <?php
-                    if($logged_in){
+                    if(isset($logged_in) && $logged_in ){
                         echo '<li class="admin-dropdown"><a href="#">' . $_SESSION['user']->get_username() . '</a>';
                         echo '<ul class="admin-dropdown-menu text-center">
                             <li><a href="/rezaa/public/dashboard.php">Dashboard</a></li>
