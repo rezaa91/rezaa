@@ -10,13 +10,18 @@
     protected $tmp_file_name = null;
     protected $file = null;
     protected $file_type = null;
+    protected $dir_location = './img/uploads/';
 
 
 
     //set file name and check file exists as soon as instance created
     public function __construct($file){
-        $this->file = $file; //store file array
-        $this->check_exists(); //check file before handling
+        if(!is_array($file)){ //if it is a string, this means that the image name was passed to the instance - therefore file already exists
+            $this->file_name = $file;
+        }else{
+            $this->file = $file; //store file array
+            $this->check_exists(); //check file before handling
+        }
     }
 
 
@@ -44,7 +49,6 @@
 
     //upload the file to the relevent destination
     public function upload_file(){
-
         //return from method if file name is sample
         if($this->file_name == 'sample.jpg'){
             return;
@@ -58,9 +62,19 @@
         }
 
         //move from temp dir in to uploads folder
-        $location = './img/uploads/';
-        move_uploaded_file($this->tmp_file_name, $location . $this->file_name );
+        move_uploaded_file($this->tmp_file_name, $this->dir_location . $this->file_name );
     }
+
+
+
+    
+    //delete file from directory - only if not sample image
+    public function delete_file(){
+        if($this->file_name != 'sample.jpg'){
+            unlink($this->dir_location . $this->file_name);
+        }
+    }
+
 
  }
 
