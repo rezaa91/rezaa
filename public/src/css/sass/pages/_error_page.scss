@@ -1,15 +1,44 @@
 #error_page_wrapper{
     width: 85%;
     margin: auto;
+    text-align: center;
     header{
         h1{
             color: $failure;
         }
     }
-    
     .error-content{
         color: $grey;
     }
+
+    .helpful_links{
+        margin-top: 7rem;
+
+        h3{
+            color: $black;
+            font-weight: 900;
+            font-family: $sans-serif;
+        }
+
+        a{
+            display: block;
+            border: 2px solid $primary-color;
+            background-color: $white;
+            color: $primary-color;
+            margin: 2rem auto;
+
+            transition:
+                color 0.4s,
+                background-color 0.45s,
+                border 0.45s;
+        }
+        a:hover{
+            background-color: $primary-color;
+            color: $white;
+            border: 2px solid $grey;
+        }
+    }
+
 }
 
 
@@ -22,11 +51,22 @@
         padding-top: 8rem;
         header{
             h1{
-                font-size: $header;
+                font-size: $lead;
             }
         }
         .error-content{
-            font-size: $lead;
+            margin-top: 1rem;
+            font-size: $small;
+        }
+
+        .helpful_links{
+            h3{
+                font-size: $small;
+            }
+            a{
+                width: 10rem;
+                padding: 1rem;
+            }
         }
     }
 
@@ -41,11 +81,21 @@
         padding-top: 11rem;
         header{
             h1{
-                font-size: $desktop-header;
+                font-size: $desktop-lead;
             }
         }
         .error-content{
-            font-size: $desktop-lead;
+            font-size: $desktop-regular;
+        }
+
+        .helpful_links{
+            h3{
+                font-size: $lead;
+            }
+            a{
+                font-size: $desktop-regular;
+                width: 20rem;
+            }
         }
 
     }

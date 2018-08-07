@@ -57,8 +57,8 @@
                         </div>
                         <div class='flex-2'>
                             <h3>$title</h3>
-                            <p>$preview</p>
-                            <p>$date</p>
+                            <p class='preview'>$preview</p>
+                            <p class='date'>$date</p>
                         </div>
                     </div>
                 </a>
@@ -78,7 +78,8 @@
             
         }
         
-
+        
+        //if there are currently no blogs to display - inform user
         if(isset($error)){
             echo "<p class='error'>$error</p>";
         }

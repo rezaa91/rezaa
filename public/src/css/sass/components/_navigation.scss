@@ -19,6 +19,8 @@
             color: $white;
             font-size: $lead;
             font-family: $sans-serif;
+            
+            transition: background-color 0.3s;
 
             &:hover{
                 background-color: $hover;
@@ -134,6 +136,8 @@
                 padding: 1rem;
                 margin:0 2rem;
                 font-size: $lead;
+
+                transition: color 0.3s;
 
                 &:hover{
                     color: $grey;

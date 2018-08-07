@@ -4,6 +4,7 @@
     margin: auto;
 
     .blog-wrapper{
+        margin-bottom: 2rem;
         .header{
             h1{
                 font-family: $sans-serif;
@@ -22,6 +23,14 @@
         .content{
             color: $grey;
         }
+
+        .footer{
+            margin-top: 2rem;
+            display: flex;
+            p{
+                flex: 1;
+            }
+        }
     }
 }
 
@@ -32,11 +41,12 @@
 //mobile
 @media screen and(max-width: $mobile){
     #blogpost-wrapper{
-        padding-top: 9rem;
+        padding-top: 7rem;
         .blog-wrapper{
             .header{
                 margin-bottom: 2rem;
                 h1{
+                    text-align: center;
                     font-size: $header;
                 }
             }
@@ -50,6 +60,9 @@
                     font-size: $lead;
                 }
             }
+            .footer{
+                font-size: 12px;
+            }
         }
     }
 }
@@ -60,7 +73,7 @@
 //desktop
 @media screen and(min-width: $desktop){
     #blogpost-wrapper{
-        padding-top: 17rem;
+        padding-top: 12rem;
         .blog-wrapper{
             .header{
                 margin-bottom: 3rem;
@@ -78,6 +91,9 @@
                     font-size: $desktop-lead;
                     margin-bottom: 1.5rem;
                 }
+            }
+            .footer{
+                font-size: $desktop-small;
             }
         }
     }

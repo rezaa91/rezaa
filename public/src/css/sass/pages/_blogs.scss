@@ -3,7 +3,7 @@
 
     header{
         height: 50vh;
-        background-image: url('../../img/blogs/banner.jpg');
+        background-image: url('../../img/content/banner_blog.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -20,7 +20,7 @@
 
 
     .blog-list{
-        padding-top: 3rem;
+        padding-top: 2rem;
         width: 85%;
         margin:1rem auto;
 
@@ -50,8 +50,11 @@
                 font-family: $serif;
                 color: $primary-color;
             }
-            p{
+            .preview{
                 color: $black;
+            }
+            .date{
+                color: $grey;
             }
 
         }
@@ -70,6 +73,7 @@
             background-color: lightgray;
         }
     }
+
     .pagination{
         a{
             color: $primary-color;
@@ -106,12 +110,19 @@
     .blog-list{
         .blog-panel{
             height: 13rem;
+            position:relative;
 
             h3{
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.2rem;
             }
-            p{
+            .preview{
+                font-size: 12px;
                 line-height: 2.2rem;
+            }
+            .date{
+                font-size: 10px;
+                position:absolute;
+                bottom: 1rem;
             }
 
         }
@@ -127,6 +138,9 @@
         a{
             padding:0.5rem;
         }
+    }
+    .error{
+        font-size: $small;
     }
 
 }//end of mobile
@@ -171,9 +185,14 @@
                     font-size:$desktop-lead;
                     margin-bottom: 1.5rem;
                 }
-                p{
+                .preview{
                     font-size: $desktop-regular;
                     line-height: 3.2rem;
+                }
+                .date{
+                    font-size: $desktop-small;
+                    position:absolute;
+                    bottom: 1rem;
                 }
                 &:hover{
                     transform: scale(1.015);

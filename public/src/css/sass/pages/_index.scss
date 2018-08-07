@@ -2,7 +2,7 @@
 #index-wrapper{
     //header settings
     header{
-        background-image: url('../../img/homepage/home.jpg');
+        background-image: url('../../img/content/home.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
@@ -24,7 +24,8 @@
             margin: 2rem auto;
 
             h2{
-                font-family: $sans-serif;
+                color: $grey;
+                font-family: $serif;
                 font-weight: normal;
             }
         }
@@ -41,6 +42,8 @@
                 border-radius: 20px;
                 background-color: $primary-color;
 
+                transition: background-color 0.3s;
+
                 &:hover{
                     background-color:$hover;
                 }
@@ -56,19 +59,19 @@
             }
         }
         .panel-1{
-            background-image: url('../../img/homepage/projects.jpg');
+            background-image: url('../../img/content/projects.jpg');
             background-size: cover;
             background-repeat:no-repeat;
         }
 
         .panel-2{
-            background-image: url('../../img/homepage/blog.jpg');
+            background-image: url('../../img/content/blog.jpg');
             background-size: cover;
             background-repeat:no-repeat;
         }
 
         .panel-3{
-            background-image: url('../../img/homepage/tutorials.jpg');
+            background-image: url('../../img/content/tutorials.jpg');
             background-size: cover;
             background-repeat:no-repeat;
         }
@@ -150,10 +153,28 @@
     //footer settings
     .social-media-wrapper{
         border-top: 2px solid $grey;
+        box-shadow: -1px -1px 3px $grey;
         background-color: $black;
 
         a{
             color: $white;
+        }
+
+        .social_links{
+            margin: 0 1rem;
+        }
+
+        .yt{
+            color: rgb(188, 13, 13);
+        }
+        .fb{
+            color: rgb(26, 73, 147);
+        }
+        .twitter{
+            color: rgb(0, 221, 255);
+        }
+        .insta{
+            color: rgb(209, 143, 43);
         }
     }//end of footer settings
 
@@ -427,11 +448,13 @@
         //footer section
         .social-media-wrapper{
             padding:3rem 0rem;
-            background-color: $white;
             a{
                 color: $black;
                 padding: 1rem;
                 margin: 0 3rem;
+            }
+            .social_links{
+                font-size: $desktop-regular;
             }
         }
 

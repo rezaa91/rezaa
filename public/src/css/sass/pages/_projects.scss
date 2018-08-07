@@ -1,7 +1,7 @@
 #projects-wrapper{
     header{
         height: 50vh;
-        background-image: url('../../img/projects/banner.jpg');
+        background-image: url('../../img/content/banner_projects.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -22,7 +22,7 @@
     }
 
     .projects-container{
-        margin: 2rem auto;
+        margin: 3rem auto;
         display: flex;
         flex-wrap: wrap;
     }
@@ -72,28 +72,34 @@
 //mobile
 @media screen and(max-width: $mobile){
 
-    header{
-        .header-content{
-            h1{
-                font-size: $header;
+    #projects-wrapper{
+        header{
+            .header-content{
+                h1{
+                    font-size: $header;
+                }
             }
         }
-    }
-
-    .projects-panel{
-        width: 46%;
-        margin: 2%;
-        padding: 3.2rem 1rem;
-        h3{
-            font-size: $small;
-            margin-bottom: 0.5rem;
+    
+        .projects-panel{
+            width: 46%;
+            margin: 2%;
+            padding: 3.2rem 1rem;
+            h3{
+                font-size: $small;
+                margin-bottom: 0.5rem;
+            }
+            a{
+                padding: 0.2rem;
+                font-size: $small;
+                bottom: 1rem;
+            }
         }
-        a{
-            padding: 0.2rem;
-            font-size: $small;
-            bottom: 1rem;
+        .error{
+            margin-top: 2rem;
         }
     }
+    
 
 }//end of mobile
 

@@ -31,7 +31,7 @@
             if($blog->updated_at != NULL){
                 $dt = new DateTime($blog->updated_at);
                 $date = $dt->format('M d Y');
-                echo '<p>Updated at: ' .$date . '</p>';
+                echo '<p class="text-right">Updated at: ' .$date . '</p>';
             }
 
             ?>

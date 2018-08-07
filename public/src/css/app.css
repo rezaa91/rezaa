@@ -32,7 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 
 textarea {
   resize: none;
-  height: 20rem; }
+  height: 20rem;
+  padding: 0.5rem; }
 
 .hide {
   display: none; }
@@ -70,7 +71,8 @@ textarea {
       border-top: 1px solid #272424;
       color: #f9f9f9;
       font-size: 2.2rem;
-      font-family: "Open Sans", sans-serif; }
+      font-family: "Open Sans", sans-serif;
+      transition: background-color 0.3s; }
       .nav-wrapper .dropdown li:hover, .nav-wrapper .dropdown a:hover {
         background-color: #a80808; }
     .nav-wrapper .dropdown a {
@@ -125,7 +127,8 @@ textarea {
       .nav-wrapper .nav-links a {
         padding: 1rem;
         margin: 0 2rem;
-        font-size: 2.2rem; }
+        font-size: 2.2rem;
+        transition: color 0.3s; }
         .nav-wrapper .nav-links a:hover {
           color: #989898; }
     .nav-wrapper .admin-dropdown:hover .admin-dropdown-menu {
@@ -141,7 +144,8 @@ textarea {
   display: inline-block;
   border: 1px solid #272424;
   border-radius: 5px;
-  color: #f9f9f9; }
+  color: #f9f9f9;
+  transition: opacity 0.3s; }
 
 .btn-delete {
   background-color: crimson; }
@@ -152,6 +156,12 @@ textarea {
 .btn-edit {
   background-color: #989898; }
 
+.btn:hover {
+  opacity: 0.85; }
+
+@media screen and (max-width: 440px) {
+  .btn {
+    padding: 1rem; } }
 @media screen and (min-width: 1280px) {
   .btn {
     width: 20rem;
@@ -241,28 +251,57 @@ textarea {
       font-size: 3.2rem; } }
 #error_page_wrapper {
   width: 85%;
-  margin: auto; }
+  margin: auto;
+  text-align: center; }
   #error_page_wrapper header h1 {
     color: crimson; }
   #error_page_wrapper .error-content {
     color: #989898; }
+  #error_page_wrapper .helpful_links {
+    margin-top: 7rem; }
+    #error_page_wrapper .helpful_links h3 {
+      color: #272424;
+      font-weight: 900;
+      font-family: "Open Sans", sans-serif; }
+    #error_page_wrapper .helpful_links a {
+      display: block;
+      border: 2px solid #B30B0B;
+      background-color: #f9f9f9;
+      color: #B30B0B;
+      margin: 2rem auto;
+      transition: color 0.4s, background-color 0.45s, border 0.45s; }
+    #error_page_wrapper .helpful_links a:hover {
+      background-color: #B30B0B;
+      color: #f9f9f9;
+      border: 2px solid #989898; }
 
 @media screen and (max-width: 440px) {
   #error_page_wrapper {
     padding-top: 8rem; }
     #error_page_wrapper header h1 {
-      font-size: 3.2rem; }
+      font-size: 2.2rem; }
     #error_page_wrapper .error-content {
-      font-size: 2.2rem; } }
+      margin-top: 1rem;
+      font-size: 1.4rem; }
+    #error_page_wrapper .helpful_links h3 {
+      font-size: 1.4rem; }
+    #error_page_wrapper .helpful_links a {
+      width: 10rem;
+      padding: 1rem; } }
 @media screen and (min-width: 1280px) {
   #error_page_wrapper {
     padding-top: 11rem; }
     #error_page_wrapper header h1 {
-      font-size: 5.5rem; }
+      font-size: 3.2rem; }
     #error_page_wrapper .error-content {
-      font-size: 3.2rem; } }
+      font-size: 2.6rem; }
+    #error_page_wrapper .helpful_links h3 {
+      font-size: 2.2rem; }
+    #error_page_wrapper .helpful_links a {
+      font-size: 2.6rem;
+      width: 20rem; } }
 #index-wrapper header {
-  background-image: url("../../img/homepage/home.jpg");
+  background-image: url("../../img/content/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -280,13 +319,15 @@ textarea {
     width: 95%;
     margin: 2rem auto; }
     #index-wrapper header .tag-line h2 {
-      font-family: "Open Sans", sans-serif;
+      color: #989898;
+      font-family: "Roboto Slab", serif;
       font-weight: normal; }
 #index-wrapper .service-section .panel {
   color: #f9f9f9; }
   #index-wrapper .service-section .panel .panel-link {
     border-radius: 20px;
-    background-color: #B30B0B; }
+    background-color: #B30B0B;
+    transition: background-color 0.3s; }
     #index-wrapper .service-section .panel .panel-link:hover {
       background-color: #a80808; }
   #index-wrapper .service-section .panel a {
@@ -296,15 +337,15 @@ textarea {
   #index-wrapper .service-section .panel h3 {
     font-weight: 900; }
 #index-wrapper .service-section .panel-1 {
-  background-image: url("../../img/homepage/projects.jpg");
+  background-image: url("../../img/content/projects.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 #index-wrapper .service-section .panel-2 {
-  background-image: url("../../img/homepage/blog.jpg");
+  background-image: url("../../img/content/blog.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 #index-wrapper .service-section .panel-3 {
-  background-image: url("../../img/homepage/tutorials.jpg");
+  background-image: url("../../img/content/tutorials.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 #index-wrapper .about-wrapper {
@@ -353,9 +394,20 @@ textarea {
       color: crimson; }
 #index-wrapper .social-media-wrapper {
   border-top: 2px solid #989898;
+  box-shadow: -1px -1px 3px #989898;
   background-color: #272424; }
   #index-wrapper .social-media-wrapper a {
     color: #f9f9f9; }
+  #index-wrapper .social-media-wrapper .social_links {
+    margin: 0 1rem; }
+  #index-wrapper .social-media-wrapper .yt {
+    color: #bc0d0d; }
+  #index-wrapper .social-media-wrapper .fb {
+    color: #1a4993; }
+  #index-wrapper .social-media-wrapper .twitter {
+    color: #00ddff; }
+  #index-wrapper .social-media-wrapper .insta {
+    color: #d18f2b; }
 
 @media screen and (max-width: 440px) {
   #index-wrapper header h1 {
@@ -497,15 +549,16 @@ textarea {
       width: 90%;
       margin: auto; }
   #index-wrapper .social-media-wrapper {
-    padding: 3rem 0rem;
-    background-color: #f9f9f9; }
+    padding: 3rem 0rem; }
     #index-wrapper .social-media-wrapper a {
       color: #272424;
       padding: 1rem;
-      margin: 0 3rem; } }
+      margin: 0 3rem; }
+    #index-wrapper .social-media-wrapper .social_links {
+      font-size: 2.6rem; } }
 #blog-wrapper header {
   height: 50vh;
-  background-image: url("../../img/blogs/banner.jpg");
+  background-image: url("../../img/content/banner_blog.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
   #blog-wrapper header .header-content {
@@ -515,7 +568,7 @@ textarea {
       font-family: "Open Sans", sans-serif;
       font-weight: 900; }
 #blog-wrapper .blog-list {
-  padding-top: 3rem;
+  padding-top: 2rem;
   width: 85%;
   margin: 1rem auto; }
   #blog-wrapper .blog-list form {
@@ -535,8 +588,10 @@ textarea {
     #blog-wrapper .blog-list .blog-panel h3 {
       font-family: "Roboto Slab", serif;
       color: #B30B0B; }
-    #blog-wrapper .blog-list .blog-panel p {
+    #blog-wrapper .blog-list .blog-panel .preview {
       color: #272424; }
+    #blog-wrapper .blog-list .blog-panel .date {
+      color: #989898; }
   #blog-wrapper .blog-list .flex-1 {
     background-color: #272424;
     border-right: 2px solid #989898; }
@@ -559,11 +614,17 @@ textarea {
     font-size: 1.6rem; }
 
   .blog-list .blog-panel {
-    height: 13rem; }
+    height: 13rem;
+    position: relative; }
     .blog-list .blog-panel h3 {
-      margin-bottom: 0.5rem; }
-    .blog-list .blog-panel p {
+      margin-bottom: 0.2rem; }
+    .blog-list .blog-panel .preview {
+      font-size: 12px;
       line-height: 2.2rem; }
+    .blog-list .blog-panel .date {
+      font-size: 10px;
+      position: absolute;
+      bottom: 1rem; }
   .blog-list .flex-1 {
     flex: 2; }
   .blog-list .flex-2 {
@@ -571,7 +632,10 @@ textarea {
     flex: 3; }
 
   .pagination a {
-    padding: 0.5rem; } }
+    padding: 0.5rem; }
+
+  .error {
+    font-size: 1.4rem; } }
 @media screen and (min-width: 1280px) {
   #blog-wrapper header h1 {
     font-size: 5.5rem;
@@ -590,9 +654,13 @@ textarea {
     #blog-wrapper .blog-list .blog-panel h3 {
       font-size: 3.2rem;
       margin-bottom: 1.5rem; }
-    #blog-wrapper .blog-list .blog-panel p {
+    #blog-wrapper .blog-list .blog-panel .preview {
       font-size: 2.6rem;
       line-height: 3.2rem; }
+    #blog-wrapper .blog-list .blog-panel .date {
+      font-size: 2.2rem;
+      position: absolute;
+      bottom: 1rem; }
     #blog-wrapper .blog-list .blog-panel:hover {
       transform: scale(1.015);
       box-shadow: 2px 3px 7px #989898;
@@ -608,7 +676,7 @@ textarea {
       padding: 1rem; } }
 #tutorials-wrapper header {
   height: 50vh;
-  background-image: url("../../img/tutorials/banner.jpg");
+  background-image: url("../../img/content/banner_tutorial.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom: 2px solid #989898; }
@@ -663,7 +731,7 @@ textarea {
     border-left: 2px solid #989898; } }
 #projects-wrapper header {
   height: 50vh;
-  background-image: url("../../img/projects/banner.jpg");
+  background-image: url("../../img/content/banner_projects.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
   #projects-wrapper header .header-content {
@@ -676,7 +744,7 @@ textarea {
   width: 85%;
   margin: 2rem auto; }
 #projects-wrapper .projects-container {
-  margin: 2rem auto;
+  margin: 3rem auto;
   display: flex;
   flex-wrap: wrap; }
 #projects-wrapper .projects-panel {
@@ -705,20 +773,21 @@ textarea {
     transform: scale(1.2); }
 
 @media screen and (max-width: 440px) {
-  header .header-content h1 {
+  #projects-wrapper header .header-content h1 {
     font-size: 3.2rem; }
-
-  .projects-panel {
+  #projects-wrapper .projects-panel {
     width: 46%;
     margin: 2%;
     padding: 3.2rem 1rem; }
-    .projects-panel h3 {
+    #projects-wrapper .projects-panel h3 {
       font-size: 1.4rem;
       margin-bottom: 0.5rem; }
-    .projects-panel a {
+    #projects-wrapper .projects-panel a {
       padding: 0.2rem;
       font-size: 1.4rem;
-      bottom: 1rem; } }
+      bottom: 1rem; }
+  #projects-wrapper .error {
+    margin-top: 2rem; } }
 @media screen and (min-width: 1280px) {
   header .header-content h1 {
     font-size: 5.5rem;
@@ -740,35 +809,45 @@ textarea {
 #blogpost-wrapper {
   width: 85%;
   margin: auto; }
-  #blogpost-wrapper .blog-wrapper .header h1 {
-    font-family: "Open Sans", sans-serif;
-    color: #272424; }
-  #blogpost-wrapper .blog-wrapper .image {
-    border: 2px solid #989898;
-    width: 100%; }
-    #blogpost-wrapper .blog-wrapper .image img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%; }
-  #blogpost-wrapper .blog-wrapper .content {
-    color: #989898; }
+  #blogpost-wrapper .blog-wrapper {
+    margin-bottom: 2rem; }
+    #blogpost-wrapper .blog-wrapper .header h1 {
+      font-family: "Open Sans", sans-serif;
+      color: #272424; }
+    #blogpost-wrapper .blog-wrapper .image {
+      border: 2px solid #989898;
+      width: 100%; }
+      #blogpost-wrapper .blog-wrapper .image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%; }
+    #blogpost-wrapper .blog-wrapper .content {
+      color: #989898; }
+    #blogpost-wrapper .blog-wrapper .footer {
+      margin-top: 2rem;
+      display: flex; }
+      #blogpost-wrapper .blog-wrapper .footer p {
+        flex: 1; }
 
 @media screen and (max-width: 440px) {
   #blogpost-wrapper {
-    padding-top: 9rem; }
+    padding-top: 7rem; }
     #blogpost-wrapper .blog-wrapper .header {
       margin-bottom: 2rem; }
       #blogpost-wrapper .blog-wrapper .header h1 {
+        text-align: center;
         font-size: 3.2rem; }
     #blogpost-wrapper .blog-wrapper .image {
       margin-bottom: 2rem;
       height: 25rem; }
     #blogpost-wrapper .blog-wrapper .content .intro {
       margin-bottom: 1rem;
-      font-size: 2.2rem; } }
+      font-size: 2.2rem; }
+    #blogpost-wrapper .blog-wrapper .footer {
+      font-size: 12px; } }
 @media screen and (min-width: 1280px) {
   #blogpost-wrapper {
-    padding-top: 17rem; }
+    padding-top: 12rem; }
     #blogpost-wrapper .blog-wrapper .header {
       margin-bottom: 3rem; }
       #blogpost-wrapper .blog-wrapper .header h1 {
@@ -780,7 +859,9 @@ textarea {
       font-size: 2.6rem; }
       #blogpost-wrapper .blog-wrapper .content .intro {
         font-size: 3.2rem;
-        margin-bottom: 1.5rem; } }
+        margin-bottom: 1.5rem; }
+    #blogpost-wrapper .blog-wrapper .footer {
+      font-size: 2.2rem; } }
 #project-wrapper {
   width: 85%;
   margin: auto; }

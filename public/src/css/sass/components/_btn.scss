@@ -4,6 +4,8 @@
     border: 1px solid $black;
     border-radius: 5px;
     color: $white;
+
+    transition: opacity 0.3s;
 }
 
 .btn-delete{
@@ -18,10 +20,18 @@
     background-color: $grey;
 }
 
+.btn:hover{
+    opacity:0.85;
+}
+
 
 //MEDIA QUERIES
 //mobile
-
+@media screen and(max-width: $mobile){
+    .btn{
+        padding: 1rem;
+    }
+}
 
 
 //desktop
