@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 require('../core/smtp.php'); //send email
 
                 //inupt data in to database if email successfully sent
-                if($mail->send()){
+                if($mail->send()){ //send email
                     $q = "INSERT INTO email_marketing(email) VALUES(:email)";
                     $stmt = $pdo->prepare($q);
                     $r = $stmt->execute([':email' => $email]); //insert email in to database
