@@ -53,6 +53,11 @@ textarea {
   display: inline-block;
   text-align: right; }
 
+.gradient {
+  background-color: rgba(0, 0, 0, 0.45);
+  width: inherit;
+  height: inherit; }
+
 .nav-wrapper {
   z-index: 10;
   width: 100%;
@@ -402,8 +407,6 @@ textarea {
     margin: 0 1rem; }
   #index-wrapper .social-media-wrapper .yt {
     color: #bc0d0d; }
-  #index-wrapper .social-media-wrapper .fb {
-    color: #1a4993; }
   #index-wrapper .social-media-wrapper .twitter {
     color: #00ddff; }
   #index-wrapper .social-media-wrapper .insta {
@@ -420,11 +423,10 @@ textarea {
   #index-wrapper .service-section {
     height: 100vh; }
     #index-wrapper .service-section .panel {
-      height: 33.33vh;
-      padding-top: 2rem; }
+      height: 33.33vh; }
       #index-wrapper .service-section .panel .panel-content {
-        margin: auto;
-        width: 80%; }
+        padding: 2rem 10% 0;
+        margin: auto; }
       #index-wrapper .service-section .panel .panel-link {
         margin: 4rem auto; }
       #index-wrapper .service-section .panel a {
@@ -433,6 +435,7 @@ textarea {
       #index-wrapper .service-section .panel p {
         line-height: 2.2rem; }
       #index-wrapper .service-section .panel h3 {
+        margin-bottom: 0.5rem;
         font-size: 2.2rem; }
   #index-wrapper .about-wrapper {
     height: 100vh;
@@ -487,6 +490,7 @@ textarea {
       border-bottom: 2px solid #272424;
       box-shadow: 1px 0px 6px #272424; }
     #index-wrapper .service-section .panel-content .panel-info {
+      text-align: center;
       padding: 8rem 1rem;
       width: 90%;
       margin: auto; }
@@ -568,7 +572,7 @@ textarea {
       font-family: "Open Sans", sans-serif;
       font-weight: 900; }
 #blog-wrapper .blog-list {
-  padding-top: 2rem;
+  padding-top: 0.3rem;
   width: 85%;
   margin: 1rem auto; }
   #blog-wrapper .blog-list form {
@@ -679,6 +683,7 @@ textarea {
   background-image: url("../../img/content/banner_tutorial.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-bottom: 2px solid #989898; }
   #tutorials-wrapper header .header-content {
     padding-top: 20vh;
