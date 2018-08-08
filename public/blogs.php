@@ -84,7 +84,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){ //if page accessed via search bar post
             }else{ //inform user if no blogs yet to display
 
                 $blogs = false; //flag variable to be used in view
-                throw new Exception('There are currently no blogs to display');
+                throw new Exception('There are currently no blogs to display.');
 
             }
             
