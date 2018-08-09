@@ -57,6 +57,14 @@ error_reporting(E_ALL);
 ini_set('display_errors',1);
 
 
+
+//hide errors on server
+/*
+error_reporting(0);
+ini_set('display_errors',0);
+*/
+
+
 require('config.php'); //require database configuration settings
 
 //begin database connection
