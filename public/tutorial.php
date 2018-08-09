@@ -51,6 +51,17 @@
     ];
 
 
+    $video_type = $videos[$type]; //html or js - to be used in view
+
+
+    //if the tutorial clicked does not currently exist - inform the user
+    if(empty($video_type)){
+        $_SESSION['failure'] = 'This tutorial is not yet available.';
+        header('location: tutorials.php');
+        exit();
+    }
+
+
     //display correct page depending on type
     $page_title = $type . ' tutorials';
     include('../includes/header.inc.php');
