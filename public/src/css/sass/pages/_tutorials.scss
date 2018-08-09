@@ -24,6 +24,9 @@
         .categories-panel{
             background-color: $black;
             border-bottom: 2px solid $grey;
+            opacity: 1;
+
+            transition: opacity 0.5s;
 
             a{
                 display:block;
@@ -38,7 +41,7 @@
                 color: $white;
             }
             &:hover{
-                opacity: 0.9;
+                opacity: 0.95;
             }
         }
     }

@@ -783,7 +783,9 @@ img {
   height: 50vh; }
   #tutorials-wrapper .categories .categories-panel {
     background-color: #272424;
-    border-bottom: 2px solid #989898; }
+    border-bottom: 2px solid #989898;
+    opacity: 1;
+    transition: opacity 0.5s; }
     #tutorials-wrapper .categories .categories-panel a {
       display: block;
       width: 100%;
@@ -793,7 +795,7 @@ img {
     #tutorials-wrapper .categories .categories-panel span {
       color: #f9f9f9; }
     #tutorials-wrapper .categories .categories-panel:hover {
-      opacity: 0.9; }
+      opacity: 0.95; }
 
 @media screen and (max-width: 440px) {
   #tutorials-wrapper header h1 {
@@ -1000,9 +1002,9 @@ img {
     color: #989898; }
   #project-wrapper .project-btn {
     margin-top: 4rem;
+    margin-bottom: 3rem;
     background-color: #f9f9f9;
     border: 1px solid #B30B0B;
-    margin-bottom: 3rem;
     border-radius: 1.5rem;
     box-shadow: 1px 3px 12px #989898; }
     #project-wrapper .project-btn a {
@@ -1012,6 +1014,8 @@ img {
       display: block; }
     #project-wrapper .project-btn:hover {
       box-shadow: 0px 0px 4px #989898; }
+    #project-wrapper .project-btn:active {
+      box-shadow: -2px -2px 4px #989898 inset; }
 
 @media screen and (max-width: 440px) {
   #project-wrapper {
@@ -1027,7 +1031,7 @@ img {
     #project-wrapper .project-content p {
       margin-bottom: 2rem; }
     #project-wrapper .project-btn a {
-      padding: 1rem;
+      padding: 0.5rem;
       font-size: 2.2rem; } }
 @media screen and (min-width: 440px) {
   #project-wrapper {
@@ -1044,8 +1048,12 @@ img {
       font-size: 2.6rem;
       margin-bottom: 4rem; }
     #project-wrapper .project-btn a {
-      padding: 3rem;
+      padding: 1rem;
       font-size: 3.2rem; } }
+@media screen and (min-width: 1024px) {
+  #project-wrapper .project-btn {
+    margin: 0 auto 3rem;
+    width: 30%; } }
 .tutorial_template_wrapper {
   margin: auto;
   text-align: center; }

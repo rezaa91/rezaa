@@ -32,9 +32,9 @@
 
     .project-btn{
         margin-top: 4rem;
+        margin-bottom: 3rem;
         background-color: $white;
         border: 1px solid $primary-color;
-        margin-bottom: 3rem;
         border-radius: 1.5rem;
         box-shadow: 1px 3px 12px $grey;
         a{
@@ -45,6 +45,9 @@
         }
         &:hover{
             box-shadow:0px 0px 4px $grey;
+        }
+        &:active{
+            box-shadow: -2px -2px 4px $grey inset;
         }
     }
 } //end of global settings
@@ -80,7 +83,7 @@
 
         .project-btn{
             a{
-                padding: 1rem;
+                padding: 0.5rem;
                 font-size: $lead;
             }
         }
@@ -117,7 +120,7 @@
 
         .project-btn{
             a{
-                padding: 3rem;
+                padding: 1rem;
                 font-size: $desktop-lead;
             }
         }
@@ -131,6 +134,11 @@
 //desktop
 @media screen and(min-width: $tablet){
 
-    
+    #project-wrapper{
+        .project-btn{
+            margin: 0 auto 3rem;
+            width: 30%;
+        }
+    }
 
 }//end of desktop
