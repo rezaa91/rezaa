@@ -43,8 +43,30 @@
 }//end of mobile
 
 
+
+//tablet
+@media screen and(min-width: $mobile){
+    .crud-wrapper{
+        padding-top: 10.5rem;
+
+        header{
+            h1{
+                font-size: $header;
+            }
+        }
+        .form-wrapper{
+            h2{
+                font-size: $sub-header;
+            }
+        }
+
+    }
+}
+
+
+
 //desktop
-@media screen and(min-width: $desktop){
+@media screen and(min-width: $tablet){
     .crud-wrapper{
         padding-top: 12rem;
 

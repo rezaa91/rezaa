@@ -34,8 +34,8 @@
 }
 
 
-//desktop
-@media screen and(min-width: $desktop){
+//tablet and desktop
+@media screen and(min-width: $mobile){
     .btn{
         width: 20rem;
         padding-top: 1rem;

@@ -43,8 +43,9 @@
 }//end of mobile
 
 
-//desktop
-@media screen and(min-width: $desktop){
+
+//tablet
+@media screen and(min-width: $mobile){
     #login-wrapper{
         input{
             padding: 1rem;
@@ -57,4 +58,12 @@
             margin: 2rem 1rem;
         }
     }
+}
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+    
 }//end of desktop

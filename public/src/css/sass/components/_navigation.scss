@@ -96,20 +96,21 @@
 }
 
 
+
+
+
 //tablet
+@media screen and(min-width: $mobile){
 
-
-
-//desktop
-@media screen and(min-width: $desktop){
     .nav-wrapper{
+        padding: 2rem 0;
         //hide mobile nav bar items
         .mobile{
             display: none;
         }
 
         background-color: $white;
-        padding:2rem 0rem;
+        padding:1rem 0rem;
 
         li{
             display: inline-block;
@@ -122,6 +123,7 @@
         }
 
         .nav-brand a{
+            flex: 1;
             color: $primary-color;
             font-size: $sub-header;
             font-family: $sans-serif;
@@ -132,10 +134,10 @@
 
         .nav-links{
             flex: 3;
+            padding-top:0.5rem;
                 a{
-                padding: 1rem;
-                margin:0 2rem;
-                font-size: $lead;
+                padding: 0.1rem;
+                margin:0 1rem;
 
                 transition: color 0.3s;
 
@@ -161,4 +163,27 @@
             }
         }
     }
+
+
+}//end of tablet
+
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+    
+    .nav-wrapper{
+        .nav-links{
+            padding-top:0;
+                a{
+                padding: 2rem;
+                margin:0 2rem;
+                font-size: $desktop-small;
+            }
+        }
+
+    }
+
 }//end of desktop

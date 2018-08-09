@@ -149,18 +149,17 @@
 
 
 
-
-//desktop
-@media screen and(min-width: $desktop){
+//tablet
+@media screen and(min-width: $mobile){
 
     #blog-wrapper{
         header{
             h1{
-                font-size: $desktop-header;
+                font-size: $desktop-sub-header;
                 margin-bottom: 2rem;
             }
             span{
-                font-size: $desktop-lead;
+                font-size: $desktop-regular;
             }
         }
 
@@ -179,18 +178,19 @@
             }
 
             .blog-panel{
-                height: 30rem;
+                height: 22rem;
                 transition: transform 0.2s;
+                position:relative;
                 h3{
-                    font-size:$desktop-lead;
+                    font-size:$desktop-regular;
                     margin-bottom: 1.5rem;
                 }
                 .preview{
-                    font-size: $desktop-regular;
-                    line-height: 3.2rem;
+                    font-size: $lead;
+                    line-height: 2.8rem;
                 }
                 .date{
-                    font-size: $desktop-small;
+                    font-size: $small;
                     position:absolute;
                     bottom: 1rem;
                 }
@@ -207,8 +207,8 @@
                 flex: 2;
             }
             .flex-2{
-                padding: 2rem;
-                flex: 5;
+                padding: 1rem;
+                flex: 4;
             }
         }
         .pagination{
@@ -217,6 +217,55 @@
                 padding: 1rem;
             }
         }
+    }
+
+}
+
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+
+    #blog-wrapper{
+
+        header{
+            h1{
+                font-size: $desktop-header;
+            }
+            span{
+                font-size: $desktop-lead;
+            }
+        }
+
+        .blog-list{
+            .blog-panel{
+                height: 30rem;
+                
+                h3{
+                    font-size:$desktop-lead;
+                }
+                .preview{
+                    font-size: $desktop-regular;
+                    line-height: 3.2rem;
+                }
+                .date{
+                    font-size: $desktop-small;
+            
+                }
+    
+            }
+
+            .flex-1{
+                flex: 2;
+            }
+            .flex-2{
+                padding: 2rem;
+                flex: 5;
+            }
+        }
+        
     }
 
 }//end of desktop

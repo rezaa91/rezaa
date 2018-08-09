@@ -82,16 +82,15 @@
         }
     
         .projects-panel{
-            width: 46%;
-            margin: 2%;
-            padding: 3.2rem 1rem;
+            width: 47.5%;
+            margin: 1.25%;
+            padding: 4rem 1rem;
             h3{
-                font-size: $small;
-                margin-bottom: 0.5rem;
+                font-size: $lead;
+                margin-bottom: 0.2rem;
             }
             a{
                 padding: 0.2rem;
-                font-size: $small;
                 bottom: 1rem;
             }
         }
@@ -106,36 +105,67 @@
 
 
 
+//tablet
+@media screen and(min-width: $mobile){
+    #projects-wrapper{
+        header{
+            .header-content{
+                h1{
+                    font-size: $desktop-sub-header;
+                    margin-bottom: 2rem;
+                }
+                span{
+                    font-size: $desktop-regular;
+                }
+            }
+        }
+
+        .projects-panel{
+            width: 47.5%;
+            margin: 1.25%;
+            padding: 10rem 4rem 12rem;
+            h3{
+                font-size: $desktop-small;
+                margin-bottom:2rem;
+            }
+            a{
+                font-size: $sub-header;
+                padding: 0.75rem;
+                bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+
 
 //desktop
-@media screen and(min-width: $desktop){
+@media screen and(min-width: $tablet){
 
-    header{
-        .header-content{
-            h1{
-                font-size: $desktop-header;
-                margin-bottom: 2rem;
+    #projects-wrapper{
+        header{
+            .header-content{
+                h1{
+                    font-size: $desktop-header;
+                }
+                span{
+                    font-size: $desktop-lead;
+                }
             }
-            span{
-                font-size: $desktop-lead;
+        }
+
+        .projects-panel{
+            width: 22.5%;
+            margin: 1.25%;
+            padding: 10rem 4rem 12rem;
+            h3{
+                font-size: $desktop-regular;
+            }
+            a{
+                font-size: $desktop-small;
             }
         }
     }
-
-    .projects-panel{
-        width: 22.5%;
-        margin: 1.25%;
-        padding: 10rem 4rem 12rem;
-        h3{
-            font-size: $desktop-regular;
-            margin-bottom:2rem;
-        }
-        a{
-            font-size: $desktop-small;
-            padding: 0.75rem;
-            bottom: 2rem;
-        }
-    }
-
 
 }//end of desktop

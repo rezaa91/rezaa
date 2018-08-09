@@ -35,9 +35,8 @@
 }//end of mobile
 
 
-//desktop
-@media screen and(min-width: $desktop){
-
+//tablet
+@media screen and(min-width: $mobile){
     .form-group{
         label,input, textarea{
             font-size: $desktop-small;
@@ -51,8 +50,19 @@
             padding: 2rem;
         }
         input[type="file"]{
-            flex: 1;
+            flex: 3;
+            font-size: $small;
         }
     }
+}
 
-}//end of desktop
+
+//desktop
+@media screen and(min-width: $tablet){
+    .form-group{
+        input[type='file']{
+            flex: 1;
+            font-size: $regular;
+        }
+    }
+}

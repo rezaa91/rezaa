@@ -65,13 +65,13 @@
             }
         }
     }
-}
+}//end of mobile
 
 
 
 
-//desktop
-@media screen and(min-width: $desktop){
+//tablet
+@media screen and(min-width: $mobile){
     #blogpost-wrapper{
         padding-top: 12rem;
         .blog-wrapper{
@@ -97,4 +97,13 @@
             }
         }
     }
+}
+
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+    
 }

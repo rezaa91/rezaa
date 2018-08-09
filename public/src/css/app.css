@@ -35,6 +35,9 @@ textarea {
   height: 20rem;
   padding: 0.5rem; }
 
+img {
+  object-fit: cover; }
+
 .hide {
   display: none; }
 
@@ -54,7 +57,7 @@ textarea {
   text-align: right; }
 
 .gradient {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(50, 50, 50, 0.4);
   width: inherit;
   height: inherit; }
 
@@ -109,10 +112,11 @@ textarea {
       width: 100%; }
       .nav-wrapper .admin-dropdown .admin-dropdown-menu a:hover {
         background-color: #272424; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   .nav-wrapper {
+    padding: 2rem 0;
     background-color: #f9f9f9;
-    padding: 2rem 0rem; }
+    padding: 1rem 0rem; }
     .nav-wrapper .mobile {
       display: none; }
     .nav-wrapper li {
@@ -122,17 +126,18 @@ textarea {
       margin: auto;
       display: flex; }
     .nav-wrapper .nav-brand a {
+      flex: 1;
       color: #B30B0B;
       font-size: 2.6rem;
       font-family: "Open Sans", sans-serif; }
       .nav-wrapper .nav-brand a:hover {
         opacity: 0.75; }
     .nav-wrapper .nav-links {
-      flex: 3; }
+      flex: 3;
+      padding-top: 0.5rem; }
       .nav-wrapper .nav-links a {
-        padding: 1rem;
-        margin: 0 2rem;
-        font-size: 2.2rem;
+        padding: 0.1rem;
+        margin: 0 1rem;
         transition: color 0.3s; }
         .nav-wrapper .nav-links a:hover {
           color: #989898; }
@@ -144,6 +149,13 @@ textarea {
       display: none; }
       .nav-wrapper .admin-dropdown .admin-dropdown-menu a {
         padding: 5px; } }
+@media screen and (min-width: 1024px) {
+  .nav-wrapper .nav-links {
+    padding-top: 0; }
+    .nav-wrapper .nav-links a {
+      padding: 2rem;
+      margin: 0 2rem;
+      font-size: 2.2rem; } }
 .btn {
   text-align: center;
   display: inline-block;
@@ -167,7 +179,7 @@ textarea {
 @media screen and (max-width: 440px) {
   .btn {
     padding: 1rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   .btn {
     width: 20rem;
     padding-top: 1rem;
@@ -190,7 +202,7 @@ textarea {
   .form-group input[type="submit"] {
     font-size: 1.6rem;
     padding: 1rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   .form-group label, .form-group input, .form-group textarea {
     font-size: 2.2rem;
     flex: 5; }
@@ -200,7 +212,12 @@ textarea {
     font-size: 2.6rem;
     padding: 2rem; }
   .form-group input[type="file"] {
-    flex: 1; } }
+    flex: 3;
+    font-size: 1.4rem; } }
+@media screen and (min-width: 1024px) {
+  .form-group input[type='file'] {
+    flex: 1;
+    font-size: 1.6rem; } }
 .feedback-modal {
   z-index: 10;
   position: absolute;
@@ -247,7 +264,14 @@ textarea {
       font-size: 2.6rem; }
     .crud-wrapper .form-wrapper h2 {
       font-size: 2.2rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
+  .crud-wrapper {
+    padding-top: 10.5rem; }
+    .crud-wrapper header h1 {
+      font-size: 3.2rem; }
+    .crud-wrapper .form-wrapper h2 {
+      font-size: 2.6rem; } }
+@media screen and (min-width: 1024px) {
   .crud-wrapper {
     padding-top: 12rem; }
     .crud-wrapper header h1 {
@@ -293,7 +317,7 @@ textarea {
     #error_page_wrapper .helpful_links a {
       width: 10rem;
       padding: 1rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #error_page_wrapper {
     padding-top: 11rem; }
     #error_page_wrapper header h1 {
@@ -464,53 +488,40 @@ textarea {
     padding: 1.6rem; }
     #index-wrapper .social-media-wrapper a {
       padding: 1rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #index-wrapper header h1 {
-    padding-top: 30vh;
-    font-size: 14rem; }
+    padding-top: 35vh;
+    font-size: 9rem; }
   #index-wrapper header .tag-line {
-    padding: 2rem; }
+    padding: 1.5rem; }
     #index-wrapper header .tag-line h2 {
-      font-size: 4.2rem; }
+      font-size: 2.6rem; }
   #index-wrapper .service-section {
-    width: 85%;
-    margin: auto;
-    display: flex;
-    position: relative;
-    top: -9rem; }
+    height: 100vh; }
     #index-wrapper .service-section .panel {
-      flex: 1;
-      border: 2px solid #272424; }
-    #index-wrapper .service-section .panel-content h3 {
-      padding-top: 2.2rem;
-      font-size: 3.2rem;
-      height: 9rem;
-      background-color: #989898;
-      text-align: center;
-      border-bottom: 2px solid #272424;
-      box-shadow: 1px 0px 6px #272424; }
-    #index-wrapper .service-section .panel-content .panel-info {
-      text-align: center;
-      padding: 8rem 1rem;
-      width: 90%;
+      height: 33.33vh; }
+    #index-wrapper .service-section .panel-content {
+      padding: 5rem 10% 0;
       margin: auto; }
-      #index-wrapper .service-section .panel-content .panel-info p {
-        font-size: 2.6rem;
-        height: 10rem; }
-      #index-wrapper .service-section .panel-content .panel-info a {
-        margin-top: 2rem;
-        font-size: 2.6rem;
-        padding: 2rem 0rem; }
-    #index-wrapper .service-section .panel-2 {
-      margin: 0 2%; }
+    #index-wrapper .service-section .panel-link {
+      margin: 4rem auto; }
+    #index-wrapper .service-section a {
+      padding: 13px 0px;
+      font-size: 2.2rem; }
+    #index-wrapper .service-section p {
+      line-height: 2.2rem;
+      font-size: 2.2rem; }
+    #index-wrapper .service-section h3 {
+      margin-bottom: 0.5rem;
+      font-size: 3.2rem; }
   #index-wrapper .about-wrapper {
-    margin-top: -4rem; }
+    padding-top: 2rem; }
     #index-wrapper .about-wrapper .about-content {
-      border-right: 0.6rem solid #B30B0B; }
+      border-right: 0.4rem solid #B30B0B; }
       #index-wrapper .about-wrapper .about-content h2 {
         text-align: left;
         margin-bottom: 3.5rem;
-        font-size: 5.5rem;
+        font-size: 4.2rem;
         width: 30rem;
         letter-spacing: 0.5rem;
         text-align: center; }
@@ -524,12 +535,12 @@ textarea {
     #index-wrapper .about-wrapper .child-2 {
       flex: 3; }
     #index-wrapper .about-wrapper .description {
-      margin: 0 20rem; }
+      margin: 0 5rem; }
       #index-wrapper .about-wrapper .description h3 {
-        font-size: 4.2rem; }
+        font-size: 3.2rem; }
       #index-wrapper .about-wrapper .description p {
         margin-top: 2.5rem;
-        font-size: 2.6rem; }
+        font-size: 2.2rem; }
     #index-wrapper .about-wrapper .subscribe {
       margin-top: 5rem;
       text-align: left;
@@ -543,7 +554,7 @@ textarea {
         font-size: 2.6rem;
         margin-bottom: 2rem; }
       #index-wrapper .about-wrapper .subscribe input[type="text"] {
-        width: 30%; }
+        width: 50%; }
       #index-wrapper .about-wrapper .subscribe input {
         font-size: 2.2rem;
         padding: 1rem; }
@@ -560,6 +571,63 @@ textarea {
       margin: 0 3rem; }
     #index-wrapper .social-media-wrapper .social_links {
       font-size: 2.6rem; } }
+@media screen and (min-width: 1024px) {
+  #index-wrapper header h1 {
+    font-size: 14rem; }
+  #index-wrapper header .tag-line {
+    padding: 2rem; }
+    #index-wrapper header .tag-line h2 {
+      font-size: 4.2rem; }
+  #index-wrapper .service-section {
+    height: auto;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: -9rem; }
+    #index-wrapper .service-section .panel {
+      height: auto;
+      flex: 1;
+      border: 2px solid #272424; }
+    #index-wrapper .service-section .panel-content {
+      padding: 0;
+      margin: auto; }
+      #index-wrapper .service-section .panel-content h3 {
+        padding-top: 2.2rem;
+        font-size: 3.2rem;
+        height: 9rem;
+        background-color: #989898;
+        text-align: center;
+        border-bottom: 2px solid #272424;
+        box-shadow: 1px 0px 6px #272424; }
+      #index-wrapper .service-section .panel-content .panel-link {
+        margin: auto; }
+      #index-wrapper .service-section .panel-content .panel-info {
+        text-align: center;
+        padding: 8rem 1rem;
+        width: 90%;
+        margin: auto; }
+        #index-wrapper .service-section .panel-content .panel-info p {
+          font-size: 2.6rem;
+          height: 10rem; }
+        #index-wrapper .service-section .panel-content .panel-info a {
+          margin-top: 2rem;
+          font-size: 2.6rem;
+          padding: 2rem 0rem; }
+    #index-wrapper .service-section .panel-2 {
+      margin: 0 2%; }
+  #index-wrapper .about-wrapper {
+    margin-top: -4rem; }
+    #index-wrapper .about-wrapper .about-content {
+      border-right: 0.6rem solid #B30B0B; }
+      #index-wrapper .about-wrapper .about-content h2 {
+        font-size: 5.5rem; }
+    #index-wrapper .about-wrapper .description {
+      margin: 0 10rem; }
+      #index-wrapper .about-wrapper .description p {
+        font-size: 2.6rem; }
+    #index-wrapper .about-wrapper .subscribe input[type="text"] {
+      width: 30%; } }
 #blog-wrapper header {
   height: 50vh;
   background-image: url("../../img/content/banner_blog.jpg");
@@ -640,12 +708,12 @@ textarea {
 
   .error {
     font-size: 1.4rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #blog-wrapper header h1 {
-    font-size: 5.5rem;
+    font-size: 4.2rem;
     margin-bottom: 2rem; }
   #blog-wrapper header span {
-    font-size: 3.2rem; }
+    font-size: 2.6rem; }
   #blog-wrapper .blog-list form {
     text-align: left; }
     #blog-wrapper .blog-list form input {
@@ -653,16 +721,17 @@ textarea {
     #blog-wrapper .blog-list form input[type="text"] {
       width: 30rem; }
   #blog-wrapper .blog-list .blog-panel {
-    height: 30rem;
-    transition: transform 0.2s; }
+    height: 22rem;
+    transition: transform 0.2s;
+    position: relative; }
     #blog-wrapper .blog-list .blog-panel h3 {
-      font-size: 3.2rem;
+      font-size: 2.6rem;
       margin-bottom: 1.5rem; }
     #blog-wrapper .blog-list .blog-panel .preview {
-      font-size: 2.6rem;
-      line-height: 3.2rem; }
-    #blog-wrapper .blog-list .blog-panel .date {
       font-size: 2.2rem;
+      line-height: 2.8rem; }
+    #blog-wrapper .blog-list .blog-panel .date {
+      font-size: 1.4rem;
       position: absolute;
       bottom: 1rem; }
     #blog-wrapper .blog-list .blog-panel:hover {
@@ -672,12 +741,31 @@ textarea {
   #blog-wrapper .blog-list .flex-1 {
     flex: 2; }
   #blog-wrapper .blog-list .flex-2 {
-    padding: 2rem;
-    flex: 5; }
+    padding: 1rem;
+    flex: 4; }
   #blog-wrapper .pagination {
     font-size: 2.6rem; }
     #blog-wrapper .pagination a {
       padding: 1rem; } }
+@media screen and (min-width: 1024px) {
+  #blog-wrapper header h1 {
+    font-size: 5.5rem; }
+  #blog-wrapper header span {
+    font-size: 3.2rem; }
+  #blog-wrapper .blog-list .blog-panel {
+    height: 30rem; }
+    #blog-wrapper .blog-list .blog-panel h3 {
+      font-size: 3.2rem; }
+    #blog-wrapper .blog-list .blog-panel .preview {
+      font-size: 2.6rem;
+      line-height: 3.2rem; }
+    #blog-wrapper .blog-list .blog-panel .date {
+      font-size: 2.2rem; }
+  #blog-wrapper .blog-list .flex-1 {
+    flex: 2; }
+  #blog-wrapper .blog-list .flex-2 {
+    padding: 2rem;
+    flex: 5; } }
 #tutorials-wrapper header {
   height: 50vh;
   background-image: url("../../img/content/banner_tutorial.jpg");
@@ -714,26 +802,40 @@ textarea {
     height: 25vh; }
     #tutorials-wrapper .categories-panel h2 {
       padding-top: 8vh; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #tutorials-wrapper header h1 {
-    font-size: 5.5rem;
+    font-size: 4.2rem;
     margin-bottom: 2rem; }
+  #tutorials-wrapper header span {
+    font-size: 2.6rem; }
   #tutorials-wrapper .categories {
     display: flex; }
   #tutorials-wrapper .categories-panel {
     flex: 1; }
     #tutorials-wrapper .categories-panel h2 {
-      font-size: 4.2rem;
+      font-size: 3.2rem;
       padding-top: 18vh;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       transition: font-size 0.4s; }
     #tutorials-wrapper .categories-panel span {
-      font-size: 2.6rem; }
+      font-size: 2.2rem; }
     #tutorials-wrapper .categories-panel:hover h2 {
-      font-size: 5.5rem;
+      font-size: 4.2rem;
       transition: font-size 0.4s; }
   #tutorials-wrapper .panel-2 {
     border-left: 2px solid #989898; } }
+@media screen and (min-width: 1024px) {
+  #tutorials-wrapper header h1 {
+    font-size: 5.5rem; }
+  #tutorials-wrapper header span {
+    font-size: 3.2rem; }
+  #tutorials-wrapper .categories-panel h2 {
+    font-size: 4.2rem;
+    margin-bottom: 2rem; }
+  #tutorials-wrapper .categories-panel span {
+    font-size: 2.6rem; }
+  #tutorials-wrapper .categories-panel:hover h2 {
+    font-size: 5.5rem; } }
 #projects-wrapper header {
   height: 50vh;
   background-image: url("../../img/content/banner_projects.jpg");
@@ -781,36 +883,47 @@ textarea {
   #projects-wrapper header .header-content h1 {
     font-size: 3.2rem; }
   #projects-wrapper .projects-panel {
-    width: 46%;
-    margin: 2%;
-    padding: 3.2rem 1rem; }
+    width: 47.5%;
+    margin: 1.25%;
+    padding: 4rem 1rem; }
     #projects-wrapper .projects-panel h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem; }
+      font-size: 2.2rem;
+      margin-bottom: 0.2rem; }
     #projects-wrapper .projects-panel a {
       padding: 0.2rem;
-      font-size: 1.4rem;
       bottom: 1rem; }
   #projects-wrapper .error {
     margin-top: 2rem; } }
-@media screen and (min-width: 1280px) {
-  header .header-content h1 {
-    font-size: 5.5rem;
+@media screen and (min-width: 440px) {
+  #projects-wrapper header .header-content h1 {
+    font-size: 4.2rem;
     margin-bottom: 2rem; }
-  header .header-content span {
+  #projects-wrapper header .header-content span {
+    font-size: 2.6rem; }
+  #projects-wrapper .projects-panel {
+    width: 47.5%;
+    margin: 1.25%;
+    padding: 10rem 4rem 12rem; }
+    #projects-wrapper .projects-panel h3 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem; }
+    #projects-wrapper .projects-panel a {
+      font-size: 2.6rem;
+      padding: 0.75rem;
+      bottom: 2rem; } }
+@media screen and (min-width: 1024px) {
+  #projects-wrapper header .header-content h1 {
+    font-size: 5.5rem; }
+  #projects-wrapper header .header-content span {
     font-size: 3.2rem; }
-
-  .projects-panel {
+  #projects-wrapper .projects-panel {
     width: 22.5%;
     margin: 1.25%;
     padding: 10rem 4rem 12rem; }
-    .projects-panel h3 {
-      font-size: 2.6rem;
-      margin-bottom: 2rem; }
-    .projects-panel a {
-      font-size: 2.2rem;
-      padding: 0.75rem;
-      bottom: 2rem; } }
+    #projects-wrapper .projects-panel h3 {
+      font-size: 2.6rem; }
+    #projects-wrapper .projects-panel a {
+      font-size: 2.2rem; } }
 #blogpost-wrapper {
   width: 85%;
   margin: auto; }
@@ -850,7 +963,7 @@ textarea {
       font-size: 2.2rem; }
     #blogpost-wrapper .blog-wrapper .footer {
       font-size: 12px; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #blogpost-wrapper {
     padding-top: 12rem; }
     #blogpost-wrapper .blog-wrapper .header {
@@ -877,6 +990,7 @@ textarea {
     width: 100%;
     border: 2px solid #989898; }
     #project-wrapper .image img {
+      object-fit: cover;
       width: 100%;
       height: 100%; }
   #project-wrapper .project-content h3 {
@@ -915,14 +1029,14 @@ textarea {
     #project-wrapper .project-btn a {
       padding: 1rem;
       font-size: 2.2rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #project-wrapper {
     padding-top: 12rem; }
     #project-wrapper h1 {
       font-size: 5.5rem;
       margin-bottom: 2rem; }
     #project-wrapper .image {
-      height: 50rem;
+      height: 40rem;
       margin-bottom: 3rem; }
     #project-wrapper .project-content h3 {
       font-size: 3.2rem; }
@@ -981,7 +1095,22 @@ textarea {
   .tutorial_template_wrapper iframe {
     height: 100vh;
     max-width: 100%; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
+  .tutorial_template_wrapper {
+    padding-top: 10rem;
+    width: 100%; }
+    .tutorial_template_wrapper .video_list_wrapper {
+      font-size: 1.4rem;
+      padding: 5rem;
+      margin-left: 1rem;
+      height: 720px; }
+    .tutorial_template_wrapper iframe {
+      height: 480px; }
+    .tutorial_template_wrapper .featured_video_title {
+      font-size: 2.2rem;
+      letter-spacing: 0.5rem;
+      margin-bottom: 1rem; } }
+@media screen and (min-width: 1024px) {
   .tutorial_template_wrapper {
     padding-top: 12rem;
     width: 85%; }
@@ -990,9 +1119,12 @@ textarea {
     .tutorial_template_wrapper .featured_video_wrapper {
       flex: 6; }
     .tutorial_template_wrapper .video_list_wrapper {
+      font-size: 1.2rem;
       flex: 2;
       padding: 5rem;
       margin-left: 1rem;
+      height: 720px; }
+    .tutorial_template_wrapper iframe {
       height: 720px; }
     .tutorial_template_wrapper .featured_video_title {
       font-size: 2.6rem;
@@ -1019,7 +1151,7 @@ textarea {
     padding: 0.5rem; }
   #login-wrapper input[type="submit"] {
     font-size: 2.2rem; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 440px) {
   #login-wrapper input {
     padding: 1rem;
     font-size: 2.6rem; }

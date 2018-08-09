@@ -297,84 +297,73 @@
 
 
 
+//tablet
+@media screen and(min-width: $mobile){
 
-
-
-
-//desktop
-@media screen and(min-width: $desktop){
     #index-wrapper{
         //header settings
         header{
             h1{
-                padding-top: 30vh;
-                font-size: 14rem;
+                padding-top: 35vh;
+                font-size: 9rem;
             }
             .tag-line{
-                padding: 2rem;
+                padding: 1.5rem;
 
                 h2{
-                    font-size: $desktop-sub-header;
+                    font-size: $desktop-regular;
                 }
             }
         }//end of header settings
 
         
-        //service settings
+        
+        //services section
         .service-section{
-            width: 85%;
-            margin:auto;
-            display: flex;
-            position: relative;
-            top: -9rem;
+            height: 100vh;
+    
             .panel{
-                flex: 1;
-                border: 2px solid $black;
-            }
+                height: 33.33vh;                
+            } 
+            
             .panel-content{
-                h3{
-                    padding-top: 2.2rem;
-                    font-size: $desktop-lead;
-                    height: 9rem;
-                    background-color: $grey;
-                    text-align: center;
-                    border-bottom: 2px solid $black;
-                    box-shadow: 1px 0px 6px $black;
-                }
-                .panel-info{
-                    text-align: center;
-                    padding: 8rem 1rem;
-                    width: 90%;
-                    margin: auto;
-
-                    p{
-                        font-size: $desktop-regular;
-                        height: 10rem;
-                    }
-                    a{
-                        margin-top: 2rem;
-                        font-size: $desktop-regular;
-                        padding: 2rem 0rem;
-                    }
-                }
-
+                padding: 5rem 10% 0;
+                margin:auto;
             }
-            .panel-2{
-                margin: 0 2%;
+
+            .panel-link{
+                margin: 4rem auto;    
+            }
+
+            a{
+                padding: 13px 0px;
+                font-size: $lead;
+            }
+
+            p{
+                line-height: 2.2rem;
+                font-size: $desktop-small;
+            }
+
+            h3{
+                margin-bottom: 0.5rem;
+                font-size: $desktop-lead;
             }
             
-        }//end of service settings
+        }//end of service section
+
+
 
 
         //about section
         .about-wrapper{
-            margin-top: -4rem;
+            padding-top: 2rem;
             .about-content{
-                border-right: 0.6rem solid $primary-color;
+                border-right: 0.4rem solid $primary-color;
                 h2{
                     text-align:left;
                     margin-bottom: 3.5rem;
-                    font-size: $desktop-header;
+                    font-size: $desktop-sub-header;
                     width: 30rem;
                     letter-spacing: 0.5rem;
                     text-align:center;
@@ -398,13 +387,13 @@
             
 
             .description{
-                margin: 0 20rem;
+                margin: 0 5rem;
                 h3{
-                    font-size: $desktop-sub-header;
+                    font-size: $desktop-lead;
                 }
                 p{
                     margin-top: 2.5rem;
-                    font-size: $desktop-regular;
+                    font-size: $lead;
                 }
             }
 
@@ -425,7 +414,7 @@
                 }
 
                 input[type="text"]{
-                    width: 30%;
+                    width: 50%;
                 }
                 input{
                     font-size: $desktop-small;
@@ -461,16 +450,116 @@
 
         
     }
+
+}//end of tablet
+
+
+
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+    
+    #index-wrapper{
+        header{
+            h1{
+                font-size: 14rem;
+            }
+            .tag-line{
+                padding: 2rem;
+
+                h2{
+                    font-size: $desktop-sub-header;
+                }
+            }
+        }//end of header settings
+
+        //service settings
+        .service-section{
+            height: auto;
+            width: 85%;
+            margin:auto;
+            display: flex;
+            position: relative;
+            top: -9rem;
+            .panel{
+                height: auto;
+                flex: 1;
+                border: 2px solid $black;
+            }
+            
+            .panel-content{
+                padding: 0;
+                margin:auto;
+                h3{
+                    padding-top: 2.2rem;
+                    font-size: $desktop-lead;
+                    height: 9rem;
+                    background-color: $grey;
+                    text-align: center;
+                    border-bottom: 2px solid $black;
+                    box-shadow: 1px 0px 6px $black;
+                }
+                .panel-link{
+                    margin: auto;    
+                }
+                .panel-info{
+                    text-align: center;
+                    padding: 8rem 1rem;
+                    width: 90%;
+                    margin: auto;
+
+                    p{
+                        font-size: $desktop-regular;
+                        height: 10rem;
+                    }
+                    a{
+                        margin-top: 2rem;
+                        font-size: $desktop-regular;
+                        padding: 2rem 0rem;
+                    }
+                }
+
+            }
+            
+            .panel-2{
+                margin: 0 2%;
+            }
+            
+        }//end of service settings
+
+        
+        //about section
+        .about-wrapper{
+            margin-top: -4rem;
+
+            .about-content{
+                border-right: 0.6rem solid $primary-color;
+                h2{
+                    font-size: $desktop-header;
+                }
+            }
+
+            .description{
+                margin: 0 10rem;
+
+                p{
+                    font-size: $desktop-regular;
+                }
+            }
+            .subscribe{
+                input[type="text"]{
+                    width: 30%;
+                }
+            }
+        }
+
+        
+    
+    }
+
 }//end of desktop
-
-
-
-
-
-
-//tablet settings
-@media screen and(max-width: $tablet){
-
-}
 
 

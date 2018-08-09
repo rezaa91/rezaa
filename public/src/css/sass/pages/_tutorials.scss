@@ -67,13 +67,17 @@
 
 
 
-//desktop
-@media screen and(min-width: $desktop){
+
+//tablet
+@media screen and(min-width:$mobile){
     #tutorials-wrapper{
         header{
             h1{
-                font-size: $desktop-header;
+                font-size: $desktop-sub-header;
                 margin-bottom: 2rem;
+            }
+            span{
+                font-size: $desktop-regular;
             }
         }
         .categories{
@@ -82,18 +86,18 @@
         .categories-panel{
             flex:1;
             h2{
-                font-size: $desktop-sub-header;
+                font-size: $desktop-lead;
                 padding-top: 18vh;
-                margin-bottom: 2rem;
+                margin-bottom: 1.5rem;
                 transition:
                     font-size 0.4s;
             }
             span{
-                font-size: $desktop-regular;
+                font-size: $lead;
             }
             &:hover{
                 h2{
-                    font-size: $desktop-header;
+                    font-size: $desktop-sub-header;
                     transition:
                         font-size 0.4s;
                 }
@@ -101,6 +105,40 @@
         }
         .panel-2{
             border-left: 2px solid $grey;
+        }
+    }
+}
+
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+
+    #tutorials-wrapper{
+        header{
+            h1{
+                font-size: $desktop-header;
+            }
+            span{
+                font-size: $desktop-lead;
+            }
+        }
+
+        .categories-panel{
+            h2{
+                font-size: $desktop-sub-header;
+                margin-bottom: 2rem;
+            }
+            span{
+                font-size: $desktop-regular;
+            }
+            &:hover{
+                h2{
+                    font-size: $desktop-header;
+                }
+            }
         }
     }
 

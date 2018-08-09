@@ -74,8 +74,9 @@
 
 
 
-//desktop
-@media screen and(min-width: $desktop){
+
+//tablet
+@media screen and(min-width: $mobile){
 
     #error_page_wrapper{
         padding-top: 11rem;
@@ -99,5 +100,15 @@
         }
 
     }
+
+}
+
+
+
+
+//desktop
+@media screen and(min-width: $tablet){
+
+    
 
 }//end of desktop
