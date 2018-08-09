@@ -1,3 +1,4 @@
 core/config.php
 core/smtp.php
 vendor/
+.htaccess
