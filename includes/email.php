@@ -10,7 +10,7 @@ $body = "
 
 
     <div style='text-align: center; margin-bottom: 50px; font-size: 18px;'>
-        <p style=' color: #989898; font-weight: bold; letter-spacing: 1.6px; line-height: 26px;'><span style='font-size: 18px; color: #272424'>Thank you for subscribing.</span><br>Newsletter issue #1 will be sent out Monday 5th Novemeber. Following issues will be released the first Monday every month thereafter. In the meantime, why don't you get acquainted with my website. See below for some of the content you can enjoy right now...</p>
+        <p style=' color: #989898; font-weight: bold; letter-spacing: 1.6px; line-height: 26px;'><span style='font-size: 18px; color: #272424'>Thank you for subscribing.</span><br>Newsletter issue #1 will be sent out Monday 5th Novemeber. Following issues will be released the first Monday of every month thereafter. In the meantime, why don't you get acquainted with my website. See below for some of the content you can enjoy right now...</p>
     </div>
 
 
